@@ -34,11 +34,50 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/MainMenuScene.m"
-         timestampString = "380877470.387801"
+         timestampString = "380903723.46909"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "36"
-         endingLineNumber = "36"
+         startingLineNumber = "38"
+         endingLineNumber = "38"
+         landmarkName = "-pressedShare"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/MainMenuScene.m"
+         timestampString = "380903331.856097"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "41"
+         endingLineNumber = "41"
+         landmarkName = "-pressedShare"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/MainMenuScene.m"
+         timestampString = "380903333.223575"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "43"
+         endingLineNumber = "43"
+         landmarkName = "-pressedShare"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/MainMenuScene.m"
+         timestampString = "380903333.772431"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "42"
+         endingLineNumber = "42"
          landmarkName = "-pressedShare"
          landmarkType = "5">
       </FileBreakpoint>

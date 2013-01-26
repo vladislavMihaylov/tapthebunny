@@ -23,4 +23,15 @@ Icon@2x.png
 Info.plist
 levelBtn.png
 MainMenuScene.ccbi
+mainMenu-hd.plist
+mainMenu-hd.png
+mainMenu.plist
+mainMenu.png
+buttonsAnimations-hd.plist
+buttonsAnimations-hd.png
+buttonsAnimations.plist
+buttonsAnimations.png
+selectAnimal.plist
+selectAnimal.png
+selectAnimal.ccbi
 SelectAnimalScene.ccbi

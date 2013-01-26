@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5079AC716B425000084A9DD /* mainMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5079AC516B424FF0084A9DD /* mainMenu.plist */; };
+		F5079AC816B425000084A9DD /* mainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = F5079AC616B424FF0084A9DD /* mainMenu.png */; };
+		F5079AD316B447370084A9DD /* mainMenu-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5079AD116B447370084A9DD /* mainMenu-hd.plist */; };
+		F5079AD416B447370084A9DD /* mainMenu-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F5079AD216B447370084A9DD /* mainMenu-hd.png */; };
+		F5079B1016B454BF0084A9DD /* Common.mm in Sources */ = {isa = PBXBuildFile; fileRef = F5079B0F16B454BF0084A9DD /* Common.mm */; };
+		F5079B1216B4555E0084A9DD /* btnAnimation.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5079B1116B4555E0084A9DD /* btnAnimation.plist */; };
+		F5079B1B16B46F430084A9DD /* buttonsAnimations-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5079B1716B46F430084A9DD /* buttonsAnimations-hd.plist */; };
+		F5079B1C16B46F430084A9DD /* buttonsAnimations-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F5079B1816B46F430084A9DD /* buttonsAnimations-hd.png */; };
+		F5079B1D16B46F430084A9DD /* buttonsAnimations.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5079B1916B46F430084A9DD /* buttonsAnimations.plist */; };
+		F5079B1E16B46F430084A9DD /* buttonsAnimations.png in Resources */ = {isa = PBXBuildFile; fileRef = F5079B1A16B46F430084A9DD /* buttonsAnimations.png */; };
+		F5079B2116B472200084A9DD /* selectAnimal.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5079B1F16B472200084A9DD /* selectAnimal.plist */; };
+		F5079B2216B472200084A9DD /* selectAnimal.png in Resources */ = {isa = PBXBuildFile; fileRef = F5079B2016B472200084A9DD /* selectAnimal.png */; };
+		F5079B2516B4733A0084A9DD /* selectAnimal-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5079B2316B4733A0084A9DD /* selectAnimal-hd.plist */; };
+		F5079B2616B4733A0084A9DD /* selectAnimal-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F5079B2416B4733A0084A9DD /* selectAnimal-hd.png */; };
 		F508371F16B2F422007967B6 /* MainMenuScene.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = F508371E16B2F422007967B6 /* MainMenuScene.ccbi */; };
 		F508372116B2F91E007967B6 /* SelectAnimalScene.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = F508372016B2F91E007967B6 /* SelectAnimalScene.ccbi */; };
 		F508372416B2F939007967B6 /* SelectAnimalScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F508372316B2F938007967B6 /* SelectAnimalScene.m */; };
@@ -417,6 +431,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F5079AC516B424FF0084A9DD /* mainMenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = mainMenu.plist; path = Resources/menu/mainMenu.plist; sourceTree = "<group>"; };
+		F5079AC616B424FF0084A9DD /* mainMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainMenu.png; path = Resources/menu/mainMenu.png; sourceTree = "<group>"; };
+		F5079AD116B447370084A9DD /* mainMenu-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "mainMenu-hd.plist"; path = "Resources/menu/mainMenu-hd.plist"; sourceTree = "<group>"; };
+		F5079AD216B447370084A9DD /* mainMenu-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mainMenu-hd.png"; path = "Resources/menu/mainMenu-hd.png"; sourceTree = "<group>"; };
+		F5079B0E16B454BF0084A9DD /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		F5079B0F16B454BF0084A9DD /* Common.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Common.mm; sourceTree = "<group>"; };
+		F5079B1116B4555E0084A9DD /* btnAnimation.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = btnAnimation.plist; sourceTree = "<group>"; };
+		F5079B1716B46F430084A9DD /* buttonsAnimations-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "buttonsAnimations-hd.plist"; path = "Resources/selectAnimal/buttonsAnimations-hd.plist"; sourceTree = "<group>"; };
+		F5079B1816B46F430084A9DD /* buttonsAnimations-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonsAnimations-hd.png"; path = "Resources/selectAnimal/buttonsAnimations-hd.png"; sourceTree = "<group>"; };
+		F5079B1916B46F430084A9DD /* buttonsAnimations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = buttonsAnimations.plist; path = Resources/selectAnimal/buttonsAnimations.plist; sourceTree = "<group>"; };
+		F5079B1A16B46F430084A9DD /* buttonsAnimations.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonsAnimations.png; path = Resources/selectAnimal/buttonsAnimations.png; sourceTree = "<group>"; };
+		F5079B1F16B472200084A9DD /* selectAnimal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = selectAnimal.plist; path = Resources/selectAnimal/selectAnimal.plist; sourceTree = "<group>"; };
+		F5079B2016B472200084A9DD /* selectAnimal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = selectAnimal.png; path = Resources/selectAnimal/selectAnimal.png; sourceTree = "<group>"; };
+		F5079B2316B4733A0084A9DD /* selectAnimal-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "selectAnimal-hd.plist"; path = "Resources/selectAnimal/selectAnimal-hd.plist"; sourceTree = "<group>"; };
+		F5079B2416B4733A0084A9DD /* selectAnimal-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectAnimal-hd.png"; path = "Resources/selectAnimal/selectAnimal-hd.png"; sourceTree = "<group>"; };
 		F508371E16B2F422007967B6 /* MainMenuScene.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = MainMenuScene.ccbi; path = Resources/MainMenuScene.ccbi; sourceTree = "<group>"; };
 		F508372016B2F91E007967B6 /* SelectAnimalScene.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = SelectAnimalScene.ccbi; path = Resources/SelectAnimalScene.ccbi; sourceTree = "<group>"; };
 		F508372216B2F938007967B6 /* SelectAnimalScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectAnimalScene.h; sourceTree = "<group>"; };
@@ -747,6 +776,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F5079A7016B412100084A9DD /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+				F5079B2316B4733A0084A9DD /* selectAnimal-hd.plist */,
+				F5079B2416B4733A0084A9DD /* selectAnimal-hd.png */,
+				F5079B1F16B472200084A9DD /* selectAnimal.plist */,
+				F5079B2016B472200084A9DD /* selectAnimal.png */,
+				F5079B1116B4555E0084A9DD /* btnAnimation.plist */,
+				F5079B1716B46F430084A9DD /* buttonsAnimations-hd.plist */,
+				F5079B1816B46F430084A9DD /* buttonsAnimations-hd.png */,
+				F5079B1916B46F430084A9DD /* buttonsAnimations.plist */,
+				F5079B1A16B46F430084A9DD /* buttonsAnimations.png */,
+				F5079AD116B447370084A9DD /* mainMenu-hd.plist */,
+				F5079AD216B447370084A9DD /* mainMenu-hd.png */,
+				F5079AC516B424FF0084A9DD /* mainMenu.plist */,
+				F5079AC616B424FF0084A9DD /* mainMenu.png */,
+			);
+			name = Menus;
+			sourceTree = "<group>";
+		};
 		F50C839716B3B3E1008102CF /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -850,6 +899,8 @@
 				F529F68816B3BA0400EB0CE8 /* MySHKConfigurator.h */,
 				F529F68916B3BA0400EB0CE8 /* MySHKConfigurator.m */,
 				F529F68A16B3BA0400EB0CE8 /* SHKSharers.plist */,
+				F5079B0E16B454BF0084A9DD /* Common.h */,
+				F5079B0F16B454BF0084A9DD /* Common.mm */,
 				F53F6BD116B2DAB900444747 /* Resources */,
 				F53F6BEB16B2DAB900444747 /* libs */,
 				F53F6D4416B2DABC00444747 /* Supporting Files */,
@@ -860,6 +911,7 @@
 		F53F6BD116B2DAB900444747 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F5079A7016B412100084A9DD /* Menus */,
 				F508372016B2F91E007967B6 /* SelectAnimalScene.ccbi */,
 				F508371E16B2F422007967B6 /* MainMenuScene.ccbi */,
 				F5916FF616B2FC9A00B50F88 /* levelBtn.png */,
@@ -1559,6 +1611,19 @@
 				F508372116B2F91E007967B6 /* SelectAnimalScene.ccbi in Resources */,
 				F5916FF716B2FC9A00B50F88 /* levelBtn.png in Resources */,
 				F529F68C16B3BA0400EB0CE8 /* SHKSharers.plist in Resources */,
+				F5079AC716B425000084A9DD /* mainMenu.plist in Resources */,
+				F5079AC816B425000084A9DD /* mainMenu.png in Resources */,
+				F5079AD316B447370084A9DD /* mainMenu-hd.plist in Resources */,
+				F5079AD416B447370084A9DD /* mainMenu-hd.png in Resources */,
+				F5079B1216B4555E0084A9DD /* btnAnimation.plist in Resources */,
+				F5079B1B16B46F430084A9DD /* buttonsAnimations-hd.plist in Resources */,
+				F5079B1C16B46F430084A9DD /* buttonsAnimations-hd.png in Resources */,
+				F5079B1D16B46F430084A9DD /* buttonsAnimations.plist in Resources */,
+				F5079B1E16B46F430084A9DD /* buttonsAnimations.png in Resources */,
+				F5079B2116B472200084A9DD /* selectAnimal.plist in Resources */,
+				F5079B2216B472200084A9DD /* selectAnimal.png in Resources */,
+				F5079B2516B4733A0084A9DD /* selectAnimal-hd.plist in Resources */,
+				F5079B2616B4733A0084A9DD /* selectAnimal-hd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1682,6 +1747,7 @@
 				F52C60A016B2EE4800751BA6 /* AppDelegate.m in Sources */,
 				F508372416B2F939007967B6 /* SelectAnimalScene.m in Sources */,
 				F529F68B16B3BA0400EB0CE8 /* MySHKConfigurator.m in Sources */,
+				F5079B1016B454BF0084A9DD /* Common.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

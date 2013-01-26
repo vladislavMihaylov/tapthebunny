@@ -29,28 +29,34 @@
 - (void) pressedShare
 {
     [self hideSubButtonsWithTag: kSpeedBtnTag andSecondTag: kSoundBtnTag];
+    [self hideSlideForButton: 106];
     
     if(!isOpenShareMenu)
     {
         [self showSubButtonsWithTag: kFaceBookBtnTag andSecondTag: kTwitterBtnTag];
+        [self showSlideForButton: 105];
     }
     else
     {
         [self hideSubButtonsWithTag: kFaceBookBtnTag andSecondTag: kTwitterBtnTag];
+        [self hideSlideForButton: 105];
     }
 }
 
 - (void) pressedOptions: (id) sender
 {
     [self hideSubButtonsWithTag: kFaceBookBtnTag andSecondTag: kTwitterBtnTag];
+    [self hideSlideForButton: 105];
     
     if(!isOpenOptionsMenu)
     {
         [self showSubButtonsWithTag: kSpeedBtnTag andSecondTag: kSoundBtnTag];
+        [self showSlideForButton: 106];
     }
     else
     {
         [self hideSubButtonsWithTag: kSpeedBtnTag andSecondTag: kSoundBtnTag];
+        [self hideSlideForButton: 106];
     }
 }
 
@@ -58,6 +64,9 @@
 {
     [self hideSubButtonsWithTag: kFaceBookBtnTag andSecondTag: kTwitterBtnTag];
     [self hideSubButtonsWithTag: kSpeedBtnTag andSecondTag: kSoundBtnTag];
+    
+    [self hideSlideForButton: 105];
+    [self hideSlideForButton: 106];
     
     CCLOG(@"Cart");
 }
@@ -67,18 +76,19 @@
     [self hideSubButtonsWithTag: kFaceBookBtnTag andSecondTag: kTwitterBtnTag];
     [self hideSubButtonsWithTag: kSpeedBtnTag andSecondTag: kSoundBtnTag];
     
-    CCLOG(@"Gift");
+    [self hideSlideForButton: 105];
+    [self hideSlideForButton: 106];
 }
 
 - (void) sendFB
 {
-    SHKItem *facebookItem = [SHKItem text: @"Best game ever!!! #doodlecalls"];
+    SHKItem *facebookItem = [SHKItem text: @"Best game ever!!! #tapthebunny"];
     [SHKFacebook shareItem: facebookItem];
 }
 
 - (void) sendTweet
 {
-    SHKItem *tweetItem = [SHKItem text: @"Best game ever!!! #doodlecalls"];
+    SHKItem *tweetItem = [SHKItem text: @"Best game ever!!! #tapthebunny"];
     [SHKTwitter shareItem: tweetItem];
 }
 
@@ -98,6 +108,30 @@
     isOpenShareMenu = NO;
     
     CCLOG(@"OKAY");
+}
+
+- (void) showSlideForButton: (NSInteger) sliderTag
+{
+    CCArray *arr = [self children];
+    for(CCNode *mynode in arr)
+    {
+        if(mynode.tag == sliderTag)
+        {
+            [mynode runAction: [CCScaleTo actionWithDuration: 0.2 scaleX: 1 scaleY: 1]];
+        }
+    }
+}
+
+- (void) hideSlideForButton: (NSInteger) sliderTag
+{
+    CCArray *arr = [self children];
+    for(CCNode *mynode in arr)
+    {
+        if(mynode.tag == sliderTag)
+        {
+            [mynode runAction: [CCScaleTo actionWithDuration: 0.2 scaleX: 1 scaleY: 0]];
+        }
+    }
 }
 
 - (void) showSubButtonsWithTag: (NSInteger) firstTag andSecondTag: (NSInteger) secondTag
@@ -123,7 +157,7 @@
                 {
                     [curNode runAction: [CCSequence actions:
                                                         [CCMoveTo actionWithDuration: 0.2
-                                                                            position: ccp(curNode.position.x, 100)],
+                                                                            position: ccp(curNode.position.x, 110)],
                                          [CCCallBlock actionWithBlock: ^(id sender) {curNode.isEnabled = YES;}], nil]];
                 }
                 if(curNode.tag == secondTag)

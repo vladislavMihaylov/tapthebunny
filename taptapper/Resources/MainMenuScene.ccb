@@ -50,7 +50,7 @@
 						<key>value</key>
 						<array>
 							<real>240</real>
-							<real>160</real>
+							<real>161</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -80,14 +80,6 @@
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>rotation</string>
-						<key>type</key>
-						<string>Degrees</string>
-						<key>value</key>
-						<real>90</real>
-					</dict>
-					<dict>
-						<key>name</key>
 						<string>tag</string>
 						<key>type</key>
 						<string>Integer</string>
@@ -109,19 +101,240 @@
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string></string>
-							<string>Default.png</string>
+							<string>menu/mainMenu.plist</string>
+							<string>menuBg.png</string>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>CCSprite</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>0</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>402</real>
+							<real>125</real>
+							<integer>0</integer>
 						</array>
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>blendFunc</string>
+						<string>anchorPoint</string>
 						<key>type</key>
-						<string>Blendmode</string>
+						<string>Point</string>
 						<key>value</key>
 						<array>
-							<integer>770</integer>
-							<integer>771</integer>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ignoreAnchorPointForPosition</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>displayFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string>menu/mainMenu.plist</string>
+							<string>titles.png</string>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>CCSprite</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>0</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>61</real>
+							<real>35</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.0</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>0.0</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>tag</string>
+						<key>type</key>
+						<string>Integer</string>
+						<key>value</key>
+						<integer>105</integer>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ignoreAnchorPointForPosition</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>displayFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string>menu/mainMenu.plist</string>
+							<string>slideBg.png</string>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>CCSprite</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>0</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>141</real>
+							<real>35</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.0</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>0.0</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>tag</string>
+						<key>type</key>
+						<string>Integer</string>
+						<key>value</key>
+						<integer>106</integer>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ignoreAnchorPointForPosition</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>displayFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string>menu/mainMenu.plist</string>
+							<string>slideBg.png</string>
 						</array>
 					</dict>
 				</array>
@@ -153,8 +366,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>402</real>
-									<real>172</real>
+									<real>403</real>
+									<real>100</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -224,8 +437,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-72.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>playBtn.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -235,8 +448,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-Small.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>playBtnOn.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -246,11 +459,13 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-Small-50.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>playBtnOn.png</string>
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>baseClass</key>
@@ -274,7 +489,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>57</real>
+									<real>60</real>
 									<real>50</real>
 									<integer>0</integer>
 								</array>
@@ -345,8 +560,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-Small.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>facebookBtn.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -356,8 +571,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>facebookBtnOn.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -367,8 +582,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-Small.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>facebookBtn.png</string>
 								</array>
 							</dict>
 						</array>
@@ -395,7 +610,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>57</real>
+									<real>60</real>
 									<real>50</real>
 									<integer>0</integer>
 								</array>
@@ -466,8 +681,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-Small.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>twitterBtn.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -477,8 +692,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>twitterBtnOn.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -488,8 +703,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-Small.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>twitterBtn.png</string>
 								</array>
 							</dict>
 						</array>
@@ -516,7 +731,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>56</real>
+									<real>60</real>
 									<real>50</real>
 									<integer>0</integer>
 								</array>
@@ -587,8 +802,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-Small-50.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>shareBtn.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -598,8 +813,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-72.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>shareBtnOn.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -609,8 +824,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-72.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>shareBtn.png</string>
 								</array>
 							</dict>
 						</array>
@@ -637,7 +852,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>131</real>
+									<real>140</real>
 									<real>50</real>
 									<integer>0</integer>
 								</array>
@@ -708,8 +923,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-Small.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>soundOnBtn.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -719,8 +934,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>soundOffBtn.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -730,8 +945,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-Small.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>soundOffBtn.png</string>
 								</array>
 							</dict>
 						</array>
@@ -758,7 +973,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>131</real>
+									<real>140</real>
 									<real>50</real>
 									<integer>0</integer>
 								</array>
@@ -829,8 +1044,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-Small.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>speed1Btn.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -840,8 +1055,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>speed2Btn.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -851,8 +1066,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-Small.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>speed2Btn.png</string>
 								</array>
 							</dict>
 						</array>
@@ -879,8 +1094,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>133</real>
-									<real>55</real>
+									<real>140</real>
+									<real>50</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -950,8 +1165,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>optionBtn.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -961,8 +1176,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-Small-50.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>optionBtnOn.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -972,8 +1187,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-72.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>optionBtn.png</string>
 								</array>
 							</dict>
 						</array>
@@ -1000,8 +1215,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>194</real>
-									<real>56</real>
+									<real>220</real>
+									<real>50</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -1071,8 +1286,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-Small.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>cartBtn.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1082,8 +1297,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-72.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>cartBtnOn.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1093,8 +1308,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-72.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>cartBtn.png</string>
 								</array>
 							</dict>
 						</array>
@@ -1121,8 +1336,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>264</real>
-									<real>62</real>
+									<real>300</real>
+									<real>50</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -1192,8 +1407,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-72.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>giftBtn.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1203,8 +1418,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-Small.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>giftBtnOn.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1214,8 +1429,8 @@
 								<string>SpriteFrame</string>
 								<key>value</key>
 								<array>
-									<string></string>
-									<string>Icon-72.png</string>
+									<string>menu/mainMenu.plist</string>
+									<string>giftBtn.png</string>
 								</array>
 							</dict>
 						</array>

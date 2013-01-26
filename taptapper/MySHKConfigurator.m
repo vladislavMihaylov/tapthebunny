@@ -35,7 +35,7 @@
  These values are used by any service that shows 'shared from XYZ'
  */
 - (NSString*)appName {
-	return @"Doodle Calls";
+	return @"Tap The Bunny";
 }
 
 - (NSString*)appURL {
@@ -76,7 +76,7 @@
 // 
 //    Your CFBundleURLSchemes entry: fb555lite
 - (NSString*)facebookAppId {
-	return @"272830839511953";
+	return @"405614939525869";
 }
 
 - (NSString*)facebookLocalAppId {
@@ -139,11 +139,11 @@
 }
 
 - (NSString*)twitterConsumerKey {
-	return @"uGpLDL9MeTPXToSNKDmQyg";
+	return @"Dob8jfioVUxD1x0nmVHA";
 }
 
 - (NSString*)twitterSecret {
-	return @"TEgPsmkwzXJHN7jW1bK9N8BQsa1PjyudF9QNidgC4";
+	return @"krSQbw8g5axrj8cgUp1qfQmAkXPuIAKLMCvGdrCWafc";
 }
 // You need to set this if using OAuth, see note above (xAuth users can skip it)
 - (NSString*)twitterCallbackUrl {
