@@ -14,6 +14,9 @@
 
 #import "GameConfig.h"
 
+#import "SHKItem.h"
+#import "SHKFacebook.h"
+#import "SHKTwitter.h"
 
 @implementation MainMenuScene
 
@@ -69,12 +72,14 @@
 
 - (void) sendFB
 {
-    CCLOG(@"FaceBook");
+    SHKItem *facebookItem = [SHKItem text: @"Best game ever!!! #doodlecalls"];
+    [SHKFacebook shareItem: facebookItem];
 }
 
 - (void) sendTweet
 {
-    CCLOG(@"Twitter");
+    SHKItem *tweetItem = [SHKItem text: @"Best game ever!!! #doodlecalls"];
+    [SHKTwitter shareItem: tweetItem];
 }
 
 - (void) soundMode

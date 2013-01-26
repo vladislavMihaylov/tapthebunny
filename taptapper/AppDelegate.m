@@ -12,7 +12,10 @@
 
 #import "CCBReader.h"
 
+#import "SHKConfiguration.h"
+#import "MySHKConfigurator.h"
 
+#import "SHKFacebook.h"
 
 @implementation AppController
 
@@ -20,6 +23,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    DefaultSHKConfigurator *configurator = [[[MySHKConfigurator alloc] init] autorelease];
+    
+    [SHKConfiguration sharedInstanceWithConfigurator: configurator];
+    
 	// Create the main window
 	window_ = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
@@ -116,7 +123,7 @@
 	if( [navController_ visibleViewController] == director_ )
 		[director_ resume];
     
-    ///[SHKFacebook handleDidBecomeActive]; /////////////////////////////////////////////////////////////////////////////////////////
+    [SHKFacebook handleDidBecomeActive]; /////////////////////////////////////////////////////////////////////////////////////////
 }
 
 -(void) applicationDidEnterBackground:(UIApplication*)application
@@ -136,7 +143,7 @@
 {
 	CC_DIRECTOR_END();
     
-    //[SHKFacebook handleWillTerminate]; /////////////////////////////////////////////////////////////////////////////////////////
+    [SHKFacebook handleWillTerminate]; /////////////////////////////////////////////////////////////////////////////////////////
 }
 
 // purge memory
@@ -161,7 +168,7 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/*- (BOOL)handleOpenURL:(NSURL*)url
+- (BOOL)handleOpenURL:(NSURL*)url
 {
     NSString* scheme = [url scheme];
     NSString* prefix = [NSString stringWithFormat:@"fb%@", SHKCONFIG(facebookAppId)];
@@ -178,7 +185,7 @@
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
     return [self handleOpenURL:url];
-}*/
+}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
