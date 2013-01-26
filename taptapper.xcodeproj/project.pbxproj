@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F508371F16B2F422007967B6 /* MainMenuScene.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = F508371E16B2F422007967B6 /* MainMenuScene.ccbi */; };
+		F508372116B2F91E007967B6 /* SelectAnimalScene.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = F508372016B2F91E007967B6 /* SelectAnimalScene.ccbi */; };
+		F508372416B2F939007967B6 /* SelectAnimalScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F508372316B2F938007967B6 /* SelectAnimalScene.m */; };
+		F52C60A016B2EE4800751BA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F52C609F16B2EE4800751BA6 /* AppDelegate.m */; };
 		F53F6BBF16B2DAB900444747 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53F6BBE16B2DAB900444747 /* QuartzCore.framework */; };
 		F53F6BC116B2DAB900444747 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53F6BC016B2DAB900444747 /* OpenGLES.framework */; };
 		F53F6BC316B2DAB900444747 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53F6BC216B2DAB900444747 /* OpenAL.framework */; };
@@ -130,12 +134,24 @@
 		F53F6D4016B2DABC00444747 /* vec3.c in Sources */ = {isa = PBXBuildFile; fileRef = F53F6D3F16B2DABC00444747 /* vec3.c */; };
 		F53F6D4216B2DABC00444747 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = F53F6D4116B2DABC00444747 /* vec4.c */; };
 		F53F6D4716B2DABC00444747 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F53F6D4616B2DABC00444747 /* main.m */; };
-		F53F6D4A16B2DABC00444747 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F53F6D4916B2DABC00444747 /* AppDelegate.m */; };
-		F53F6D4D16B2DABC00444747 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F53F6D4C16B2DABC00444747 /* HelloWorldLayer.m */; };
-		F53F6D5016B2DABC00444747 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F53F6D4F16B2DABC00444747 /* IntroLayer.m */; };
+		F53F6D4D16B2DABC00444747 /* GameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F53F6D4C16B2DABC00444747 /* GameLayer.m */; };
+		F542BE5316B2DEAC00DBBD42 /* GameConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F542BE5216B2DEAC00DBBD42 /* GameConfig.m */; };
+		F542BE5616B2E95100DBBD42 /* MainMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F542BE5516B2E95100DBBD42 /* MainMenuScene.m */; };
+		F542BE6416B2E9CD00DBBD42 /* CCBAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F542BE5916B2E9CD00DBBD42 /* CCBAnimationManager.m */; };
+		F542BE6516B2E9CD00DBBD42 /* CCBKeyframe.m in Sources */ = {isa = PBXBuildFile; fileRef = F542BE5B16B2E9CD00DBBD42 /* CCBKeyframe.m */; };
+		F542BE6616B2E9CD00DBBD42 /* CCBReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F542BE5D16B2E9CD00DBBD42 /* CCBReader.m */; };
+		F542BE6716B2E9CD00DBBD42 /* CCBsequence.m in Sources */ = {isa = PBXBuildFile; fileRef = F542BE5F16B2E9CD00DBBD42 /* CCBsequence.m */; };
+		F542BE6816B2E9CD00DBBD42 /* CCBSequenceProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = F542BE6116B2E9CD00DBBD42 /* CCBSequenceProperty.m */; };
+		F542BE6916B2E9CD00DBBD42 /* CCNode+CCBRelativePositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = F542BE6316B2E9CD00DBBD42 /* CCNode+CCBRelativePositioning.m */; };
+		F5916FF716B2FC9A00B50F88 /* levelBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = F5916FF616B2FC9A00B50F88 /* levelBtn.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F508371E16B2F422007967B6 /* MainMenuScene.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = MainMenuScene.ccbi; path = Resources/MainMenuScene.ccbi; sourceTree = "<group>"; };
+		F508372016B2F91E007967B6 /* SelectAnimalScene.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = SelectAnimalScene.ccbi; path = Resources/SelectAnimalScene.ccbi; sourceTree = "<group>"; };
+		F508372216B2F938007967B6 /* SelectAnimalScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectAnimalScene.h; sourceTree = "<group>"; };
+		F508372316B2F938007967B6 /* SelectAnimalScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectAnimalScene.m; sourceTree = "<group>"; };
+		F52C609F16B2EE4800751BA6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F53F6BBA16B2DAB900444747 /* taptapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taptapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53F6BBE16B2DAB900444747 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F53F6BC016B2DAB900444747 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -393,11 +409,25 @@
 		F53F6D4516B2DABC00444747 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		F53F6D4616B2DABC00444747 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F53F6D4816B2DABC00444747 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F53F6D4916B2DABC00444747 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F53F6D4B16B2DABC00444747 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		F53F6D4C16B2DABC00444747 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
-		F53F6D4E16B2DABC00444747 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
-		F53F6D4F16B2DABC00444747 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		F53F6D4B16B2DABC00444747 /* GameLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameLayer.h; sourceTree = "<group>"; };
+		F53F6D4C16B2DABC00444747 /* GameLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameLayer.m; sourceTree = "<group>"; };
+		F542BE5116B2DEAC00DBBD42 /* GameConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		F542BE5216B2DEAC00DBBD42 /* GameConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameConfig.m; sourceTree = "<group>"; };
+		F542BE5416B2E95100DBBD42 /* MainMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuScene.h; sourceTree = "<group>"; };
+		F542BE5516B2E95100DBBD42 /* MainMenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuScene.m; sourceTree = "<group>"; };
+		F542BE5816B2E9CD00DBBD42 /* CCBAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBAnimationManager.h; sourceTree = "<group>"; };
+		F542BE5916B2E9CD00DBBD42 /* CCBAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBAnimationManager.m; sourceTree = "<group>"; };
+		F542BE5A16B2E9CD00DBBD42 /* CCBKeyframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBKeyframe.h; sourceTree = "<group>"; };
+		F542BE5B16B2E9CD00DBBD42 /* CCBKeyframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBKeyframe.m; sourceTree = "<group>"; };
+		F542BE5C16B2E9CD00DBBD42 /* CCBReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBReader.h; sourceTree = "<group>"; };
+		F542BE5D16B2E9CD00DBBD42 /* CCBReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBReader.m; sourceTree = "<group>"; };
+		F542BE5E16B2E9CD00DBBD42 /* CCBSequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBSequence.h; sourceTree = "<group>"; };
+		F542BE5F16B2E9CD00DBBD42 /* CCBsequence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBsequence.m; sourceTree = "<group>"; };
+		F542BE6016B2E9CD00DBBD42 /* CCBSequenceProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBSequenceProperty.h; sourceTree = "<group>"; };
+		F542BE6116B2E9CD00DBBD42 /* CCBSequenceProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBSequenceProperty.m; sourceTree = "<group>"; };
+		F542BE6216B2E9CD00DBBD42 /* CCNode+CCBRelativePositioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCNode+CCBRelativePositioning.h"; sourceTree = "<group>"; };
+		F542BE6316B2E9CD00DBBD42 /* CCNode+CCBRelativePositioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCNode+CCBRelativePositioning.m"; sourceTree = "<group>"; };
+		F5916FF616B2FC9A00B50F88 /* levelBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = levelBtn.png; path = Resources/levelBtn.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -456,12 +486,17 @@
 		F53F6BD016B2DAB900444747 /* taptapper */ = {
 			isa = PBXGroup;
 			children = (
+				F542BE5716B2E9BC00DBBD42 /* CCBReader */,
 				F53F6D4816B2DABC00444747 /* AppDelegate.h */,
-				F53F6D4916B2DABC00444747 /* AppDelegate.m */,
-				F53F6D4B16B2DABC00444747 /* HelloWorldLayer.h */,
-				F53F6D4C16B2DABC00444747 /* HelloWorldLayer.m */,
-				F53F6D4E16B2DABC00444747 /* IntroLayer.h */,
-				F53F6D4F16B2DABC00444747 /* IntroLayer.m */,
+				F52C609F16B2EE4800751BA6 /* AppDelegate.m */,
+				F53F6D4B16B2DABC00444747 /* GameLayer.h */,
+				F53F6D4C16B2DABC00444747 /* GameLayer.m */,
+				F542BE5116B2DEAC00DBBD42 /* GameConfig.h */,
+				F542BE5216B2DEAC00DBBD42 /* GameConfig.m */,
+				F542BE5416B2E95100DBBD42 /* MainMenuScene.h */,
+				F542BE5516B2E95100DBBD42 /* MainMenuScene.m */,
+				F508372216B2F938007967B6 /* SelectAnimalScene.h */,
+				F508372316B2F938007967B6 /* SelectAnimalScene.m */,
 				F53F6BD116B2DAB900444747 /* Resources */,
 				F53F6BEB16B2DAB900444747 /* libs */,
 				F53F6D4416B2DABC00444747 /* Supporting Files */,
@@ -472,6 +507,9 @@
 		F53F6BD116B2DAB900444747 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F508372016B2F91E007967B6 /* SelectAnimalScene.ccbi */,
+				F508371E16B2F422007967B6 /* MainMenuScene.ccbi */,
+				F5916FF616B2FC9A00B50F88 /* levelBtn.png */,
 				F53F6BD216B2DAB900444747 /* Default.png */,
 				F53F6BD416B2DAB900444747 /* Default-Landscape~ipad.png */,
 				F53F6BD616B2DAB900444747 /* fps_images.png */,
@@ -832,6 +870,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F542BE5716B2E9BC00DBBD42 /* CCBReader */ = {
+			isa = PBXGroup;
+			children = (
+				F542BE5816B2E9CD00DBBD42 /* CCBAnimationManager.h */,
+				F542BE5916B2E9CD00DBBD42 /* CCBAnimationManager.m */,
+				F542BE5A16B2E9CD00DBBD42 /* CCBKeyframe.h */,
+				F542BE5B16B2E9CD00DBBD42 /* CCBKeyframe.m */,
+				F542BE5C16B2E9CD00DBBD42 /* CCBReader.h */,
+				F542BE5D16B2E9CD00DBBD42 /* CCBReader.m */,
+				F542BE5E16B2E9CD00DBBD42 /* CCBSequence.h */,
+				F542BE5F16B2E9CD00DBBD42 /* CCBsequence.m */,
+				F542BE6016B2E9CD00DBBD42 /* CCBSequenceProperty.h */,
+				F542BE6116B2E9CD00DBBD42 /* CCBSequenceProperty.m */,
+				F542BE6216B2E9CD00DBBD42 /* CCNode+CCBRelativePositioning.h */,
+				F542BE6316B2E9CD00DBBD42 /* CCNode+CCBRelativePositioning.m */,
+			);
+			name = CCBReader;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -895,6 +952,9 @@
 				F53F6BE716B2DAB900444747 /* Icon@2x.png in Resources */,
 				F53F6BEA16B2DAB900444747 /* iTunesArtwork in Resources */,
 				F53F6D2816B2DABB00444747 /* ChangeLog in Resources */,
+				F508371F16B2F422007967B6 /* MainMenuScene.ccbi in Resources */,
+				F508372116B2F91E007967B6 /* SelectAnimalScene.ccbi in Resources */,
+				F5916FF716B2FC9A00B50F88 /* levelBtn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1006,9 +1066,17 @@
 				F53F6D4016B2DABC00444747 /* vec3.c in Sources */,
 				F53F6D4216B2DABC00444747 /* vec4.c in Sources */,
 				F53F6D4716B2DABC00444747 /* main.m in Sources */,
-				F53F6D4A16B2DABC00444747 /* AppDelegate.m in Sources */,
-				F53F6D4D16B2DABC00444747 /* HelloWorldLayer.m in Sources */,
-				F53F6D5016B2DABC00444747 /* IntroLayer.m in Sources */,
+				F53F6D4D16B2DABC00444747 /* GameLayer.m in Sources */,
+				F542BE5316B2DEAC00DBBD42 /* GameConfig.m in Sources */,
+				F542BE5616B2E95100DBBD42 /* MainMenuScene.m in Sources */,
+				F542BE6416B2E9CD00DBBD42 /* CCBAnimationManager.m in Sources */,
+				F542BE6516B2E9CD00DBBD42 /* CCBKeyframe.m in Sources */,
+				F542BE6616B2E9CD00DBBD42 /* CCBReader.m in Sources */,
+				F542BE6716B2E9CD00DBBD42 /* CCBsequence.m in Sources */,
+				F542BE6816B2E9CD00DBBD42 /* CCBSequenceProperty.m in Sources */,
+				F542BE6916B2E9CD00DBBD42 /* CCNode+CCBRelativePositioning.m in Sources */,
+				F52C60A016B2EE4800751BA6 /* AppDelegate.m in Sources */,
+				F508372416B2F939007967B6 /* SelectAnimalScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1112,6 +1180,7 @@
 				F53F6D5516B2DABC00444747 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,15 +1,18 @@
 //
 //  AppDelegate.m
-//  taptapper
+//  doodleCalls
 //
-//  Created by Vlad on 25.01.13.
-//  Copyright __MyCompanyName__ 2013. All rights reserved.
+//  Created by Vlad on 04.12.12.
+//  Copyright __MyCompanyName__ 2012. All rights reserved.
 //
 
 #import "cocos2d.h"
 
 #import "AppDelegate.h"
-#import "IntroLayer.h"
+
+#import "CCBReader.h"
+
+
 
 @implementation AppController
 
@@ -35,7 +38,7 @@
 	director_.wantsFullScreenLayout = YES;
 
 	// Display FSP and SPF
-	[director_ setDisplayStats:YES];
+	[director_ setDisplayStats: NO];
 
 	// set FPS at 60
 	[director_ setAnimationInterval:1.0/60];
@@ -69,12 +72,15 @@
 	[sharedFileUtils setiPadSuffix:@"-ipad"];					// Default on iPad is "ipad"
 	[sharedFileUtils setiPadRetinaDisplaySuffix:@"-ipadhd"];	// Default on iPad RetinaDisplay is "-ipadhd"
 
+
 	// Assume that PVR images have premultiplied alpha
 	[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
 
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
-	[director_ pushScene: [IntroLayer scene]]; 
-
+	//[director_ pushScene: [IntroLayer scene]];
+    
+    CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"MainMenuScene.ccbi"];
+    [director_ pushScene: mainScene]; 
 	
 	// Create a Navigation Controller with the Director
 	navController_ = [[UINavigationController alloc] initWithRootViewController:director_];
@@ -109,6 +115,8 @@
 {
 	if( [navController_ visibleViewController] == director_ )
 		[director_ resume];
+    
+    ///[SHKFacebook handleDidBecomeActive]; /////////////////////////////////////////////////////////////////////////////////////////
 }
 
 -(void) applicationDidEnterBackground:(UIApplication*)application
@@ -127,6 +135,8 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
 	CC_DIRECTOR_END();
+    
+    //[SHKFacebook handleWillTerminate]; /////////////////////////////////////////////////////////////////////////////////////////
 }
 
 // purge memory
@@ -148,5 +158,29 @@
 
 	[super dealloc];
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*- (BOOL)handleOpenURL:(NSURL*)url
+{
+    NSString* scheme = [url scheme];
+    NSString* prefix = [NSString stringWithFormat:@"fb%@", SHKCONFIG(facebookAppId)];
+    if ([scheme hasPrefix:prefix])
+        return [SHKFacebook handleOpenURL:url];
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [self handleOpenURL:url];
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return [self handleOpenURL:url];
+}*/
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 @end
 
