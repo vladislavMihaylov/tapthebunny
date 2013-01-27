@@ -22,8 +22,16 @@
 
 - (void) pressedPlay: (id) sender
 {
-    CCScene* selectAnimalScene = [CCBReader sceneWithNodeGraphFromFile: @"SelectAnimalScene.ccbi"];
-    [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: selectAnimalScene]];
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        CCScene* selectAnimalScene = [CCBReader sceneWithNodeGraphFromFile: @"SelectAnimal-ipad.ccbi"];
+        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: selectAnimalScene]];
+    }
+    else
+    {
+        CCScene* selectAnimalScene = [CCBReader sceneWithNodeGraphFromFile: @"SelectAnimalScene.ccbi"];
+        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: selectAnimalScene]];
+    }
 }
 
 - (void) pressedShare
@@ -107,7 +115,28 @@
     isOpenOptionsMenu = NO;
     isOpenShareMenu = NO;
     
-    CCLOG(@"OKAY");
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        startHeight = 80;
+        firstBtnHeight = 185;
+        secondBtnHeight = 260;
+        
+        slideScale = 0.9;
+        
+        CCLOG(@"iPad");
+    }
+    else
+    {
+        startHeight = 50;
+        firstBtnHeight = 110;
+        secondBtnHeight = 150;
+        
+        slideScale = 1;
+        
+        CCLOG(@"iPhone");
+    }
+    
+    
 }
 
 - (void) showSlideForButton: (NSInteger) sliderTag
@@ -117,7 +146,7 @@
     {
         if(mynode.tag == sliderTag)
         {
-            [mynode runAction: [CCScaleTo actionWithDuration: 0.2 scaleX: 1 scaleY: 1]];
+            [mynode runAction: [CCScaleTo actionWithDuration: 0.2 scaleX: 1 scaleY: slideScale]];
         }
     }
 }
@@ -157,14 +186,14 @@
                 {
                     [curNode runAction: [CCSequence actions:
                                                         [CCMoveTo actionWithDuration: 0.2
-                                                                            position: ccp(curNode.position.x, 110)],
+                                                                            position: ccp(curNode.position.x, firstBtnHeight)],
                                          [CCCallBlock actionWithBlock: ^(id sender) {curNode.isEnabled = YES;}], nil]];
                 }
                 if(curNode.tag == secondTag)
                 {
                     [curNode runAction: [CCSequence actions:
                                          [CCMoveTo actionWithDuration: 0.2
-                                                             position: ccp(curNode.position.x, 150)],
+                                                             position: ccp(curNode.position.x, secondBtnHeight)],
                                          [CCCallBlock actionWithBlock: ^(id sender) {curNode.isEnabled = YES;}], nil]];
                 }
             }
@@ -196,14 +225,14 @@
                 {
                     [curNode runAction: [CCSequence actions:
                                          [CCMoveTo actionWithDuration: 0.2
-                                                             position: ccp(curNode.position.x, 50)],
+                                                             position: ccp(curNode.position.x, startHeight)],
                                          [CCCallBlock actionWithBlock: ^(id sender) {curNode.isEnabled = NO;}], nil]];
                 }
                 if(curNode.tag == secondTag)
                 {
                     [curNode runAction: [CCSequence actions:
                                          [CCMoveTo actionWithDuration: 0.2
-                                                             position: ccp(curNode.position.x, 50)],
+                                                             position: ccp(curNode.position.x, startHeight)],
                                          [CCCallBlock actionWithBlock: ^(id sender) {curNode.isEnabled = NO;}], nil]];
                 }
             }

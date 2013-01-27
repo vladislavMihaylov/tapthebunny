@@ -49,8 +49,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>240</real>
-							<real>161</real>
+							<real>512</real>
+							<real>384</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -131,8 +131,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>402</real>
-							<real>125</real>
+							<real>852</real>
+							<real>277</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -203,8 +203,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>61</real>
-							<real>35</real>
+							<real>120</real>
+							<real>70</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -283,8 +283,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>141</real>
-							<real>35</real>
+							<real>270</real>
+							<real>70</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -368,8 +368,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>403</real>
-									<real>100</real>
+									<real>855</real>
+									<real>242</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -489,8 +489,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>60</real>
-									<real>50</real>
+									<real>120</real>
+									<real>80</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -610,8 +610,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>60</real>
-									<real>50</real>
+									<real>120</real>
+									<real>80</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -731,8 +731,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>60</real>
-									<real>50</real>
+									<real>120</real>
+									<real>80</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -852,8 +852,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>140</real>
-									<real>50</real>
+									<real>270</real>
+									<real>80</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -973,8 +973,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>140</real>
-									<real>50</real>
+									<real>270</real>
+									<real>80</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -1094,8 +1094,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>140</real>
-									<real>50</real>
+									<real>270</real>
+									<real>80</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -1215,8 +1215,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>220</real>
-									<real>50</real>
+									<real>420</real>
+									<real>80</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -1336,8 +1336,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>300</real>
-									<real>50</real>
+									<real>570</real>
+									<real>80</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -1637,15 +1637,15 @@
 			<key>centeredOrigin</key>
 			<false/>
 			<key>ext</key>
-			<string> </string>
+			<string>ipad hd</string>
 			<key>height</key>
-			<integer>320</integer>
+			<integer>768</integer>
 			<key>name</key>
-			<string>iPhone Landscape</string>
+			<string>iPad Landscape</string>
 			<key>scale</key>
-			<real>1</real>
+			<real>2</real>
 			<key>width</key>
-			<integer>480</integer>
+			<integer>1024</integer>
 		</dict>
 	</array>
 	<key>sequences</key>

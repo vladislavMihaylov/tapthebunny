@@ -16,8 +16,16 @@
 
 - (void) back
 {
-    CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"MainMenuScene.ccbi"];
-    [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"MainMenuScene-ipad.ccbi"];
+        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
+    }
+    else
+    {
+        CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"MainMenuScene.ccbi"];
+        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
+    }
 }
 
 - (void) playWith: (CCMenuItemImage *) sender
@@ -29,18 +37,29 @@
 - (void) didLoadFromCCB
 {
     CCSprite *sprite = [CCSprite spriteWithFile: @"Icon.png"];
-    sprite.position = ccp(90, 84);
     sprite.anchorPoint = ccp(0.5, 0);
-    [self addChild: sprite];
     
     CCSprite *sprite2 = [CCSprite spriteWithFile: @"Icon.png"];
-    sprite2.position = ccp(240, 84);
     sprite2.anchorPoint = ccp(0.5, 0);
-    [self addChild: sprite2];
     
     CCSprite *sprite3 = [CCSprite spriteWithFile: @"Icon.png"];
-    sprite3.position = ccp(390, 84);
     sprite3.anchorPoint = ccp(0.5, 0);
+   
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        sprite.position = ccp(200, 223);
+        sprite2.position = ccp(512, 223);
+        sprite3.position = ccp(824, 223);
+    }
+    else
+    {
+        sprite.position = ccp(90, 84);
+        sprite2.position = ccp(240, 84);
+        sprite3.position = ccp(390, 84);
+    }
+    
+    [self addChild: sprite];
+    [self addChild: sprite2];
     [self addChild: sprite3];
     
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: @"buttonsAnimations.plist"];

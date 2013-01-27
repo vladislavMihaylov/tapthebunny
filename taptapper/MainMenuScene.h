@@ -13,6 +13,12 @@
 {
     BOOL isOpenShareMenu;
     BOOL isOpenOptionsMenu;
+    
+    NSInteger startHeight;
+    NSInteger firstBtnHeight;
+    NSInteger secondBtnHeight;
+    
+    float slideScale;
 }
 
 @end
