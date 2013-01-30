@@ -63,6 +63,8 @@
 
 @implementation CCSprite
 
+@synthesize isCanTap;
+
 @synthesize dirty = dirty_;
 @synthesize quad = quad_;
 @synthesize atlasIndex = atlasIndex_;

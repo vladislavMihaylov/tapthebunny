@@ -10,7 +10,10 @@
 #import "CCBReader.h"
 
 #import "GameLayer.h"
+#import "GameConfig.h"
 #import "Common.h"
+
+#import "FinishGame.h"
 
 @implementation SelectAnimalScene
 
@@ -20,18 +23,23 @@
     {
         CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"MainMenuScene-ipad.ccbi"];
         [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
+        
     }
     else
     {
         CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"MainMenuScene.ccbi"];
         [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
+        
+        
     }
 }
 
 - (void) playWith: (CCMenuItemImage *) sender
 {
-    [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: [GameLayer sceneWithAnimal: sender.tag]]];
+    animalNum = sender.tag;
     
+    CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"gameScene_1.ccbi"];
+    [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
 }
 
 - (void) didLoadFromCCB

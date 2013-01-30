@@ -107,8 +107,12 @@
 	// image is flipped
 	BOOL	flipX_;
 	BOOL	flipY_;
+    
+    
+    BOOL isCanTap;
 }
 
+@property (nonatomic, assign) BOOL isCanTap;
 /** whether or not the Sprite needs to be updated in the Atlas */
 @property (nonatomic,readwrite) BOOL dirty;
 /** the quad (tex coords, vertex coords and color) information */

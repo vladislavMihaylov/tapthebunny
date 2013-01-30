@@ -1,4 +1,4 @@
-/*
+  /*
  * CocosBuilder: http://www.cocosbuilder.com
  *
  * Copyright (c) 2012 Zynga Inc.

@@ -13,3 +13,5 @@
 
 extern float GameCenterX;
 extern float GameCenterY;
+
+extern NSInteger animalNum;

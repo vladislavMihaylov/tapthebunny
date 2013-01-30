@@ -9,6 +9,10 @@
 #import "GuiLayer.h"
 #import "GameLayer.h"
 
+#import "CCBReader.h"
+
+#import "FinishGame.h"
+
 @implementation GuiLayer
 
 @synthesize gameLayer;
@@ -16,12 +20,15 @@
 - (void) dealloc
 {
     [super dealloc];
+    [starsArray release];
 }
 
 - (id) init
 {
     if(self = [super init])
     {
+        starsArray = [[NSMutableArray alloc] init];
+        
         if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
         {
             screenWidth = 480;
@@ -41,6 +48,7 @@
         boxSprite.anchorPoint = ccp(0, 0);
         boxSprite.position = ccp(screenWidth + 10, 0);
         [self addChild: boxSprite];
+        
         
         pauseBtn = [CCSprite spriteWithSpriteFrameName: @"pauseBtn.png"];
         pauseBtnOn = [CCSprite spriteWithSpriteFrameName: @"pauseBtnOn.png"];
@@ -114,14 +122,20 @@
         
         CCMenuItemImage *restart = [CCMenuItemImage itemWithNormalSprite: restartBtn
                                                           selectedSprite:restartBtnOn
+                                                                  target: self
+                                                                selector: @selector(restart)
                                     ];
         
         CCMenuItemImage *mainMenu = [CCMenuItemImage itemWithNormalSprite: homeBtn
                                                            selectedSprite: homeBtnOn
+                                                                   target: self
+                                                                 selector: @selector(goHomeMenu)
                                      ];
         
         CCMenuItemImage *selectAnimalMenu = [CCMenuItemImage itemWithNormalSprite: selectBtn
                                                                    selectedSprite: selectBtnOn
+                                                                           target: self
+                                                                         selector: @selector(goSelectAnimal)
                                              ];
         
         CCMenuItemImage *tutorial = [CCMenuItemImage itemWithNormalSprite: tutorialBtn
@@ -155,19 +169,82 @@
     return self;
 }
 
+- (void) restart
+{
+    [self removeStars];
+    [gameLayer restartLevel];
+    [self hidePauseMenu];
+}
+
 - (void) showPauseMenu
 {
     [boxSprite runAction: [CCMoveTo actionWithDuration: 0.5 position: ccp(screenWidth - boxSprite.contentSize.width, 0)]];
+    [gameLayer pause];
 }
 
 - (void) hidePauseMenu
 {
-    [boxSprite runAction: [CCMoveTo actionWithDuration: 0.5 position: ccp(screenWidth + 10, 0)]];
+    [boxSprite runAction: [CCMoveTo actionWithDuration: 0.2 position: ccp(screenWidth + 10, 0)]];
+    [gameLayer unPause];
+}
+
+- (void) goHomeMenu
+{
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"MainMenuScene-ipad.ccbi"];
+        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
+    }
+    else
+    {
+        CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"MainMenuScene.ccbi"];
+        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
+    }
+}
+
+- (void) goSelectAnimal
+{
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        CCScene* selectAnimalScene = [CCBReader sceneWithNodeGraphFromFile: @"SelectAnimal-ipad.ccbi"];
+        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: selectAnimalScene]];
+    }
+    else
+    {
+        CCScene* selectAnimalScene = [CCBReader sceneWithNodeGraphFromFile: @"SelectAnimalScene.ccbi"];
+        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: selectAnimalScene]];
+    }
 }
 
 - (void) soundMode
 {
     
+}
+
+- (void) addStar
+{
+    CCSprite *starSprite = [CCSprite spriteWithFile: @"star.png"];
+    starSprite.position = ccp(125 + 40 * [starsArray count], 290);
+    [self addChild: starSprite];
+    
+    [starsArray addObject: starSprite];
+    
+    if([starsArray count] >= 6)
+    {
+        //[gameLayer pause];
+        CCLOG(@"You win!");
+        [gameLayer showMotherScene];
+    }
+}
+
+- (void) removeStars
+{
+    for(CCSprite *spriteToRemove in starsArray)
+    {
+        [self removeChild: spriteToRemove cleanup: YES];
+    }
+    
+    [starsArray removeAllObjects];
 }
 
 @end

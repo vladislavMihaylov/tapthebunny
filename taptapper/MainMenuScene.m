@@ -112,6 +112,8 @@
 
 - (void) didLoadFromCCB
 {
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"bg.mp3"];
+    
     isOpenOptionsMenu = NO;
     isOpenShareMenu = NO;
     

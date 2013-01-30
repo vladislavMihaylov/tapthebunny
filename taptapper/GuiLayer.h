@@ -45,7 +45,11 @@
     
     NSInteger screenWidth;
     NSInteger screenHeight;
+    
+    NSMutableArray *starsArray;
 }
+
+- (void) addStar;
 
 @property (nonatomic, assign) GameLayer *gameLayer;
 

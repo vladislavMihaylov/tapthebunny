@@ -15,14 +15,22 @@
 
 @interface GameLayer : CCLayer
 {
-    GuiLayer *gui;
+    GuiLayer *guiLayer;
     
     NSInteger screenWidth;
     NSInteger screenHeight;
+    
+    NSMutableArray *animalsArray;
+    NSMutableArray *starsArray;
+    
+    NSString *coordinats;
+    NSString *subZeroCoordinats;
 }
 
-+(CCScene *) sceneWithAnimal: (NSInteger) numOfAnimal;
+- (void) restartLevel;
+- (void) pause;
+- (void) unPause;
+- (void) showMotherScene;
 
-@property (nonatomic, assign) GuiLayer *guiLayer;
 
 @end
