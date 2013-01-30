@@ -19,31 +19,22 @@
 
 - (void) back
 {
-    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-    {
-        CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"MainMenuScene-ipad.ccbi"];
-        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
-        
-    }
-    else
-    {
-        CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"MainMenuScene.ccbi"];
-        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
-        
-        
-    }
+    CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"MainMenuScene%@.ccbi", postFix]];
+    [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
 }
 
 - (void) playWith: (CCMenuItemImage *) sender
 {
     animalNum = sender.tag;
     
-    CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"gameScene_1.ccbi"];
+    CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"gameScene_%i%@.ccbi", sceneNum, postFix]];
     [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
 }
 
 - (void) didLoadFromCCB
 {
+    sceneNum = arc4random() % 3 + 1;
+    
     CCSprite *sprite = [CCSprite spriteWithFile: @"Icon.png"];
     sprite.anchorPoint = ccp(0.5, 0);
     
@@ -53,18 +44,9 @@
     CCSprite *sprite3 = [CCSprite spriteWithFile: @"Icon.png"];
     sprite3.anchorPoint = ccp(0.5, 0);
    
-    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-    {
-        sprite.position = ccp(200, 223);
-        sprite2.position = ccp(512, 223);
-        sprite3.position = ccp(824, 223);
-    }
-    else
-    {
-        sprite.position = ccp(90, 84);
-        sprite2.position = ccp(240, 84);
-        sprite3.position = ccp(390, 84);
-    }
+    sprite.position = posForSprite1;
+    sprite2.position = posForSprite2;
+    sprite3.position = posForSprite3;
     
     [self addChild: sprite];
     [self addChild: sprite2];

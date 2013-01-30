@@ -125,10 +125,11 @@
             CCLOG(@"TAAP");
             curNode.isCanTap = NO;
             [curNode stopAllActions];
+            
             [curNode runAction: [CCSpawn actions:
-                                            [CCJumpTo actionWithDuration: 1 position: ccp(480, 350) height: 50 jumps: 1],
-                                 nil]
-             ];
+                                        [CCJumpTo actionWithDuration: 1 position: animalFlyPoint height: 50 jumps: 1],
+                                nil]
+                ];
             
             [self addStar];
         }
@@ -186,7 +187,7 @@
     {
         if(boxSprite.tag == 661)
         {
-            [boxSprite runAction: [CCMoveTo actionWithDuration: 0.3 position: ccp(322, 0)]];
+            [boxSprite runAction: [CCMoveTo actionWithDuration: 0.3 position: posForBoxSprite]];
         }
     }
     
@@ -214,7 +215,7 @@
     {
         if(curMenu.tag == 666)
         {
-            [curMenu runAction: [CCMoveTo actionWithDuration: 0.1 position: ccp(165, 0)]];
+            [curMenu runAction: [CCMoveTo actionWithDuration: 0.1 position: posForMenu]];
         }
         
         if(curMenu.tag == 66)
@@ -235,7 +236,7 @@
     {
         if(boxSprite.tag == 661)
         {
-            [boxSprite runAction: [CCMoveTo actionWithDuration: 0.1 position: ccp(480, 0)]];
+            [boxSprite runAction: [CCMoveTo actionWithDuration: 0.1 position: posForBoxSpriteHide]];
         }
     }
     
@@ -247,30 +248,14 @@
 
 - (void) showMainMenu
 {
-    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-    {
-        CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"MainMenuScene-ipad.ccbi"];
-        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
-    }
-    else
-    {
-        CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"MainMenuScene.ccbi"];
-        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
-    }
+    CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"MainMenuScene%@.ccbi", postFix]];
+    [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
 }
 
 - (void) showSelectMenu
 {
-    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-    {
-        CCScene* selectAnimalScene = [CCBReader sceneWithNodeGraphFromFile: @"SelectAnimal-ipad.ccbi"];
-        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: selectAnimalScene]];
-    }
-    else
-    {
-        CCScene* selectAnimalScene = [CCBReader sceneWithNodeGraphFromFile: @"SelectAnimalScene.ccbi"];
-        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: selectAnimalScene]];
-    }
+    CCScene* selectAnimalScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"SelectAnimal%@.ccbi", postFix]];
+    [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: selectAnimalScene]];
 }
 
 - (void) showMotherScene
@@ -281,7 +266,9 @@
 - (void) addStar
 {
     CCSprite *starSprite = [CCSprite spriteWithFile: @"star.png"];
-    starSprite.position = ccp(125 + 40 * [starsArray count], 290);
+    
+    starSprite.position = ccp(widthForStar + stepOfStar * [starsArray count], heightForStar);
+    
     [self addChild: starSprite];
     
     [starsArray addObject: starSprite];

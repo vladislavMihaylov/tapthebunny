@@ -12,6 +12,8 @@
 
 #import "CCBReader.h"
 
+#import "GameConfig.h"
+
 #import "SHKConfiguration.h"
 #import "MySHKConfigurator.h"
 
@@ -88,14 +90,43 @@
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
-        CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"MainMenuScene-ipad.ccbi"];
-        [director_ pushScene: mainScene];
+        postFix = @"-ipad";
+        
+        posForSprite1 = ccp(200, 223);
+        posForSprite2 = ccp(512, 223);
+        posForSprite3 = ccp(824, 223);
+        
+        animalFlyPoint = ccp(1024, 900);
+        
+        posForBoxSprite = ccp(696, 0);
+        posForBoxSpriteHide = ccp(1024, 0);
+        posForMenu = ccp(330, 0);
+        
+        heightForStar = 700;
+        widthForStar = 315;
+        stepOfStar = 70;
     }
     else
     {
-        CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"MainMenuScene.ccbi"];
-        [director_ pushScene: mainScene];
+        postFix = @"";
+        
+        posForSprite1 = ccp(90, 84);
+        posForSprite2 = ccp(240, 84);
+        posForSprite3 = ccp(390, 84);
+        
+        animalFlyPoint = ccp(480, 350);
+        
+        posForBoxSprite = ccp(322, 0);
+        posForBoxSpriteHide = ccp(480, 0);
+        posForMenu = ccp(165, 0);
+        
+        heightForStar = 290;
+        widthForStar = 125;
+        stepOfStar = 40;
     }
+    
+    CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"MainMenuScene%@.ccbi", postFix]];
+    [director_ pushScene: mainScene];
 	
 	// Create a Navigation Controller with the Director
 	navController_ = [[UINavigationController alloc] initWithRootViewController:director_];

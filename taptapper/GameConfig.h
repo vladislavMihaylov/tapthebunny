@@ -15,3 +15,20 @@ extern float GameCenterX;
 extern float GameCenterY;
 
 extern NSInteger animalNum;
+extern NSInteger sceneNum;
+
+extern NSString *postFix;
+
+extern CGPoint posForSprite1;
+extern CGPoint posForSprite2;
+extern CGPoint posForSprite3;
+
+extern CGPoint animalFlyPoint;
+
+extern CGPoint posForBoxSprite;
+extern CGPoint posForBoxSpriteHide;
+extern CGPoint posForMenu;
+
+extern float heightForStar;
+extern float widthForStar;
+extern float stepOfStar;

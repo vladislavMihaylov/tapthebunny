@@ -22,16 +22,8 @@
 
 - (void) pressedPlay: (id) sender
 {
-    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-    {
-        CCScene* selectAnimalScene = [CCBReader sceneWithNodeGraphFromFile: @"SelectAnimal-ipad.ccbi"];
-        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: selectAnimalScene]];
-    }
-    else
-    {
-        CCScene* selectAnimalScene = [CCBReader sceneWithNodeGraphFromFile: @"SelectAnimalScene.ccbi"];
-        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: selectAnimalScene]];
-    }
+    CCScene* selectAnimalScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"SelectAnimal%@.ccbi", postFix]];
+    [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: selectAnimalScene]];
 }
 
 - (void) pressedShare
@@ -125,7 +117,6 @@
         
         slideScale = 0.9;
         
-        CCLOG(@"iPad");
     }
     else
     {
@@ -135,7 +126,6 @@
         
         slideScale = 1;
         
-        CCLOG(@"iPhone");
     }
     
     
@@ -238,7 +228,6 @@
                                          [CCCallBlock actionWithBlock: ^(id sender) {curNode.isEnabled = NO;}], nil]];
                 }
             }
-            //mynode.visible = NO;
         }
     }
 }

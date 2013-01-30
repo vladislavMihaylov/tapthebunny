@@ -11,12 +11,9 @@
 
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
-#import "GuiLayer.h"
 
 @interface GameLayer : CCLayer
 {
-    GuiLayer *guiLayer;
-    
     NSInteger screenWidth;
     NSInteger screenHeight;
     
