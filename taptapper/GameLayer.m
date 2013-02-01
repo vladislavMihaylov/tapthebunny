@@ -11,6 +11,8 @@
 #import "GameLayer.h"
 #import "GameConfig.h"
 #import "Common.h"
+#import "Settings.h"
+#import "SimpleAudioEngine.h"
 
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
@@ -27,14 +29,62 @@
 
 -(void) didLoadFromCCB
 {
+    arr = [self children];
+    
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"bg.mp3"];
+    [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: [Settings sharedSettings].soundLevel];
+    
     animalsArray = [[NSMutableArray alloc] init];
     starsArray = [[NSMutableArray alloc] init];
+    
+    tutorialSprite = [CCSprite spriteWithFile: @"tutorial.png"];
+    tutorialSprite.position = ccp(GameCenterX, GameCenterY * 3);
+    [self addChild: tutorialSprite z: 3];
         
     [self restartLevel];
     
+    CCMenuItemImage *okBtn = [CCMenuItemImage itemWithNormalImage: @"ok.png"
+                                                    selectedImage: @"okOn.png"
+                                                           target: self
+                                                         selector: @selector(hideTutorial)
+                              ];
+    
+    okBtn.position = posForOkBtn;
+    
+    CCMenu *tutorialMenu = [CCMenu menuWithItems: okBtn, nil];
+    tutorialMenu.position = ccp(0, 0);
+    [tutorialSprite addChild: tutorialMenu z:1 tag: 9999];
+    
     subZeroCoordinats = coordinats;
 
-    CCLOG(@"In init %i", [animalsArray count]);
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: [NSString stringWithFormat: @"pauseMenu.plist"]];
+    
+    CCSprite *soundOnBtn = [CCSprite spriteWithSpriteFrameName: @"soundOnBtn.png"];
+    CCSprite *soundOffBtn = [CCSprite spriteWithSpriteFrameName: @"soundOffBtn.png"];
+    CCSprite *select = [CCSprite spriteWithFile: @"icon.png"];
+    
+    CCMenuItemImage *on = [CCMenuItemImage itemWithNormalSprite: soundOnBtn selectedSprite: select];
+    CCMenuItemImage *off = [CCMenuItemImage itemWithNormalSprite: soundOffBtn selectedSprite: select];
+    
+    CCMenu *soundMenu = [CCMenu menuWithItems: nil];
+    soundMenu.position = ccp(0, 0);
+    [self addChild: soundMenu z:1 tag: 222];
+    
+    if ([Settings sharedSettings].soundLevel == 0)
+    {
+        CCMenuItemToggle *sound = [CCMenuItemToggle itemWithTarget:self selector:@selector(soundMode) items: off, on, nil];
+        sound.position = posForSoundBtnInGameMenuHide;
+        [soundMenu addChild: sound z: 1 tag: kSoundBtnTag];
+    }
+    else if ([Settings sharedSettings].soundLevel == 1)
+    {
+        CCMenuItemToggle *sound = [CCMenuItemToggle itemWithTarget:self selector:@selector(soundMode) items: on, off, nil];
+        sound.position = posForSoundBtnInGameMenuHide;
+        [soundMenu addChild: sound z: 1 tag: kSoundBtnTag];
+    }
+    
+    
+
 }
 
 - (void) restartLevel
@@ -67,8 +117,6 @@
         [Common loadAnimationWithPlist: @"Animations" andName: [NSString stringWithFormat: @"animal_%i_pos_%i_film_", animalNum, i]];
     }
     
-    
-    CCArray *arr = [self children];
     for(CCSprite *curSpr in arr)
     {
         for (int i = 1; i < 7; i++)
@@ -102,6 +150,55 @@
     [coordinats retain];
     [coordinatsItems retain];
     
+}
+- (void) showTutorial
+{
+    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
+    
+    [tutorialSprite runAction: [CCMoveTo actionWithDuration: 0.3 position: ccp(GameCenterX, GameCenterY)]];
+
+    for(CCMenu *curMenu in arr)
+    {
+        if(curMenu.tag == 666 || curMenu.tag == 222)
+        {
+            curMenu.isTouchEnabled = NO;
+        }
+    }
+    
+}
+
+- (void) hideTutorial
+{
+    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
+    
+    [tutorialSprite runAction: [CCMoveTo actionWithDuration: 0.2 position: ccp(GameCenterX, GameCenterY * 3)]];
+    
+    for(CCMenu *curMenu in arr)
+    {
+        if(curMenu.tag == 666 || curMenu.tag == 222)
+        {
+            curMenu.isTouchEnabled = YES;
+        }
+    }
+
+}
+
+- (void) soundMode
+{
+    if ([Settings sharedSettings].soundLevel == 1)
+    {
+        [Settings sharedSettings].soundLevel = 0;
+        [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: 0];
+        [[SimpleAudioEngine sharedEngine] setEffectsVolume: 0];
+    }
+    else
+    {
+        [Settings sharedSettings].soundLevel = 1;
+        [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: 1];
+        [[SimpleAudioEngine sharedEngine] setEffectsVolume: 1];
+    }
+    
+    [[Settings sharedSettings] save];
 }
 
 - (void) registerWithTouchDispatcher
@@ -140,6 +237,8 @@
 
 - (void) restart
 {
+    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
+    
     [self runAction: [CCSequence actions:
                                     [CCCallBlock actionWithBlock: ^(id sender){[self unPause];}],
                                     [CCCallBlock actionWithBlock: ^(id sender){[self restartLevel];}],
@@ -150,15 +249,29 @@
 
 - (void) pause
 {
-    self.isTouchEnabled = NO;
+    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
     
-    CCArray *arr = [self children];
+    self.isTouchEnabled = NO;
     
     for(CCLayerColor *curLayerColor in arr)
     {
         if(curLayerColor.tag == 777)
         {
+            
             curLayerColor.visible = YES;
+        }
+    }
+    
+    for(CCMenu *curMenu in arr)
+    {
+        if(curMenu.tag == 222)
+        {
+            CCArray *menuArr = [curMenu children];
+            
+            for(CCNode *curNode in menuArr)
+            {
+                [curNode runAction: [CCMoveTo actionWithDuration: 0.3 position: posForSoundBtnInGameMenu]];
+            }
         }
     }
     
@@ -199,15 +312,28 @@
 
 - (void) unPause
 {
-    self.isTouchEnabled = YES;
+    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
     
-    CCArray *arr = [self children];
+    self.isTouchEnabled = YES;
     
     for(CCLayerColor *curLayerColor in arr)
     {
         if(curLayerColor.tag == 777)
         {
             curLayerColor.visible = NO;
+        }
+    }
+    
+    for(CCMenu *curMenu in arr)
+    {
+        if(curMenu.tag == 222)
+        {
+            CCArray *menuArr = [curMenu children];
+            
+            for(CCNode *curNode in menuArr)
+            {
+                [curNode runAction: [CCMoveTo actionWithDuration: 0.1 position: posForSoundBtnInGameMenuHide]];
+            }
         }
     }
     
@@ -248,12 +374,16 @@
 
 - (void) showMainMenu
 {
+    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
+    
     CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"MainMenuScene%@.ccbi", postFix]];
     [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
 }
 
 - (void) showSelectMenu
 {
+    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
+    
     CCScene* selectAnimalScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"SelectAnimal%@.ccbi", postFix]];
     [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: selectAnimalScene]];
 }
@@ -265,17 +395,27 @@
 
 - (void) addStar
 {
-    CCSprite *starSprite = [CCSprite spriteWithFile: @"star.png"];
+    [[SimpleAudioEngine sharedEngine] playEffect: [NSString stringWithFormat: @"%ianimal.mp3", animalNum]];
     
-    starSprite.position = ccp(widthForStar + stepOfStar * [starsArray count], heightForStar);
+    // Далее немного магии. Если добавлять спрайт звезды напрямую в селф, то у LayerColor выставляется неправильный z-индекс
+    // и он оказывается "ближе" к экрану, чем меню. У нода с тэгом 99 в билдере z-индекс меньше, чем у меню, поэтому все равботает ок.
     
-    [self addChild: starSprite];
-    
-    [starsArray addObject: starSprite];
+    for(CCNode *xNode in arr)
+    {
+        if(xNode.tag == 99)
+        {
+            CCSprite *starSprite = [CCSprite spriteWithFile: @"star.png"];
+            
+            starSprite.position = ccp(widthForStar + stepOfStar * [starsArray count], heightForStar);
+            
+            [xNode addChild: starSprite];
+            
+            [starsArray addObject: starSprite];
+        }
+    }
     
     if([starsArray count] >= 6)
     {
-        
         [self showMotherScene];
     }
 }

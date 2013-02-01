@@ -11,6 +11,8 @@
 
 #import "GameConfig.h"
 
+#import "SimpleAudioEngine.h"
+
 @implementation FinishGame
 
 + (CCScene *) scene
@@ -33,6 +35,8 @@
 {
     if(self = [super init])
     {
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"FamilyWin.mp3" loop: YES];
+        
         CCLabelTTF *label = [CCLabelTTF labelWithString: @"You Win!!" fontName: @"Arial" fontSize: 48];
         label.position = ccp(240, 160);
         [self addChild: label];

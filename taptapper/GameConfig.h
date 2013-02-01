@@ -11,6 +11,9 @@
 #define kFirstSlideTag      105
 #define kSecondSlideTag     106
 
+#define kSoundKey           @"soundKey"
+#define kGameModeKey        @"gameModeKey"
+
 extern float GameCenterX;
 extern float GameCenterY;
 
@@ -29,6 +32,18 @@ extern CGPoint posForBoxSprite;
 extern CGPoint posForBoxSpriteHide;
 extern CGPoint posForMenu;
 
+extern CGPoint posForOkBtn;
+
+extern CGPoint posForOptionsMenu;
+extern CGPoint posForSoundBtnInGameMenu;
+extern CGPoint posForSoundBtnInGameMenuHide;
+
 extern float heightForStar;
 extern float widthForStar;
 extern float stepOfStar;
+
+extern float startBtnHeight;
+extern float firstBtnHeight;
+extern float secondBtnHeight;
+
+extern float slideScale;

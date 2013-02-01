@@ -22,6 +22,10 @@
     
     NSString *coordinats;
     NSString *subZeroCoordinats;
+    
+    CCSprite *tutorialSprite;
+    
+    CCArray *arr;
 }
 
 - (void) restartLevel;

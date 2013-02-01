@@ -13,6 +13,7 @@
 #import "CCBReader.h"
 
 #import "GameConfig.h"
+#import "Settings.h"
 
 #import "SHKConfiguration.h"
 #import "MySHKConfigurator.h"
@@ -28,6 +29,8 @@
     DefaultSHKConfigurator *configurator = [[[MySHKConfigurator alloc] init] autorelease];
     
     [SHKConfiguration sharedInstanceWithConfigurator: configurator];
+    
+    [[Settings sharedSettings] load];
     
 	// Create the main window
 	window_ = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -92,6 +95,9 @@
     {
         postFix = @"-ipad";
         
+        GameCenterX = 512;
+        GameCenterY = 384;
+        
         posForSprite1 = ccp(200, 223);
         posForSprite2 = ccp(512, 223);
         posForSprite3 = ccp(824, 223);
@@ -102,13 +108,29 @@
         posForBoxSpriteHide = ccp(1024, 0);
         posForMenu = ccp(330, 0);
         
+        posForOptionsMenu = ccp(270, 80);
+        
+        posForOkBtn = ccp(80, 120);
+        
+        posForSoundBtnInGameMenu = ccp(810, 80);
+        posForSoundBtnInGameMenuHide = ccp(1140, 80);
+        
         heightForStar = 700;
         widthForStar = 315;
         stepOfStar = 70;
+        
+        startBtnHeight = 80;
+        firstBtnHeight = 185;
+        secondBtnHeight = 260;
+        
+        slideScale = 0.9;
     }
     else
     {
         postFix = @"";
+        
+        GameCenterX = 240;
+        GameCenterY = 160;
         
         posForSprite1 = ccp(90, 84);
         posForSprite2 = ccp(240, 84);
@@ -120,9 +142,22 @@
         posForBoxSpriteHide = ccp(480, 0);
         posForMenu = ccp(165, 0);
         
+        posForOptionsMenu = ccp(140, 50);
+        
+        posForOkBtn = ccp(40, 60);
+        
+        posForSoundBtnInGameMenu = ccp(380, 40);
+        posForSoundBtnInGameMenuHide = ccp(545, 40);
+        
         heightForStar = 290;
         widthForStar = 125;
         stepOfStar = 40;
+        
+        startBtnHeight = 50;
+        firstBtnHeight = 110;
+        secondBtnHeight = 150;
+        
+        slideScale = 1;
     }
     
     CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"MainMenuScene%@.ccbi", postFix]];

@@ -4,7 +4,7 @@
 <dict>
 	<key>frames</key>
 	<dict>
-		<key>Scenebg.png</key>
+		<key>1Scenebg.png</key>
 		<dict>
 			<key>frame</key>
 			<string>{{2,2},{2048,1536}}</string>
@@ -17,7 +17,7 @@
 			<key>sourceSize</key>
 			<string>{2048,1536}</string>
 		</dict>
-		<key>blueBush.png</key>
+		<key>1blueBush.png</key>
 		<dict>
 			<key>frame</key>
 			<string>{{2,3590},{408,229}}</string>
@@ -30,7 +30,7 @@
 			<key>sourceSize</key>
 			<string>{470,291}</string>
 		</dict>
-		<key>bushes.png</key>
+		<key>1bushes.png</key>
 		<dict>
 			<key>frame</key>
 			<string>{{1613,1540},{2046,308}}</string>
@@ -43,7 +43,7 @@
 			<key>sourceSize</key>
 			<string>{2046,308}</string>
 		</dict>
-		<key>downWTF.png</key>
+		<key>1downWTF.png</key>
 		<dict>
 			<key>frame</key>
 			<string>{{2052,2},{1848,354}}</string>
@@ -56,7 +56,7 @@
 			<key>sourceSize</key>
 			<string>{1848,354}</string>
 		</dict>
-		<key>downdownWTF.png</key>
+		<key>1downdownWTF.png</key>
 		<dict>
 			<key>frame</key>
 			<string>{{233,3965},{2048,120}}</string>
@@ -69,7 +69,7 @@
 			<key>sourceSize</key>
 			<string>{2048,120}</string>
 		</dict>
-		<key>greenBush.png</key>
+		<key>1greenBush.png</key>
 		<dict>
 			<key>frame</key>
 			<string>{{233,3590},{373,296}}</string>
@@ -82,7 +82,7 @@
 			<key>sourceSize</key>
 			<string>{425,364}</string>
 		</dict>
-		<key>ground.png</key>
+		<key>1ground.png</key>
 		<dict>
 			<key>frame</key>
 			<string>{{934,1540},{2048,677}}</string>
@@ -95,7 +95,7 @@
 			<key>sourceSize</key>
 			<string>{2048,677}</string>
 		</dict>
-		<key>leftWTF.png</key>
+		<key>1leftWTF.png</key>
 		<dict>
 			<key>frame</key>
 			<string>{{3902,2},{768,185}}</string>
@@ -108,7 +108,7 @@
 			<key>sourceSize</key>
 			<string>{804,219}</string>
 		</dict>
-		<key>rightWTF.png</key>
+		<key>1rightWTF.png</key>
 		<dict>
 			<key>frame</key>
 			<string>{{2581,358},{558,298}}</string>
@@ -121,7 +121,7 @@
 			<key>sourceSize</key>
 			<string>{578,344}</string>
 		</dict>
-		<key>trava.png</key>
+		<key>1trava.png</key>
 		<dict>
 			<key>frame</key>
 			<string>{{531,3590},{2048,324}}</string>
@@ -134,7 +134,7 @@
 			<key>sourceSize</key>
 			<string>{2048,324}</string>
 		</dict>
-		<key>trees.png</key>
+		<key>1trees.png</key>
 		<dict>
 			<key>frame</key>
 			<string>{{2,1540},{2048,930}}</string>

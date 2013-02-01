@@ -9,16 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface MainMenuScene : CCLayer
+@interface MainMenuScene: CCLayer
 {
     BOOL isOpenShareMenu;
     BOOL isOpenOptionsMenu;
     
-    NSInteger startHeight;
-    NSInteger firstBtnHeight;
-    NSInteger secondBtnHeight;
-    
-    float slideScale;
+    CCArray *arr;
 }
 
 @end

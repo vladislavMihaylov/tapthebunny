@@ -15,16 +15,23 @@
 
 #import "FinishGame.h"
 
+#import "SimpleAudioEngine.h"
+#import "Settings.h"
+
 @implementation SelectAnimalScene
 
 - (void) back
 {
+    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
+    
     CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"MainMenuScene%@.ccbi", postFix]];
     [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
 }
 
 - (void) playWith: (CCMenuItemImage *) sender
 {
+    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
+    
     animalNum = sender.tag;
     
     CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"gameScene_%i%@.ccbi", sceneNum, postFix]];
@@ -33,6 +40,9 @@
 
 - (void) didLoadFromCCB
 {
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"chooseAnimal.mp3"];
+    [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: [Settings sharedSettings].soundLevel];
+    
     sceneNum = arc4random() % 3 + 1;
     
     CCSprite *sprite = [CCSprite spriteWithFile: @"Icon.png"];
