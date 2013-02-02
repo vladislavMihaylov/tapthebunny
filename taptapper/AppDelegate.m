@@ -187,29 +187,34 @@
 // getting a call, pause the game
 -(void) applicationWillResignActive:(UIApplication *)application
 {
-	if( [navController_ visibleViewController] == director_ )
-		[director_ pause];
+	//if( [navController_ visibleViewController] == director_ )
+	//	[director_ pause];
+    
+    [[CCDirector sharedDirector] pause];
 }
 
 // call got rejected
 -(void) applicationDidBecomeActive:(UIApplication *)application
 {
-	if( [navController_ visibleViewController] == director_ )
-		[director_ resume];
+	//if( [navController_ visibleViewController] == director_ )
+	//	[director_ resume];
+    [[CCDirector sharedDirector] resume];
     
     [SHKFacebook handleDidBecomeActive]; /////////////////////////////////////////////////////////////////////////////////////////
 }
 
 -(void) applicationDidEnterBackground:(UIApplication*)application
 {
-	if( [navController_ visibleViewController] == director_ )
-		[director_ stopAnimation];
+	//if( [navController_ visibleViewController] == director_ )
+	//	[director_ stopAnimation];
+    [[CCDirector sharedDirector] stopAnimation];
 }
 
 -(void) applicationWillEnterForeground:(UIApplication*)application
 {
-	if( [navController_ visibleViewController] == director_ )
-		[director_ startAnimation];
+	//if( [navController_ visibleViewController] == director_ )
+	//	[director_ startAnimation];
+    [[CCDirector sharedDirector] startAnimation];
 }
 
 // application will be killed
