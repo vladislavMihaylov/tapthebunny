@@ -57,6 +57,10 @@
 		F508371F16B2F422007967B6 /* MainMenuScene.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = F508371E16B2F422007967B6 /* MainMenuScene.ccbi */; };
 		F508372116B2F91E007967B6 /* SelectAnimal.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = F508372016B2F91E007967B6 /* SelectAnimal.ccbi */; };
 		F508372416B2F939007967B6 /* SelectAnimalScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F508372316B2F938007967B6 /* SelectAnimalScene.m */; };
+		F509879116BE3D8C000AB88E /* scene_2_pics-five.plist in Resources */ = {isa = PBXBuildFile; fileRef = F509878F16BE3D8C000AB88E /* scene_2_pics-five.plist */; };
+		F509879216BE3D8C000AB88E /* scene_2_pics-five.png in Resources */ = {isa = PBXBuildFile; fileRef = F509879016BE3D8C000AB88E /* scene_2_pics-five.png */; };
+		F509879516BE5825000AB88E /* scene_3_pics-five.plist in Resources */ = {isa = PBXBuildFile; fileRef = F509879316BE5825000AB88E /* scene_3_pics-five.plist */; };
+		F509879616BE5825000AB88E /* scene_3_pics-five.png in Resources */ = {isa = PBXBuildFile; fileRef = F509879416BE5825000AB88E /* scene_3_pics-five.png */; };
 		F50A29B116B973D900D9BCAF /* scene_1_pics-ipad.plist in Resources */ = {isa = PBXBuildFile; fileRef = F50A29AD16B973D900D9BCAF /* scene_1_pics-ipad.plist */; };
 		F50A29B216B973D900D9BCAF /* scene_1_pics-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F50A29AE16B973D900D9BCAF /* scene_1_pics-ipad.png */; };
 		F50A29B316B973D900D9BCAF /* scene_1_pics-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = F50A29AF16B973D900D9BCAF /* scene_1_pics-ipadhd.plist */; };
@@ -249,6 +253,16 @@
 		F542BE6716B2E9CD00DBBD42 /* CCBsequence.m in Sources */ = {isa = PBXBuildFile; fileRef = F542BE5F16B2E9CD00DBBD42 /* CCBsequence.m */; };
 		F542BE6816B2E9CD00DBBD42 /* CCBSequenceProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = F542BE6116B2E9CD00DBBD42 /* CCBSequenceProperty.m */; };
 		F542BE6916B2E9CD00DBBD42 /* CCNode+CCBRelativePositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = F542BE6316B2E9CD00DBBD42 /* CCNode+CCBRelativePositioning.m */; };
+		F5D32D9F16BD89BC007C5AF5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D32D9E16BD89BC007C5AF5 /* Default-568h@2x.png */; };
+		F5D32DA416BD8C80007C5AF5 /* menuBg.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D32DA316BD8C80007C5AF5 /* menuBg.png */; };
+		F5D32DA616BD8D97007C5AF5 /* MainMenuScene-five.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = F5D32DA516BD8D97007C5AF5 /* MainMenuScene-five.ccbi */; };
+		F5D32DA816BD918B007C5AF5 /* SelectAnimal-five.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = F5D32DA716BD918B007C5AF5 /* SelectAnimal-five.ccbi */; };
+		F5D32DAA16BD91D3007C5AF5 /* selectAnimalBg.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D32DA916BD91D3007C5AF5 /* selectAnimalBg.png */; };
+		F5D32DAC16BD9326007C5AF5 /* gameScene_1-five.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = F5D32DAB16BD9326007C5AF5 /* gameScene_1-five.ccbi */; };
+		F5D32DAE16BD93D5007C5AF5 /* gameScene_2-five.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = F5D32DAD16BD93D5007C5AF5 /* gameScene_2-five.ccbi */; };
+		F5D32DB016BD93F2007C5AF5 /* gameScene_3-five.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = F5D32DAF16BD93F2007C5AF5 /* gameScene_3-five.ccbi */; };
+		F5D32DB916BD9FFD007C5AF5 /* scene_1_pics-five.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5D32DB716BD9FFD007C5AF5 /* scene_1_pics-five.plist */; };
+		F5D32DBA16BD9FFD007C5AF5 /* scene_1_pics-five.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D32DB816BD9FFD007C5AF5 /* scene_1_pics-five.png */; };
 		F5DDC09F16B91A6D002EA03F /* star-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F5DDC09E16B91A6D002EA03F /* star-hd.png */; };
 		F5FBB37016B4F75E000D9EF5 /* MainMenuScene-ipad.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = F5FBB36F16B4F75E000D9EF5 /* MainMenuScene-ipad.ccbi */; };
 		F5FBB37B16B50DEC000D9EF5 /* mainMenu-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5FBB37916B50DEC000D9EF5 /* mainMenu-ipadhd.plist */; };
@@ -577,6 +591,10 @@
 		F508372016B2F91E007967B6 /* SelectAnimal.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = SelectAnimal.ccbi; path = Resources/SelectAnimal.ccbi; sourceTree = "<group>"; };
 		F508372216B2F938007967B6 /* SelectAnimalScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectAnimalScene.h; sourceTree = "<group>"; };
 		F508372316B2F938007967B6 /* SelectAnimalScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectAnimalScene.m; sourceTree = "<group>"; };
+		F509878F16BE3D8C000AB88E /* scene_2_pics-five.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "scene_2_pics-five.plist"; path = "Resources/five/scene_2_pics-five.plist"; sourceTree = "<group>"; };
+		F509879016BE3D8C000AB88E /* scene_2_pics-five.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "scene_2_pics-five.png"; path = "Resources/five/scene_2_pics-five.png"; sourceTree = "<group>"; };
+		F509879316BE5825000AB88E /* scene_3_pics-five.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "scene_3_pics-five.plist"; path = "Resources/five/scene_3_pics-five.plist"; sourceTree = "<group>"; };
+		F509879416BE5825000AB88E /* scene_3_pics-five.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "scene_3_pics-five.png"; path = "Resources/five/scene_3_pics-five.png"; sourceTree = "<group>"; };
 		F50A29AD16B973D900D9BCAF /* scene_1_pics-ipad.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "scene_1_pics-ipad.plist"; path = "Resources/scene_1_pics-ipad.plist"; sourceTree = "<group>"; };
 		F50A29AE16B973D900D9BCAF /* scene_1_pics-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "scene_1_pics-ipad.png"; path = "Resources/scene_1_pics-ipad.png"; sourceTree = "<group>"; };
 		F50A29AF16B973D900D9BCAF /* scene_1_pics-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "scene_1_pics-ipadhd.plist"; path = "Resources/scene_1_pics-ipadhd.plist"; sourceTree = "<group>"; };
@@ -913,6 +931,16 @@
 		F542BE6116B2E9CD00DBBD42 /* CCBSequenceProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBSequenceProperty.m; sourceTree = "<group>"; };
 		F542BE6216B2E9CD00DBBD42 /* CCNode+CCBRelativePositioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCNode+CCBRelativePositioning.h"; sourceTree = "<group>"; };
 		F542BE6316B2E9CD00DBBD42 /* CCNode+CCBRelativePositioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCNode+CCBRelativePositioning.m"; sourceTree = "<group>"; };
+		F5D32D9E16BD89BC007C5AF5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		F5D32DA316BD8C80007C5AF5 /* menuBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menuBg.png; path = Resources/five/menuBg.png; sourceTree = "<group>"; };
+		F5D32DA516BD8D97007C5AF5 /* MainMenuScene-five.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MainMenuScene-five.ccbi"; path = "Resources/MainMenuScene-five.ccbi"; sourceTree = "<group>"; };
+		F5D32DA716BD918B007C5AF5 /* SelectAnimal-five.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SelectAnimal-five.ccbi"; path = "Resources/SelectAnimal-five.ccbi"; sourceTree = "<group>"; };
+		F5D32DA916BD91D3007C5AF5 /* selectAnimalBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = selectAnimalBg.png; path = Resources/five/selectAnimalBg.png; sourceTree = "<group>"; };
+		F5D32DAB16BD9326007C5AF5 /* gameScene_1-five.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gameScene_1-five.ccbi"; path = "Resources/gameScene_1-five.ccbi"; sourceTree = "<group>"; };
+		F5D32DAD16BD93D5007C5AF5 /* gameScene_2-five.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gameScene_2-five.ccbi"; path = "Resources/gameScene_2-five.ccbi"; sourceTree = "<group>"; };
+		F5D32DAF16BD93F2007C5AF5 /* gameScene_3-five.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gameScene_3-five.ccbi"; path = "Resources/gameScene_3-five.ccbi"; sourceTree = "<group>"; };
+		F5D32DB716BD9FFD007C5AF5 /* scene_1_pics-five.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "scene_1_pics-five.plist"; path = "Resources/five/scene_1_pics-five.plist"; sourceTree = "<group>"; };
+		F5D32DB816BD9FFD007C5AF5 /* scene_1_pics-five.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "scene_1_pics-five.png"; path = "Resources/five/scene_1_pics-five.png"; sourceTree = "<group>"; };
 		F5DDC09E16B91A6D002EA03F /* star-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-hd.png"; sourceTree = "<group>"; };
 		F5FBB36F16B4F75E000D9EF5 /* MainMenuScene-ipad.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MainMenuScene-ipad.ccbi"; path = "Resources/MainMenuScene-ipad.ccbi"; sourceTree = "<group>"; };
 		F5FBB37916B50DEC000D9EF5 /* mainMenu-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "mainMenu-ipadhd.plist"; path = "Resources/menu/mainMenu-ipadhd.plist"; sourceTree = "<group>"; };
@@ -993,6 +1021,7 @@
 			children = (
 				F5FBB36F16B4F75E000D9EF5 /* MainMenuScene-ipad.ccbi */,
 				F508371E16B2F422007967B6 /* MainMenuScene.ccbi */,
+				F5D32DA516BD8D97007C5AF5 /* MainMenuScene-five.ccbi */,
 				F5FBB37D16B51250000D9EF5 /* mainMenu-ipad.plist */,
 				F5FBB37E16B51250000D9EF5 /* mainMenu-ipad.png */,
 				F5FBB37916B50DEC000D9EF5 /* mainMenu-ipadhd.plist */,
@@ -1010,6 +1039,7 @@
 			children = (
 				F5FBB39116B5255F000D9EF5 /* SelectAnimal-ipad.ccbi */,
 				F508372016B2F91E007967B6 /* SelectAnimal.ccbi */,
+				F5D32DA716BD918B007C5AF5 /* SelectAnimal-five.ccbi */,
 				F5FBB38916B51CAB000D9EF5 /* selectAnimal-ipadhd.plist */,
 				F5FBB38A16B51CAB000D9EF5 /* selectAnimal-ipadhd.png */,
 				F5FBB38D16B51E4B000D9EF5 /* selectAnimal-ipad.plist */,
@@ -1036,6 +1066,7 @@
 			children = (
 				F50C03E116B57ACD00247182 /* Default.png */,
 				F50C03DF16B57A7300247182 /* Default@2x.png */,
+				F5D32D9E16BD89BC007C5AF5 /* Default-568h@2x.png */,
 				F50C03DB16B579BE00247182 /* Default-Landscape~ipad.png */,
 				F50C03D916B5796100247182 /* Default-Landscape@2x~ipad.png */,
 				F53F6BD616B2DAB900444747 /* fps_images.png */,
@@ -1171,6 +1202,9 @@
 			children = (
 				F50AE1C816B8ED8100DD7B9C /* gameScene_1.ccbi */,
 				F50A29B516B9771C00D9BCAF /* gameScene_1-ipad.ccbi */,
+				F5D32DAB16BD9326007C5AF5 /* gameScene_1-five.ccbi */,
+				F5D32DB716BD9FFD007C5AF5 /* scene_1_pics-five.plist */,
+				F5D32DB816BD9FFD007C5AF5 /* scene_1_pics-five.png */,
 				F50A29AD16B973D900D9BCAF /* scene_1_pics-ipad.plist */,
 				F50A29AE16B973D900D9BCAF /* scene_1_pics-ipad.png */,
 				F50A29AF16B973D900D9BCAF /* scene_1_pics-ipadhd.plist */,
@@ -1188,6 +1222,9 @@
 			children = (
 				F50A29B716B98EBB00D9BCAF /* gameScene_2.ccbi */,
 				F50A29C916B994F000D9BCAF /* gameScene_2-ipad.ccbi */,
+				F5D32DAD16BD93D5007C5AF5 /* gameScene_2-five.ccbi */,
+				F509878F16BE3D8C000AB88E /* scene_2_pics-five.plist */,
+				F509879016BE3D8C000AB88E /* scene_2_pics-five.png */,
 				F505C18B16BC1E2600F82E68 /* scene_2_pics-hd.plist */,
 				F505C18C16BC1E2600F82E68 /* scene_2_pics-hd.png */,
 				F505C18D16BC1E2600F82E68 /* scene_2_pics-ipad.plist */,
@@ -1203,6 +1240,11 @@
 		F50E285916BAF7960050A6EC /* 3 */ = {
 			isa = PBXGroup;
 			children = (
+				F50A29DB16B9A18000D9BCAF /* gameScene_3.ccbi */,
+				F50A29DD16B9A18900D9BCAF /* gameScene_3-ipad.ccbi */,
+				F5D32DAF16BD93F2007C5AF5 /* gameScene_3-five.ccbi */,
+				F509879316BE5825000AB88E /* scene_3_pics-five.plist */,
+				F509879416BE5825000AB88E /* scene_3_pics-five.png */,
 				F50AA15116BBA1B3006950C9 /* scene_3_pics-hd.plist */,
 				F50AA15216BBA1B3006950C9 /* scene_3_pics-hd.png */,
 				F50AA15316BBA1B3006950C9 /* scene_3_pics-ipad.plist */,
@@ -1211,8 +1253,6 @@
 				F50AA15616BBA1B3006950C9 /* scene_3_pics-ipadhd.png */,
 				F50AA15716BBA1B3006950C9 /* scene_3_pics.plist */,
 				F50AA15816BBA1B3006950C9 /* scene_3_pics.png */,
-				F50A29DD16B9A18900D9BCAF /* gameScene_3-ipad.ccbi */,
-				F50A29DB16B9A18000D9BCAF /* gameScene_3.ccbi */,
 			);
 			name = 3;
 			sourceTree = "<group>";
@@ -1301,6 +1341,7 @@
 		F53F6BD116B2DAB900444747 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F5D32DA016BD8C20007C5AF5 /* five */,
 				F50E285A16BAFA190050A6EC /* sounds */,
 				F50E285616BAF7800050A6EC /* gameScenes */,
 				F50E285516BAF7670050A6EC /* tutorial */,
@@ -1677,6 +1718,15 @@
 				F542BE6316B2E9CD00DBBD42 /* CCNode+CCBRelativePositioning.m */,
 			);
 			name = CCBReader;
+			sourceTree = "<group>";
+		};
+		F5D32DA016BD8C20007C5AF5 /* five */ = {
+			isa = PBXGroup;
+			children = (
+				F5D32DA316BD8C80007C5AF5 /* menuBg.png */,
+				F5D32DA916BD91D3007C5AF5 /* selectAnimalBg.png */,
+			);
+			name = five;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2096,6 +2146,20 @@
 				F505C1A716BC2D1700F82E68 /* 3animal.mp3 in Resources */,
 				F505C1A816BC2D1700F82E68 /* chooseAnimal.mp3 in Resources */,
 				F505C1AA16BC36E600F82E68 /* FamilyWin.mp3 in Resources */,
+				F5D32D9F16BD89BC007C5AF5 /* Default-568h@2x.png in Resources */,
+				F5D32DA416BD8C80007C5AF5 /* menuBg.png in Resources */,
+				F5D32DA616BD8D97007C5AF5 /* MainMenuScene-five.ccbi in Resources */,
+				F5D32DA816BD918B007C5AF5 /* SelectAnimal-five.ccbi in Resources */,
+				F5D32DAA16BD91D3007C5AF5 /* selectAnimalBg.png in Resources */,
+				F5D32DAC16BD9326007C5AF5 /* gameScene_1-five.ccbi in Resources */,
+				F5D32DAE16BD93D5007C5AF5 /* gameScene_2-five.ccbi in Resources */,
+				F5D32DB016BD93F2007C5AF5 /* gameScene_3-five.ccbi in Resources */,
+				F5D32DB916BD9FFD007C5AF5 /* scene_1_pics-five.plist in Resources */,
+				F5D32DBA16BD9FFD007C5AF5 /* scene_1_pics-five.png in Resources */,
+				F509879116BE3D8C000AB88E /* scene_2_pics-five.plist in Resources */,
+				F509879216BE3D8C000AB88E /* scene_2_pics-five.png in Resources */,
+				F509879516BE5825000AB88E /* scene_3_pics-five.plist in Resources */,
+				F509879616BE5825000AB88E /* scene_3_pics-five.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

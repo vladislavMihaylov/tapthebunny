@@ -91,6 +91,7 @@
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
 	//[director_ pushScene: [IntroLayer scene]];
     
+    
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
         postFix = @"-ipad";
@@ -107,6 +108,7 @@
         posForBoxSprite = ccp(696, 0);
         posForBoxSpriteHide = ccp(1024, 0);
         posForMenu = ccp(330, 0);
+        posForOpenMenu = ccp(0, 0);
         
         posForOptionsMenu = ccp(270, 80);
         
@@ -127,30 +129,63 @@
     }
     else
     {
-        postFix = @"";
+        CGSize winSize = [CCDirector sharedDirector].winSize;
+        CCLOG(@"SizeX: %f", winSize.height);
         
-        GameCenterX = 240;
-        GameCenterY = 160;
-        
-        posForSprite1 = ccp(90, 84);
-        posForSprite2 = ccp(240, 84);
-        posForSprite3 = ccp(390, 84);
-        
-        animalFlyPoint = ccp(480, 350);
-        
-        posForBoxSprite = ccp(322, 0);
-        posForBoxSpriteHide = ccp(480, 0);
-        posForMenu = ccp(165, 0);
-        
-        posForOptionsMenu = ccp(140, 50);
+        if(IS_WIDESCREEN == YES)
+        {
+            postFix = @"-five";
+            
+            GameCenterX = 284;
+            GameCenterY = 160;
+            
+            posForOptionsMenu = ccp(170, 50);
+            
+            posForSprite1 = ccp(134, 84);
+            posForSprite2 = ccp(284, 84);
+            posForSprite3 = ccp(434, 84);
+            
+            animalFlyPoint = ccp(568, 350);
+            
+            posForBoxSprite = ccp(410, 0);
+            posForBoxSpriteHide = ccp(568, 0);
+            posForMenu = ccp(253, 0);
+            posForOpenMenu = ccp(88, 0);
+            
+            posForSoundBtnInGameMenu = ccp(468, 40);
+            posForSoundBtnInGameMenuHide = ccp(633, 40);
+            
+            widthForStar = 169;
+        }
+        else
+        {
+            postFix = @"";
+            
+            GameCenterX = 240;
+            GameCenterY = 160;
+            
+            posForOptionsMenu = ccp(140, 50);
+            
+            posForSprite1 = ccp(90, 84);
+            posForSprite2 = ccp(240, 84);
+            posForSprite3 = ccp(390, 84);
+            
+            animalFlyPoint = ccp(480, 350);
+            
+            posForBoxSprite = ccp(322, 0);
+            posForBoxSpriteHide = ccp(480, 0);
+            posForMenu = ccp(165, 0);
+            posForOpenMenu = ccp(0, 0);
+            
+            posForSoundBtnInGameMenu = ccp(380, 40);
+            posForSoundBtnInGameMenuHide = ccp(545, 40);
+            
+            widthForStar = 125;
+        }
         
         posForOkBtn = ccp(40, 60);
         
-        posForSoundBtnInGameMenu = ccp(380, 40);
-        posForSoundBtnInGameMenuHide = ccp(545, 40);
-        
         heightForStar = 290;
-        widthForStar = 125;
         stepOfStar = 40;
         
         startBtnHeight = 50;

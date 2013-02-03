@@ -14,6 +14,8 @@
 #define kSoundKey           @"soundKey"
 #define kGameModeKey        @"gameModeKey"
 
+#define IS_WIDESCREEN ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+
 extern float GameCenterX;
 extern float GameCenterY;
 
@@ -31,6 +33,7 @@ extern CGPoint animalFlyPoint;
 extern CGPoint posForBoxSprite;
 extern CGPoint posForBoxSpriteHide;
 extern CGPoint posForMenu;
+extern CGPoint posForOpenMenu;
 
 extern CGPoint posForOkBtn;
 

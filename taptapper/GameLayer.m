@@ -279,7 +279,7 @@
     {
         if(curMenu.tag == 666)
         {
-            [curMenu runAction: [CCMoveTo actionWithDuration: 0.3 position: ccp(0, 0)]];
+            [curMenu runAction: [CCMoveTo actionWithDuration: 0.3 position: posForOpenMenu]];
         }
         
         if(curMenu.tag == 66)
@@ -422,9 +422,15 @@
 
 - (void) removeStars
 {
-    for(CCSprite *spriteToRemove in starsArray)
+    for(CCNode *xNode in arr)
     {
-        [self removeChild: spriteToRemove cleanup: YES];
+        if(xNode.tag == 99)
+        {
+            for(CCSprite *spriteToRemove in starsArray)
+            {
+                [xNode removeChild: spriteToRemove cleanup: YES];
+            }
+        }
     }
     
     [starsArray removeAllObjects];

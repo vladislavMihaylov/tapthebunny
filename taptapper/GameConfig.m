@@ -19,6 +19,7 @@ CGPoint animalFlyPoint;
 CGPoint posForBoxSprite;
 CGPoint posForBoxSpriteHide;
 CGPoint posForMenu;
+CGPoint posForOpenMenu;
 
 CGPoint posForOkBtn;
 

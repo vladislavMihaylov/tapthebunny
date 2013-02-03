@@ -145,6 +145,7 @@
 {
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"menu.mp3"];
     [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: [Settings sharedSettings].soundLevel];
+    [[SimpleAudioEngine sharedEngine] setEffectsVolume: [Settings sharedSettings].soundLevel];
     
     isOpenOptionsMenu = NO;
     isOpenShareMenu = NO;

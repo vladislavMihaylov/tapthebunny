@@ -49,8 +49,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>512</real>
-							<real>384</real>
+							<real>284</real>
+							<real>160</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -74,7 +74,7 @@
 						<array>
 							<real>1</real>
 							<real>1</real>
-							<false/>
+							<true/>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -93,8 +93,8 @@
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string>scene_2_pics.plist</string>
-							<string>2Scenebg.png</string>
+							<string>five/scene_3_pics-five.plist</string>
+							<string>3Scenebg_5.png</string>
 						</array>
 					</dict>
 				</array>
@@ -107,7 +107,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>animal21</string>
+				<string>animal4</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -121,8 +121,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>353</real>
-							<real>335</real>
+							<real>20</real>
+							<real>177</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -156,7 +156,7 @@
 						<key>type</key>
 						<string>Integer</string>
 						<key>value</key>
-						<integer>21</integer>
+						<integer>14</integer>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -174,167 +174,7 @@
 						<key>value</key>
 						<array>
 							<string>animalsAnimation.plist</string>
-							<string>animal_2_pos_1_film_1.png</string>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCSprite</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>animal1</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>424</real>
-							<real>336</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.5</real>
-							<real>0.5</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>tag</string>
-						<key>type</key>
-						<string>Integer</string>
-						<key>value</key>
-						<integer>11</integer>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ignoreAnchorPointForPosition</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>displayFrame</string>
-						<key>type</key>
-						<string>SpriteFrame</string>
-						<key>value</key>
-						<array>
-							<string>animalsAnimation.plist</string>
-							<string>animal_1_pos_1_film_1.png</string>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCSprite</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>animal31</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>369</real>
-							<real>316</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.5</real>
-							<real>0.5</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>tag</string>
-						<key>type</key>
-						<string>Integer</string>
-						<key>value</key>
-						<integer>31</integer>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ignoreAnchorPointForPosition</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>displayFrame</string>
-						<key>type</key>
-						<string>SpriteFrame</string>
-						<key>value</key>
-						<array>
-							<string>animalsAnimation.plist</string>
-							<string>animal_3_pos_1_film_1.png</string>
+							<string>animal_1_pos_4_film_1.png</string>
 						</array>
 					</dict>
 				</array>
@@ -361,8 +201,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>185</real>
-							<real>359</real>
+							<real>54</real>
+							<real>184</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -441,8 +281,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>183</real>
-							<real>348</real>
+							<real>42</real>
+							<real>180</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -507,7 +347,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>animal4</string>
+				<string>animal1</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -521,8 +361,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>179</real>
-							<real>372</real>
+							<real>421</real>
+							<real>188</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -556,7 +396,7 @@
 						<key>type</key>
 						<string>Integer</string>
 						<key>value</key>
-						<integer>14</integer>
+						<integer>11</integer>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -574,7 +414,7 @@
 						<key>value</key>
 						<array>
 							<string>animalsAnimation.plist</string>
-							<string>animal_1_pos_4_film_1.png</string>
+							<string>animal_1_pos_1_film_1.png</string>
 						</array>
 					</dict>
 				</array>
@@ -587,7 +427,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>bushes</string>
+				<string>animal21</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -601,8 +441,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>505</real>
-							<real>400</real>
+							<real>396</real>
+							<real>177</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -632,6 +472,14 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>tag</string>
+						<key>type</key>
+						<string>Integer</string>
+						<key>value</key>
+						<integer>21</integer>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>ignoreAnchorPointForPosition</string>
 						<key>type</key>
 						<string>Check</string>
@@ -645,8 +493,232 @@
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string>scene_2_pics.plist</string>
-							<string>2blueBushes.png</string>
+							<string>animalsAnimation.plist</string>
+							<string>animal_2_pos_1_film_1.png</string>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>animal31</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>0</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>395</real>
+							<real>169</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>tag</string>
+						<key>type</key>
+						<string>Integer</string>
+						<key>value</key>
+						<integer>31</integer>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ignoreAnchorPointForPosition</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>displayFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string>animalsAnimation.plist</string>
+							<string>animal_3_pos_1_film_1.png</string>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>bush6</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>0</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>276</real>
+							<real>174</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<true/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ignoreAnchorPointForPosition</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>displayFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string>five/scene_3_pics-five.plist</string>
+							<string>3bush6_5.png</string>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>2greenBushes</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>0</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>284</real>
+							<real>181</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<true/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ignoreAnchorPointForPosition</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>displayFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string>five/scene_3_pics-five.plist</string>
+							<string>3greenBushes_5.png</string>
 						</array>
 					</dict>
 				</array>
@@ -673,8 +745,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>696</real>
-							<real>309</real>
+							<real>296</real>
+							<real>128</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -753,8 +825,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>694</real>
-							<real>303</real>
+							<real>322</real>
+							<real>139</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -833,8 +905,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>706</real>
-							<real>287</real>
+							<real>275</real>
+							<real>123</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -899,7 +971,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>animal6</string>
+				<string>bush4</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -913,8 +985,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>929</real>
-							<real>264</real>
+							<real>107</real>
+							<real>177</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -938,247 +1010,7 @@
 						<array>
 							<real>1</real>
 							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>tag</string>
-						<key>type</key>
-						<string>Integer</string>
-						<key>value</key>
-						<integer>16</integer>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ignoreAnchorPointForPosition</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>displayFrame</string>
-						<key>type</key>
-						<string>SpriteFrame</string>
-						<key>value</key>
-						<array>
-							<string>animalsAnimation.plist</string>
-							<string>animal_1_pos_6_film_1.png</string>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCSprite</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>animal26</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>910</real>
-							<real>247</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.5</real>
-							<real>0.5</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>tag</string>
-						<key>type</key>
-						<string>Integer</string>
-						<key>value</key>
-						<integer>26</integer>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ignoreAnchorPointForPosition</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>displayFrame</string>
-						<key>type</key>
-						<string>SpriteFrame</string>
-						<key>value</key>
-						<array>
-							<string>animalsAnimation.plist</string>
-							<string>animal_2_pos_6_film_1.png</string>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCSprite</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>animal36</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>914</real>
-							<real>241</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.5</real>
-							<real>0.5</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>tag</string>
-						<key>type</key>
-						<string>Integer</string>
-						<key>value</key>
-						<integer>36</integer>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ignoreAnchorPointForPosition</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>displayFrame</string>
-						<key>type</key>
-						<string>SpriteFrame</string>
-						<key>value</key>
-						<array>
-							<string>animalsAnimation.plist</string>
-							<string>animal_3_pos_6_film_1.png</string>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCSprite</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>rightMountain</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>986</real>
-							<real>402</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.5</real>
-							<real>0.5</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
+							<true/>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1197,368 +1029,8 @@
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string>scene_2_pics.plist</string>
-							<string>2rightMountain.png</string>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCSprite</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>bush7</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>364</real>
-							<real>374</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.5</real>
-							<real>0.5</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ignoreAnchorPointForPosition</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>displayFrame</string>
-						<key>type</key>
-						<string>SpriteFrame</string>
-						<key>value</key>
-						<array>
-							<string>scene_2_pics.plist</string>
-							<string>2bush7.png</string>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCSprite</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>tree1</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>262</real>
-							<real>366</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.5</real>
-							<real>0.5</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ignoreAnchorPointForPosition</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>displayFrame</string>
-						<key>type</key>
-						<string>SpriteFrame</string>
-						<key>value</key>
-						<array>
-							<string>scene_2_pics.plist</string>
-							<string>2tree1.png</string>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCSprite</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>tree2</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>804</real>
-							<real>380</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.5</real>
-							<real>0.5</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ignoreAnchorPointForPosition</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>displayFrame</string>
-						<key>type</key>
-						<string>SpriteFrame</string>
-						<key>value</key>
-						<array>
-							<string>scene_2_pics.plist</string>
-							<string>2tree2.png</string>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCSprite</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>bush6</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>474</real>
-							<real>364</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.5</real>
-							<real>0.5</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ignoreAnchorPointForPosition</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>displayFrame</string>
-						<key>type</key>
-						<string>SpriteFrame</string>
-						<key>value</key>
-						<array>
-							<string>scene_2_pics.plist</string>
-							<string>2bush6.png</string>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCSprite</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>ground</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>512</real>
-							<real>205</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.5</real>
-							<real>0.5</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ignoreAnchorPointForPosition</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>displayFrame</string>
-						<key>type</key>
-						<string>SpriteFrame</string>
-						<key>value</key>
-						<array>
-							<string>scene_2_pics.plist</string>
-							<string>2ground.png</string>
+							<string>five/scene_3_pics-five.plist</string>
+							<string>3bush4_5.png</string>
 						</array>
 					</dict>
 				</array>
@@ -1585,8 +1057,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>486</real>
-							<real>242</real>
+							<real>438</real>
+							<real>183</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1610,7 +1082,7 @@
 						<array>
 							<real>1</real>
 							<real>1</real>
-							<false/>
+							<true/>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1629,8 +1101,8 @@
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string>scene_2_pics.plist</string>
-							<string>2bush5.png</string>
+							<string>five/scene_3_pics-five.plist</string>
+							<string>3bush5_5.png</string>
 						</array>
 					</dict>
 				</array>
@@ -1643,7 +1115,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>bush8</string>
+				<string>mountainandWTF</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -1657,8 +1129,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>52</real>
-							<real>260</real>
+							<real>284</real>
+							<real>165</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1682,7 +1154,7 @@
 						<array>
 							<real>1</real>
 							<real>1</real>
-							<false/>
+							<true/>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1701,8 +1173,8 @@
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string>scene_2_pics.plist</string>
-							<string>2bush8.png</string>
+							<string>five/scene_3_pics-five.plist</string>
+							<string>3mountainandWTF_5.png</string>
 						</array>
 					</dict>
 				</array>
@@ -1715,7 +1187,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>bushesandmountain</string>
+				<string>ground</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -1729,8 +1201,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>512</real>
-							<real>219</real>
+							<real>284</real>
+							<real>74</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1754,7 +1226,7 @@
 						<array>
 							<real>1</real>
 							<real>1</real>
-							<false/>
+							<true/>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1773,8 +1245,152 @@
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string>scene_2_pics.plist</string>
-							<string>2mountains1bush.png</string>
+							<string>five/scene_3_pics-five.plist</string>
+							<string>3ground_5.png</string>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>trava</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>0</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>263</real>
+							<real>29</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<true/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ignoreAnchorPointForPosition</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>displayFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string>five/scene_3_pics-five.plist</string>
+							<string>3trava_5.png</string>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>bush2</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>0</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>331</real>
+							<real>28</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<true/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ignoreAnchorPointForPosition</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>displayFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string>five/scene_3_pics-five.plist</string>
+							<string>3bush2_5.png</string>
 						</array>
 					</dict>
 				</array>
@@ -1801,8 +1417,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>384</real>
-							<real>47</real>
+							<real>51</real>
+							<real>90</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1881,8 +1497,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>375</real>
-							<real>35</real>
+							<real>56</real>
+							<real>86</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1961,8 +1577,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>364</real>
-							<real>34</real>
+							<real>57</real>
+							<real>76</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2027,6 +1643,222 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
+				<string>downMountains</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>0</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>317</real>
+							<real>33</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<true/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ignoreAnchorPointForPosition</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>displayFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string>five/scene_3_pics-five.plist</string>
+							<string>3downMountains_5.png</string>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>downBushes</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>0</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>284</real>
+							<real>35</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>0.5</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ignoreAnchorPointForPosition</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>displayFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string>five/scene_3_pics-five.plist</string>
+							<string>3downBushes_5.png</string>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>bush3</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>0</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>56</real>
+							<real>86</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<true/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ignoreAnchorPointForPosition</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>displayFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string>five/scene_3_pics-five.plist</string>
+							<string>3bush3_5.png</string>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
 				<string>animal3</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
@@ -2041,8 +1873,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>894</real>
-							<real>73</real>
+							<real>441</real>
+							<real>113</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2121,8 +1953,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>884</real>
-							<real>57</real>
+							<real>435</real>
+							<real>115</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2201,8 +2033,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>878</real>
-							<real>55</real>
+							<real>435</real>
+							<real>113</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2267,7 +2099,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>trava1</string>
+				<string>woodWTF</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -2281,79 +2113,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>524</real>
-							<real>68</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.5</real>
-							<real>0.5</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ignoreAnchorPointForPosition</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>displayFrame</string>
-						<key>type</key>
-						<string>SpriteFrame</string>
-						<key>value</key>
-						<array>
-							<string>scene_2_pics.plist</string>
-							<string>2trava1.png</string>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCSprite</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>trava2</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>766</real>
+							<real>284</real>
 							<real>92</real>
 							<integer>0</integer>
 						</array>
@@ -2378,7 +2138,7 @@
 						<array>
 							<real>1</real>
 							<real>1</real>
-							<false/>
+							<true/>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2397,8 +2157,8 @@
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string>scene_2_pics.plist</string>
-							<string>2trava2.png</string>
+							<string>five/scene_3_pics-five.plist</string>
+							<string>3woodWTF_5.png</string>
 						</array>
 					</dict>
 				</array>
@@ -2411,7 +2171,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>bush3</string>
+				<string>animal6</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -2425,8 +2185,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>52</real>
-							<real>52</real>
+							<real>455</real>
+							<real>35</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2456,6 +2216,14 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>tag</string>
+						<key>type</key>
+						<string>Integer</string>
+						<key>value</key>
+						<integer>16</integer>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>ignoreAnchorPointForPosition</string>
 						<key>type</key>
 						<string>Check</string>
@@ -2469,8 +2237,8 @@
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string>scene_2_pics.plist</string>
-							<string>2bush3.png</string>
+							<string>animalsAnimation.plist</string>
+							<string>animal_1_pos_6_film_1.png</string>
 						</array>
 					</dict>
 				</array>
@@ -2483,7 +2251,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>bush2</string>
+				<string>animal26</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -2497,8 +2265,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>980</real>
-							<real>60</real>
+							<real>455</real>
+							<real>40</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2528,6 +2296,14 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>tag</string>
+						<key>type</key>
+						<string>Integer</string>
+						<key>value</key>
+						<integer>26</integer>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>ignoreAnchorPointForPosition</string>
 						<key>type</key>
 						<string>Check</string>
@@ -2541,8 +2317,8 @@
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string>scene_2_pics.plist</string>
-							<string>2bush2.png</string>
+							<string>animalsAnimation.plist</string>
+							<string>animal_2_pos_6_film_1.png</string>
 						</array>
 					</dict>
 				</array>
@@ -2555,7 +2331,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>bush4</string>
+				<string>animal36</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -2569,8 +2345,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>250</real>
-							<real>60</real>
+							<real>458</real>
+							<real>34</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2600,75 +2376,11 @@
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>ignoreAnchorPointForPosition</string>
+						<string>tag</string>
 						<key>type</key>
-						<string>Check</string>
+						<string>Integer</string>
 						<key>value</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>displayFrame</string>
-						<key>type</key>
-						<string>SpriteFrame</string>
-						<key>value</key>
-						<array>
-							<string>scene_2_pics.plist</string>
-							<string>2bush4.png</string>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCSprite</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>downPart</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>512</real>
-							<real>77</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.5</real>
-							<real>0.5</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
+						<integer>36</integer>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -2685,8 +2397,8 @@
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string>scene_2_pics.plist</string>
-							<string>2downPart.png</string>
+							<string>animalsAnimation.plist</string>
+							<string>animal_3_pos_6_film_1.png</string>
 						</array>
 					</dict>
 				</array>
@@ -2713,8 +2425,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>148</real>
-							<real>78</real>
+							<real>457</real>
+							<real>34</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2738,7 +2450,7 @@
 						<array>
 							<real>1</real>
 							<real>1</real>
-							<false/>
+							<true/>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2757,8 +2469,152 @@
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string>scene_2_pics.plist</string>
-							<string>2bush1.png</string>
+							<string>five/scene_3_pics-five.plist</string>
+							<string>3bush1_5.png</string>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>lystya</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>0</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>137</real>
+							<real>27</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<true/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ignoreAnchorPointForPosition</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>displayFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string>five/scene_3_pics-five.plist</string>
+							<string>3listya_5.png</string>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>trees</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>0</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>284</real>
+							<real>13</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<true/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ignoreAnchorPointForPosition</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>displayFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string>five/scene_3_pics-five.plist</string>
+							<string>3trees_5.png</string>
 						</array>
 					</dict>
 				</array>
@@ -2847,8 +2703,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>959</real>
-									<real>706</real>
+									<real>447</real>
+									<real>286</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -2964,7 +2820,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
+							<real>88</real>
 							<real>0.0</real>
 							<integer>0</integer>
 						</array>
@@ -3073,8 +2929,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>466</real>
-							<real>332</real>
+							<real>231</real>
+							<real>109</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -3108,8 +2964,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>10.794397354125977</real>
-							<real>8.1677160263061523</real>
+							<real>5.9497265815734863</real>
+							<real>3.3754770755767822</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -3235,7 +3091,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>1024</real>
+							<real>568</real>
 							<real>0.0</real>
 							<integer>0</integer>
 						</array>
@@ -3320,8 +3176,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>714</real>
-									<real>198</real>
+									<real>328</real>
+									<real>90</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -3433,8 +3289,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>880</real>
-									<real>300</real>
+									<real>410</real>
+									<real>145</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -3546,8 +3402,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>810</real>
-									<real>200</real>
+									<real>380</real>
+									<real>100</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -3659,8 +3515,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>950</real>
-									<real>200</real>
+									<real>440</real>
+									<real>100</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -3772,8 +3628,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>950</real>
-									<real>80</real>
+									<real>440</real>
+									<real>40</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -3889,7 +3745,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>330</real>
+							<real>250</real>
 							<real>0.0</real>
 							<integer>0</integer>
 						</array>
@@ -4081,15 +3937,15 @@
 			<key>centeredOrigin</key>
 			<false/>
 			<key>ext</key>
-			<string>ipad hd</string>
+			<string> </string>
 			<key>height</key>
-			<integer>768</integer>
+			<integer>320</integer>
 			<key>name</key>
-			<string>iPad Landscape</string>
+			<string>iPhone 5 Landscape</string>
 			<key>scale</key>
-			<real>2</real>
+			<real>1</real>
 			<key>width</key>
-			<integer>1024</integer>
+			<integer>568</integer>
 		</dict>
 	</array>
 	<key>sequences</key>
