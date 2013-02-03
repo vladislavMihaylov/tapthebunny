@@ -223,10 +223,19 @@
             curNode.isCanTap = NO;
             [curNode stopAllActions];
             
-            [curNode runAction: [CCSpawn actions:
+            [curNode runAction: [CCSequence actions:
                                         [CCJumpTo actionWithDuration: 1 position: animalFlyPoint height: 50 jumps: 1],
-                                nil]
-                ];
+                                 [CCCallBlock actionWithBlock: ^(id sender){
+                
+                                 if([starsArray count] >= 6)
+                                 {
+                                     [self showMotherScene];
+                                 }
+                                 }],
+                                 nil]
+            ];
+            
+            
             
             [self addStar];
         }
@@ -412,11 +421,6 @@
             
             [starsArray addObject: starSprite];
         }
-    }
-    
-    if([starsArray count] >= 6)
-    {
-        [self showMotherScene];
     }
 }
 

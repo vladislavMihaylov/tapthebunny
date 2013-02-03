@@ -37,13 +37,31 @@
     {
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"FamilyWin.mp3" loop: YES];
         
-        CCLabelTTF *label = [CCLabelTTF labelWithString: @"You Win!!" fontName: @"Arial" fontSize: 48];
-        label.position = ccp(240, 160);
-        [self addChild: label];
+        if(IS_WIDESCREEN == NO)
+        {
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: @"finish.plist"];
+        }
+        else
+        {
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: @"finish-five.plist"];
+        }
         
-        CCMenuItemFont *mainMenu = [CCMenuItemFont itemWithString: @"Main menu" target: self selector: @selector(gotoMainMenu)];
+        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: @"mainMenu.plist"];
         
-        mainMenu.position = ccp(240, 120);
+        CCSprite *playBtnSprite = [CCSprite spriteWithSpriteFrameName: @"playBtn.png"];
+        CCSprite *playBtnOnSprite = [CCSprite spriteWithSpriteFrameName: @"playBtnOn.png"];
+        
+        CCSprite *bgSprite = [CCSprite spriteWithSpriteFrameName: [NSString stringWithFormat: @"animal_%i_finish.png", animalNum]];
+        bgSprite.position = ccp(GameCenterX, GameCenterY);
+        [self addChild: bgSprite];
+        
+        CCMenuItemImage *mainMenu = [CCMenuItemImage itemWithNormalSprite: playBtnSprite
+                                                           selectedSprite: playBtnOnSprite
+                                                                   target: self
+                                                                 selector: @selector(gotoMainMenu)
+                                     ];
+        
+        mainMenu.position = ccp(GameCenterX * 2 * 0.9, GameCenterY * 2 * 0.15);
         
         CCMenu *menu = [CCMenu menuWithItems: mainMenu, nil];
         menu.position = ccp(0, 0);
@@ -55,7 +73,7 @@
 
 - (void) gotoMainMenu
 {
-    CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"MainMenuScene%@.ccbi", postFix]];
+    CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"SelectAnimal%@.ccbi", postFix]];
     [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
 }
 
