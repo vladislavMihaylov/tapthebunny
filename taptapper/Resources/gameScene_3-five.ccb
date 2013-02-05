@@ -632,6 +632,14 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>tag</string>
+						<key>type</key>
+						<string>Integer</string>
+						<key>value</key>
+						<integer>3006</integer>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>ignoreAnchorPointForPosition</string>
 						<key>type</key>
 						<string>Check</string>
@@ -1016,6 +1024,14 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>tag</string>
+						<key>type</key>
+						<string>Integer</string>
+						<key>value</key>
+						<integer>3004</integer>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>ignoreAnchorPointForPosition</string>
 						<key>type</key>
 						<string>Check</string>
@@ -1085,6 +1101,14 @@
 							<true/>
 							<integer>0</integer>
 						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>tag</string>
+						<key>type</key>
+						<string>Integer</string>
+						<key>value</key>
+						<integer>3005</integer>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1373,6 +1397,14 @@
 							<true/>
 							<integer>0</integer>
 						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>tag</string>
+						<key>type</key>
+						<string>Integer</string>
+						<key>value</key>
+						<integer>3002</integer>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1829,6 +1861,14 @@
 							<true/>
 							<integer>0</integer>
 						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>tag</string>
+						<key>type</key>
+						<string>Integer</string>
+						<key>value</key>
+						<integer>3003</integer>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -2456,6 +2496,14 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>tag</string>
+						<key>type</key>
+						<string>Integer</string>
+						<key>value</key>
+						<integer>3001</integer>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>ignoreAnchorPointForPosition</string>
 						<key>type</key>
 						<string>Check</string>
@@ -3066,8 +3114,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>

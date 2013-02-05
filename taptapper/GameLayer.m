@@ -36,6 +36,7 @@
     
     animalsArray = [[NSMutableArray alloc] init];
     starsArray = [[NSMutableArray alloc] init];
+    bushesArray = [[NSMutableArray alloc] init];
     
     tutorialSprite = [CCSprite spriteWithFile: @"tutorial.png"];
     tutorialSprite.position = ccp(GameCenterX, GameCenterY * 3);
@@ -99,6 +100,11 @@
         [curSprite stopAllActions];
     }
     
+    for (CCSprite *curBush in bushesArray)
+    {
+        [curBush stopAllActions];
+    }
+    
     for(int i = 0; i < [animalsArray count]; i++)
     {
         NSInteger posX = [[coordinatsItems objectAtIndex: 2 * i + 0] integerValue];
@@ -107,14 +113,56 @@
         [[animalsArray objectAtIndex: i] setPosition: ccp(posX, posY)];
     }
     
+    [bushesArray removeAllObjects];
     [animalsArray removeAllObjects];
     
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: [NSString stringWithFormat: @"animalsAnimation.plist"]];
-    
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: [NSString stringWithFormat: @"scene_%i_bushes.plist", sceneNum]];
     
     for (int i = 1; i < 7; i++)
     {
         [Common loadAnimationWithPlist: @"Animations" andName: [NSString stringWithFormat: @"animal_%i_pos_%i_film_", animalNum, i]];
+    }
+    
+    NSInteger countOfBushes = 0;
+    
+    for(CCSprite *curBush in arr)
+    {
+        if(curBush.tag > (sceneNum * 1000))
+        {
+            countOfBushes++;
+        }
+    }
+    
+    CCLOG(@"Bushes: %i", countOfBushes);
+    
+    for (int i = 1; i <= countOfBushes; i++)
+    {
+        [Common loadAnimationWithPlist: @"bushesAnimations" andName: [NSString stringWithFormat: @"scene_%i_bush_%i_", sceneNum, i]];
+    }
+    
+    for(CCSprite *curBush in arr)
+    {
+        for (int i = 1; i <= countOfBushes; i++)
+        {
+            NSString *curNum = [NSString stringWithFormat: @"%i00%i", sceneNum, i];
+            NSInteger curTag = [curNum integerValue];
+            
+            
+            
+            if(curBush.tag == curTag)
+            {
+                [bushesArray addObject: curBush];
+                
+                [curBush runAction:
+                            [CCRepeatForever actionWithAction:
+                                                [CCAnimate actionWithAnimation:
+        [[CCAnimationCache sharedAnimationCache] animationByName: [NSString stringWithFormat: @"scene_%i_bush_%i_", sceneNum, i]]
+                                                 ]
+                             ]
+                 ];
+            }
+        }
     }
     
     for(CCSprite *curSpr in arr)
@@ -125,8 +173,12 @@
             
             NSInteger curTag = [curNum integerValue];
             
+            
+            
             if(curSpr.tag == curTag)
             {
+                CCLOG(@"CurTag: %i", curTag);
+                
                 [curSpr runAction:
                             [CCRepeatForever actionWithAction:
                                                 [CCAnimate actionWithAnimation:
@@ -317,6 +369,11 @@
     {
         [curNode pauseSchedulerAndActions];
     }
+    
+    for (CCSprite *curBush in bushesArray)
+    {
+        [curBush pauseSchedulerAndActions];
+    }
 }
 
 - (void) unPause
@@ -378,6 +435,11 @@
     for(CCSprite *curNode in animalsArray)
     {
         [curNode resumeSchedulerAndActions];
+    }
+    
+    for (CCSprite *curBush in bushesArray)
+    {
+        [curBush resumeSchedulerAndActions];
     }
 }
 

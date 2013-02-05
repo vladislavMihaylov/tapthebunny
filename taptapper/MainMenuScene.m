@@ -12,6 +12,8 @@
 
 #import "SimpleAudioEngine.h"
 
+#import "CartScene.h"
+
 #import "GameConfig.h"
 #import "Settings.h"
 
@@ -78,6 +80,8 @@
     [self hideSlideForButton: 106];
     
     CCLOG(@"Cart");
+    
+    [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: [CartScene scene]]];
 }
 
 - (void) pressedGift: (id) sender

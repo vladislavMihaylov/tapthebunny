@@ -8,6 +8,8 @@ Settings *sharedSettings = nil;
 
 @synthesize soundLevel;
 @synthesize gameMode;
+@synthesize openOwl;
+@synthesize openSquirrel;
 
 + (Settings *) sharedSettings
 {
@@ -61,6 +63,26 @@ Settings *sharedSettings = nil;
     {
         self.gameMode = 0;
     }
+    
+    NSNumber *owlData = [defaults objectForKey: kOwlKey];
+    if(owlData)
+    {
+        self.openOwl = [owlData integerValue];
+    }
+    else
+    {
+        self.openOwl = 0;
+    }
+    
+    NSNumber *squirrelData = [defaults objectForKey: kSquirrelKey];
+    if(squirrelData)
+    {
+        self.openSquirrel = [squirrelData integerValue];
+    }
+    else
+    {
+        self.openSquirrel = 0;
+    }
 }
 
 - (void) save
@@ -69,6 +91,8 @@ Settings *sharedSettings = nil;
     
     [defaults setObject: [NSNumber numberWithInteger: self.soundLevel] forKey: kSoundKey];
     [defaults setObject: [NSNumber numberWithInteger: self.gameMode] forKey: kGameModeKey];
+    [defaults setObject: [NSNumber numberWithInteger: self.openOwl] forKey: kOwlKey];
+    [defaults setObject: [NSNumber numberWithInteger: self.openSquirrel] forKey: kSquirrelKey];
     
     [defaults synchronize];
 }

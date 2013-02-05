@@ -13,6 +13,8 @@
 
 #define kSoundKey           @"soundKey"
 #define kGameModeKey        @"gameModeKey"
+#define kOwlKey             @"owlKey"
+#define kSquirrelKey        @"squirrelKey"
 
 #define IS_WIDESCREEN ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 

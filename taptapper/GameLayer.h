@@ -19,6 +19,7 @@
     
     NSMutableArray *animalsArray;
     NSMutableArray *starsArray;
+    NSMutableArray *bushesArray;
     
     NSString *coordinats;
     NSString *subZeroCoordinats;

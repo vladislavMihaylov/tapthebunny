@@ -34,8 +34,30 @@
     
     animalNum = sender.tag;
     
-    CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"gameScene_%i%@.ccbi", sceneNum, postFix]];
-    [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
+    if(animalNum == 1)
+    {
+        CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"gameScene_%i%@.ccbi", sceneNum, postFix]];
+        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
+    }
+    
+    if(animalNum == 2)
+    {
+        if([Settings sharedSettings].openOwl == 1)
+        {
+            CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"gameScene_%i%@.ccbi", sceneNum, postFix]];
+            [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
+        }
+    }
+    
+    if(animalNum == 3)
+    {
+        if([Settings sharedSettings].openSquirrel == 1)
+        {
+            CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"gameScene_%i%@.ccbi", sceneNum, postFix]];
+            [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
+        }
+    }
+    
 }
 
 - (void) didLoadFromCCB
@@ -48,10 +70,10 @@
     CCSprite *sprite = [CCSprite spriteWithFile: @"Icon.png"];
     sprite.anchorPoint = ccp(0.5, 0);
     
-    CCSprite *sprite2 = [CCSprite spriteWithFile: @"Icon.png"];
+    CCSprite *sprite2 = [CCSprite spriteWithFile: @"animal_2_lock.png"];
     sprite2.anchorPoint = ccp(0.5, 0);
     
-    CCSprite *sprite3 = [CCSprite spriteWithFile: @"Icon.png"];
+    CCSprite *sprite3 = [CCSprite spriteWithFile: @"animal_3_lock.png"];
     sprite3.anchorPoint = ccp(0.5, 0);
    
     sprite.position = posForSprite1;
@@ -76,21 +98,27 @@
              ]
      ];
     
-    [sprite2 runAction:
-            [CCRepeatForever actionWithAction:
-                                [CCAnimate actionWithAnimation:
-                                        [[CCAnimationCache sharedAnimationCache] animationByName: @"owlAnimation"]
-                                 ]
-             ]
-     ];
+    if([Settings sharedSettings].openOwl == 1)
+    {
+        [sprite2 runAction:
+                [CCRepeatForever actionWithAction:
+                                    [CCAnimate actionWithAnimation:
+                                            [[CCAnimationCache sharedAnimationCache] animationByName: @"owlAnimation"]
+                                     ]
+                 ]
+         ];
+    }
     
-    [sprite3 runAction:
-            [CCRepeatForever actionWithAction:
-                                [CCAnimate actionWithAnimation:
-                                        [[CCAnimationCache sharedAnimationCache] animationByName: @"squirrelAnimation"]
-                                 ]
-             ]
-     ];
+    if([Settings sharedSettings].openSquirrel == 1)
+    {
+        [sprite3 runAction:
+                [CCRepeatForever actionWithAction:
+                                    [CCAnimate actionWithAnimation:
+                                            [[CCAnimationCache sharedAnimationCache] animationByName: @"squirrelAnimation"]
+                                     ]
+                 ]
+         ];
+    }
 }
 
 @end
