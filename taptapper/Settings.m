@@ -61,7 +61,7 @@ Settings *sharedSettings = nil;
     }
     else
     {
-        self.gameMode = 0;
+        self.gameMode = 1;
     }
     
     NSNumber *animalsData = [defaults objectForKey: kAnimalsKey];
