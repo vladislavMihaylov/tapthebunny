@@ -38,17 +38,18 @@
 {
     if(self = [super init])
     {
-        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: @"selectAnimal.plist"];
+        [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+        [[SimpleAudioEngine sharedEngine] playEffect: @"win.mp3"];
         
         CCSprite *bgSprite;
         
         if(IS_WIDESCREEN == YES)
         {
-            bgSprite = [CCSprite spriteWithFile: @"selectAnimalBg.png"];
+            bgSprite = [CCSprite spriteWithFile: @"congrBg-five.png"];
         }
         else
         {
-            bgSprite = [CCSprite spriteWithSpriteFrameName: @"bg.png"];
+            bgSprite = [CCSprite spriteWithFile: @"congrBg.png"];
         }
         
         bgSprite.position = ccp(GameCenterX, GameCenterY);
@@ -74,70 +75,26 @@
         
         
         
-        CCLabelBMFont *congratulationsLabel = [CCLabelBMFont labelWithString: @"Congratulations!" fntFile: @"shopFnt.fnt"];
-        congratulationsLabel.position = ccp(GameCenterX, GameCenterY * 1.7);
+        CCSprite *congratulations = [CCSprite spriteWithFile: @"congrats.png"];
+        congratulations.position = ccp(GameCenterX, GameCenterY * 1.45);
         
-        if(stars)
-        {
-            [self addChild: congratulationsLabel];
-        }
-        
-        NSString *text;
-        
-        if(stars == 0)
-        {
-            text = @"You not collected stars!";
-        }
-        else
-        {
-            text = @"You collected:";
-        }
-        
-        CCLabelBMFont *collectedLabel = [CCLabelBMFont labelWithString: [NSString stringWithFormat: @"%@", text] fntFile: @"shopFnt.fnt"];
-        
-        if(stars)
-        {
-            collectedLabel.position = ccp(GameCenterX, GameCenterY * 1.35);
-            collectedLabel.scale = 0.85;
-        }
-        else
-        {
-            collectedLabel.position = ccp(GameCenterX, GameCenterY);
-        }
+        [self addChild: congratulations];
         
         
-        [self addChild: collectedLabel];
         
-        NSString *postFix;
         
-        if(stars > 1)
-        {
-            postFix = @"s!";
-        }
-        else
-        {
-            postFix = @"!";
-        }
-        
-        CCLabelBMFont *starsLabel = [CCLabelBMFont labelWithString: [NSString stringWithFormat: @"star%@", postFix] fntFile: @"shopFnt.fnt"];
-        starsLabel.position = ccp(GameCenterX, GameCenterY * 0.75);
-        starsLabel.scale = 0.85;
-        
-        if(stars)
-        {
-            [self addChild: starsLabel];
-        }
+       
         
         CCSprite *starSprite1 = [CCSprite spriteWithFile: @"star.png"];
         
-        float startPosition = GameCenterX + (starSprite1.contentSize.width / 2 * (stars - 1));
+        float startPosition = GameCenterX + (starSprite1.contentSize.width * 1.5 / 2 * (stars - 1));
         
         for(int i = 0; i < stars; i++)
         {
             CCSprite *starSprite = [CCSprite spriteWithFile: @"star.png"];
             
-            starSprite.position = ccp((startPosition - (i * starSprite.contentSize.width)), GameCenterY * 1.05);
-            
+            starSprite.position = ccp((startPosition - (i * starSprite.contentSize.width * 1.5)), GameCenterY * 1.05);
+            starSprite.scale = 1.5;
             [self addChild: starSprite];
         }
     }
