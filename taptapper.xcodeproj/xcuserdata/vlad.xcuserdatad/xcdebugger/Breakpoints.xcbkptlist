@@ -138,11 +138,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/SelectAnimalScene.m"
-         timestampString = "381657904.45685"
+         timestampString = "382037897.752487"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "52"
-         endingLineNumber = "52"
+         startingLineNumber = "56"
+         endingLineNumber = "56"
          landmarkName = "-playWith:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -151,11 +151,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/SelectAnimalScene.m"
-         timestampString = "381657904.45685"
+         timestampString = "382037897.752487"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "43"
-         endingLineNumber = "43"
+         startingLineNumber = "44"
+         endingLineNumber = "44"
          landmarkName = "-playWith:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -177,11 +177,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/GameLayer.m"
-         timestampString = "381788355.048196"
+         timestampString = "382041148.947059"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "370"
-         endingLineNumber = "370"
+         startingLineNumber = "492"
+         endingLineNumber = "492"
          landmarkName = "-pause"
          landmarkType = "5">
       </FileBreakpoint>
@@ -190,11 +190,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/GameLayer.m"
-         timestampString = "381788355.048196"
+         timestampString = "382041148.947059"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "269"
-         endingLineNumber = "269"
+         startingLineNumber = "380"
+         endingLineNumber = "380"
          landmarkName = "-ccTouchBegan:withEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -203,11 +203,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/GameLayer.m"
-         timestampString = "381788355.048196"
+         timestampString = "382041148.947059"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "267"
-         endingLineNumber = "267"
+         startingLineNumber = "378"
+         endingLineNumber = "378"
          landmarkName = "-ccTouchBegan:withEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -216,11 +216,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/GameLayer.m"
-         timestampString = "381788355.048196"
+         timestampString = "382041148.947059"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "62"
-         endingLineNumber = "62"
+         startingLineNumber = "108"
+         endingLineNumber = "108"
          landmarkName = "-didLoadFromCCB"
          landmarkType = "5">
       </FileBreakpoint>
@@ -229,11 +229,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/CCBReader.m"
-         timestampString = "381158901.288277"
+         timestampString = "382039119.280714"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1095"
-         endingLineNumber = "1095"
+         startingLineNumber = "1096"
+         endingLineNumber = "1096"
          landmarkName = "+nodeGraphFromFile:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -242,11 +242,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/CCBReader.m"
-         timestampString = "381158911.79247"
+         timestampString = "382039119.280714"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1052"
-         endingLineNumber = "1052"
+         startingLineNumber = "1053"
+         endingLineNumber = "1053"
          landmarkName = "+nodeGraphFromFile:owner:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -255,11 +255,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/CCBReader.m"
-         timestampString = "381158922.040502"
+         timestampString = "382039119.280714"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1087"
-         endingLineNumber = "1087"
+         startingLineNumber = "1088"
+         endingLineNumber = "1088"
          landmarkName = "+nodeGraphFromFile:owner:parentSize:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -268,11 +268,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/CCBReader.m"
-         timestampString = "381158929.02344"
+         timestampString = "382039119.280714"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1057"
-         endingLineNumber = "1057"
+         startingLineNumber = "1058"
+         endingLineNumber = "1058"
          landmarkName = "+nodeGraphFromData:owner:parentSize:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -281,11 +281,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/CCBReader.m"
-         timestampString = "381159108.835787"
+         timestampString = "382039119.280714"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1018"
-         endingLineNumber = "1018"
+         startingLineNumber = "1019"
+         endingLineNumber = "1019"
          landmarkName = "-readFileWithCleanUp:actionManagers:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -294,11 +294,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/GameLayer.m"
-         timestampString = "381788355.048196"
+         timestampString = "382041148.947059"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "258"
-         endingLineNumber = "258"
+         startingLineNumber = "369"
+         endingLineNumber = "369"
          landmarkName = "-registerWithTouchDispatcher"
          landmarkType = "5">
       </FileBreakpoint>
@@ -307,11 +307,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/GameLayer.m"
-         timestampString = "381788355.048196"
+         timestampString = "382041148.947059"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "117"
-         endingLineNumber = "117"
+         startingLineNumber = "165"
+         endingLineNumber = "165"
          landmarkName = "-restartLevel"
          landmarkType = "5">
       </FileBreakpoint>
@@ -320,11 +320,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/GameLayer.m"
-         timestampString = "381788355.048196"
+         timestampString = "382041148.947059"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "98"
-         endingLineNumber = "98"
+         startingLineNumber = "144"
+         endingLineNumber = "144"
          landmarkName = "-restartLevel"
          landmarkType = "5">
       </FileBreakpoint>
@@ -333,11 +333,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/GameLayer.m"
-         timestampString = "381788355.048196"
+         timestampString = "382041148.947059"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "96"
-         endingLineNumber = "96"
+         startingLineNumber = "142"
+         endingLineNumber = "142"
          landmarkName = "-restartLevel"
          landmarkType = "5">
       </FileBreakpoint>
@@ -346,11 +346,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/GameLayer.m"
-         timestampString = "381788355.048196"
+         timestampString = "382041148.947059"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "93"
-         endingLineNumber = "93"
+         startingLineNumber = "139"
+         endingLineNumber = "139"
          landmarkName = "-restartLevel"
          landmarkType = "5">
       </FileBreakpoint>
@@ -359,11 +359,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/GameLayer.m"
-         timestampString = "381788355.048196"
+         timestampString = "382041148.947059"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "108"
-         endingLineNumber = "108"
+         startingLineNumber = "156"
+         endingLineNumber = "156"
          landmarkName = "-restartLevel"
          landmarkType = "5">
       </FileBreakpoint>
@@ -372,11 +372,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/GameLayer.m"
-         timestampString = "381788355.048196"
+         timestampString = "382041148.947059"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "110"
-         endingLineNumber = "110"
+         startingLineNumber = "158"
+         endingLineNumber = "158"
          landmarkName = "-restartLevel"
          landmarkType = "5">
       </FileBreakpoint>
@@ -385,11 +385,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/GameLayer.m"
-         timestampString = "381788355.048196"
+         timestampString = "382041148.947059"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "111"
-         endingLineNumber = "111"
+         startingLineNumber = "159"
+         endingLineNumber = "159"
          landmarkName = "-restartLevel"
          landmarkType = "5">
       </FileBreakpoint>
@@ -398,11 +398,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/GameLayer.m"
-         timestampString = "381788355.048196"
+         timestampString = "382041148.947059"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "111"
-         endingLineNumber = "111"
+         startingLineNumber = "159"
+         endingLineNumber = "159"
          landmarkName = "-restartLevel"
          landmarkType = "5">
       </FileBreakpoint>
@@ -424,11 +424,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/MainMenuScene.m"
-         timestampString = "381659281.506057"
+         timestampString = "381997750.407051"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "214"
-         endingLineNumber = "214"
+         startingLineNumber = "211"
+         endingLineNumber = "211"
          landmarkName = "-didLoadFromCCB"
          landmarkType = "5">
       </FileBreakpoint>
@@ -437,11 +437,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/MainMenuScene.m"
-         timestampString = "381659281.506057"
+         timestampString = "381997750.407051"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "221"
-         endingLineNumber = "221"
+         startingLineNumber = "218"
+         endingLineNumber = "218"
          landmarkName = "-didLoadFromCCB"
          landmarkType = "5">
       </FileBreakpoint>
@@ -450,11 +450,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/MainMenuScene.m"
-         timestampString = "381659281.506057"
+         timestampString = "381997750.407051"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "198"
-         endingLineNumber = "198"
+         startingLineNumber = "202"
+         endingLineNumber = "202"
          landmarkName = "-didLoadFromCCB"
          landmarkType = "5">
       </FileBreakpoint>
@@ -463,37 +463,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/MainMenuScene.m"
-         timestampString = "381659281.506057"
+         timestampString = "381999988.242624"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "205"
-         endingLineNumber = "205"
-         landmarkName = "-didLoadFromCCB"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "taptapper/MainMenuScene.m"
-         timestampString = "381659281.506057"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "189"
-         endingLineNumber = "189"
-         landmarkName = "-didLoadFromCCB"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "taptapper/MainMenuScene.m"
-         timestampString = "381659281.506057"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "212"
-         endingLineNumber = "212"
+         startingLineNumber = "234"
+         endingLineNumber = "234"
          landmarkName = "-didLoadFromCCB"
          landmarkType = "5">
       </FileBreakpoint>
@@ -502,11 +476,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/GameLayer.m"
-         timestampString = "381788355.048196"
+         timestampString = "382041148.947059"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "41"
-         endingLineNumber = "41"
+         startingLineNumber = "87"
+         endingLineNumber = "87"
          landmarkName = "-didLoadFromCCB"
          landmarkType = "5">
       </FileBreakpoint>
@@ -515,11 +489,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/GameLayer.m"
-         timestampString = "381788355.048196"
+         timestampString = "382041148.947059"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "47"
-         endingLineNumber = "47"
+         startingLineNumber = "93"
+         endingLineNumber = "93"
          landmarkName = "-didLoadFromCCB"
          landmarkType = "5">
       </FileBreakpoint>
@@ -619,11 +593,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/CartScene.m"
-         timestampString = "381701752.251086"
+         timestampString = "382002726.706192"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "165"
-         endingLineNumber = "165"
+         startingLineNumber = "157"
+         endingLineNumber = "157"
          landmarkName = "-buy:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -632,11 +606,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/CartScene.m"
-         timestampString = "381701752.251086"
+         timestampString = "382002726.706192"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "163"
-         endingLineNumber = "163"
+         startingLineNumber = "155"
+         endingLineNumber = "155"
          landmarkName = "-buy:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -645,11 +619,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/CartScene.m"
-         timestampString = "381701752.251086"
+         timestampString = "381869407.145295"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "54"
-         endingLineNumber = "54"
+         startingLineNumber = "64"
+         endingLineNumber = "64"
          landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
@@ -658,12 +632,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/GameLayer.m"
-         timestampString = "381788355.048196"
+         timestampString = "382041148.947059"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "160"
-         endingLineNumber = "160"
-         landmarkName = "-restartLevel"
+         startingLineNumber = "628"
+         endingLineNumber = "628"
+         landmarkName = "-removeStars"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -671,12 +645,181 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/GameLayer.m"
-         timestampString = "381788355.048196"
+         timestampString = "382041148.947059"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "157"
-         endingLineNumber = "157"
-         landmarkName = "-restartLevel"
+         startingLineNumber = "619"
+         endingLineNumber = "619"
+         landmarkName = "-removeStars"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/GameLayer.m"
+         timestampString = "382041148.947059"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "623"
+         endingLineNumber = "623"
+         landmarkName = "-removeStars"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/GameLayer.m"
+         timestampString = "382041148.947059"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "617"
+         endingLineNumber = "617"
+         landmarkName = "-removeStars"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/GameLayer.m"
+         timestampString = "382041148.947059"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "421"
+         endingLineNumber = "421"
+         landmarkName = "-restart"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/GameLayer.m"
+         timestampString = "382041148.947059"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "423"
+         endingLineNumber = "423"
+         landmarkName = "-restart"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/GameLayer.m"
+         timestampString = "382041148.947059"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "425"
+         endingLineNumber = "425"
+         landmarkName = "-restart"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/GameLayer.m"
+         timestampString = "382041148.947059"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "507"
+         endingLineNumber = "507"
+         landmarkName = "-unPause"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/GameLayer.m"
+         timestampString = "382041148.947059"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "424"
+         endingLineNumber = "424"
+         landmarkName = "-restart"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/GameLayer.m"
+         timestampString = "382039903.528096"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "62"
+         endingLineNumber = "62"
+         landmarkName = "-playBushAnimation:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/GameLayer.m"
+         timestampString = "382037083.797659"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "58"
+         endingLineNumber = "58"
+         landmarkName = "-playBushAnimation:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/GameLayer.m"
+         timestampString = "382037084.933548"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "60"
+         endingLineNumber = "60"
+         landmarkName = "-playBushAnimation:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/GameLayer.m"
+         timestampString = "382039918.469029"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "53"
+         endingLineNumber = "53"
+         landmarkName = "-showTagOfAnimal:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/GameLayer.m"
+         timestampString = "382039930.804611"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "43"
+         endingLineNumber = "43"
+         landmarkName = "-showTagOfAnimal:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/CCSpriteMoveAnimal.m"
+         timestampString = "382040181.864367"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "21"
+         endingLineNumber = "21"
+         landmarkName = "-moveAnimal"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

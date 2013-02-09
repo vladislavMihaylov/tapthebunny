@@ -5,5 +5,6 @@
 
 - (void) moveAnimal;
 - (void) pauseActions;
+- (void) hideAnimal;
 
 @end

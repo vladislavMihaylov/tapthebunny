@@ -29,9 +29,12 @@
 #import "CCProtocols.h"
 #import "CCTextureAtlas.h"
 
+
+
 @class CCSpriteBatchNode;
 @class CCSpriteFrame;
 @class CCAnimation;
+@class GameLayer;
 
 #pragma mark CCSprite
 
@@ -110,8 +113,12 @@
     
     
     BOOL isCanTap;
+    GameLayer *gameLayer;
+    CCArray *gameLayerArray;
 }
 
+@property (nonatomic, assign) CCArray *gameLayerArray;
+@property (nonatomic, assign) GameLayer *gameLayer;
 @property (nonatomic, assign) BOOL isCanTap;
 /** whether or not the Sprite needs to be updated in the Atlas */
 @property (nonatomic,readwrite) BOOL dirty;

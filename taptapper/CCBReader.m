@@ -38,6 +38,7 @@
 //#import "JSCocoa.h"
 #endif
 
+#import "GameLayer.h"
 
 @interface CCBFile : CCNode
 {
@@ -1104,6 +1105,7 @@
 {
     CCNode* node = [CCBReader nodeGraphFromFile:file owner:owner parentSize:parentSize];
     CCScene* scene = [CCScene node];
+    
     [scene addChild:node];
     return scene;
 }

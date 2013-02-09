@@ -37,27 +37,37 @@
     if(animalNum == 1)
     {
         CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"gameScene_%i%@.ccbi", sceneNum, postFix]];
+        
         [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
     }
     
     if(animalNum == 2)
     {
-        if([Settings sharedSettings].openOwl == 1)
+        if([Settings sharedSettings].openAnimals == 1)
         {
+            
+            
             CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"gameScene_%i%@.ccbi", sceneNum, postFix]];
+            
             [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
         }
     }
     
     if(animalNum == 3)
     {
-        if([Settings sharedSettings].openSquirrel == 1)
+        if([Settings sharedSettings].openAnimals == 1)
         {
             CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"gameScene_%i%@.ccbi", sceneNum, postFix]];
+            
             [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
         }
     }
     
+}
+
+- (void) dealloc
+{
+    [super dealloc];
 }
 
 - (void) didLoadFromCCB
@@ -65,7 +75,7 @@
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"chooseAnimal.mp3"];
     [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: [Settings sharedSettings].soundLevel];
     
-    sceneNum = arc4random() % 3 + 1;
+    sceneNum = 2;//arc4random() % 3 + 1;
     
     CCSprite *sprite = [CCSprite spriteWithFile: @"Icon.png"];
     sprite.anchorPoint = ccp(0.5, 0);
@@ -98,7 +108,7 @@
              ]
      ];
     
-    if([Settings sharedSettings].openOwl == 1)
+    if([Settings sharedSettings].openAnimals == 1)
     {
         [sprite2 runAction:
                 [CCRepeatForever actionWithAction:
@@ -107,10 +117,8 @@
                                      ]
                  ]
          ];
-    }
     
-    if([Settings sharedSettings].openSquirrel == 1)
-    {
+    
         [sprite3 runAction:
                 [CCRepeatForever actionWithAction:
                                     [CCAnimate actionWithAnimation:

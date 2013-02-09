@@ -99,7 +99,7 @@
 {
     [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
     
-    SHKItem *facebookItem = [SHKItem text: @"Best game ever!!! #tapthebunny"];
+    SHKItem *facebookItem = [SHKItem text: @"Best game ever for toddlers and preschoolers!!! #tapthebunny"];
     [SHKFacebook shareItem: facebookItem];
 }
 
@@ -107,7 +107,7 @@
 {
     [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
     
-    SHKItem *tweetItem = [SHKItem text: @"Best game ever!!! #tapthebunny"];
+    SHKItem *tweetItem = [SHKItem text: @"Best game ever for toddlers and preschoolers!!! #tapthebunny"];
     [SHKTwitter shareItem: tweetItem];
 }
 
@@ -145,10 +145,23 @@
     [[Settings sharedSettings] save];
 }
 
+- (void) dealloc
+{
+    [super dealloc];
+}
+
 - (void) didLoadFromCCB
 {
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"menu.mp3"];
-    [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: [Settings sharedSettings].soundLevel];
+    if([Settings sharedSettings].soundLevel == 1)
+    {
+        [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: 1];
+    }
+    else
+    {
+        [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: 0];
+    }
+    
     [[SimpleAudioEngine sharedEngine] setEffectsVolume: [Settings sharedSettings].soundLevel];
     
     isOpenOptionsMenu = NO;
@@ -208,20 +221,31 @@
         [soundMenu addChild: sound z: 1 tag: kSoundBtnTag];
     }
     
-    
-    if ([Settings sharedSettings].gameMode == 0)
+    if([Settings sharedSettings].openBabyMode == 0)
     {
-        CCMenuItemToggle *speed = [CCMenuItemToggle itemWithTarget:self selector:@selector(speedMode) items: baby, monster, nil];
-        speed.position = posForOptionsMenu;
-        speed.isEnabled = NO;
-        [speedMenu addChild: speed z: 1 tag: kSpeedBtnTag];
+        [speedMenu addChild: monster z: 1 tag: kSpeedBtnTag];
+        monster.position = posForOptionsMenu;
+        monster.isEnabled = NO;
+        monster.opacity = 180;
     }
-    else if ([Settings sharedSettings].gameMode == 1)
+    else
     {
-        CCMenuItemToggle *speed = [CCMenuItemToggle itemWithTarget:self selector:@selector(speedMode) items: monster, baby, nil];
-        speed.position = posForOptionsMenu;
-        speed.isEnabled = NO;
-        [speedMenu addChild: speed z: 1 tag: kSpeedBtnTag];
+    
+        if ([Settings sharedSettings].gameMode == 0)
+        {
+            CCMenuItemToggle *speed = [CCMenuItemToggle itemWithTarget:self selector:@selector(speedMode) items: baby, monster, nil];
+            speed.position = posForOptionsMenu;
+            speed.isEnabled = NO;
+            [speedMenu addChild: speed z: 1 tag: kSpeedBtnTag];
+        }
+        else if ([Settings sharedSettings].gameMode == 1)
+        {
+            CCMenuItemToggle *speed = [CCMenuItemToggle itemWithTarget:self selector:@selector(speedMode) items: monster, baby, nil];
+            speed.position = posForOptionsMenu;
+            speed.isEnabled = NO;
+            [speedMenu addChild: speed z: 1 tag: kSpeedBtnTag];
+        }
+        
     }
     
     arr = [self children];

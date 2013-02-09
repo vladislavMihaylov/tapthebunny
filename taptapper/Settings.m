@@ -8,8 +8,8 @@ Settings *sharedSettings = nil;
 
 @synthesize soundLevel;
 @synthesize gameMode;
-@synthesize openOwl;
-@synthesize openSquirrel;
+@synthesize openAnimals;
+@synthesize openBabyMode;
 
 + (Settings *) sharedSettings
 {
@@ -64,24 +64,24 @@ Settings *sharedSettings = nil;
         self.gameMode = 0;
     }
     
-    NSNumber *owlData = [defaults objectForKey: kOwlKey];
-    if(owlData)
+    NSNumber *animalsData = [defaults objectForKey: kAnimalsKey];
+    if(animalsData)
     {
-        self.openOwl = [owlData integerValue];
+        self.openAnimals = [animalsData integerValue];
     }
     else
     {
-        self.openOwl = 0;
+        self.openAnimals = 0;
     }
     
-    NSNumber *squirrelData = [defaults objectForKey: kSquirrelKey];
-    if(squirrelData)
+    NSNumber *openBabyModeData = [defaults objectForKey: kOpenBabyModeKey];
+    if(openBabyModeData)
     {
-        self.openSquirrel = [squirrelData integerValue];
+        self.openBabyMode = [openBabyModeData integerValue];
     }
     else
     {
-        self.openSquirrel = 0;
+        self.openBabyMode = 0;
     }
 }
 
@@ -91,8 +91,8 @@ Settings *sharedSettings = nil;
     
     [defaults setObject: [NSNumber numberWithInteger: self.soundLevel] forKey: kSoundKey];
     [defaults setObject: [NSNumber numberWithInteger: self.gameMode] forKey: kGameModeKey];
-    [defaults setObject: [NSNumber numberWithInteger: self.openOwl] forKey: kOwlKey];
-    [defaults setObject: [NSNumber numberWithInteger: self.openSquirrel] forKey: kSquirrelKey];
+    [defaults setObject: [NSNumber numberWithInteger: self.openAnimals] forKey: kAnimalsKey];
+    [defaults setObject: [NSNumber numberWithInteger: self.openBabyMode] forKey: kOpenBabyModeKey];
     
     [defaults synchronize];
 }

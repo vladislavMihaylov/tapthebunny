@@ -42,6 +42,8 @@
 #import "Support/CCProfiling.h"
 #import "Support/OpenGL_Internal.h"
 
+#import "GameLayer.h"
+
 // external
 #import "kazmath/GL/matrix.h"
 
@@ -63,6 +65,8 @@
 
 @implementation CCSprite
 
+@synthesize gameLayerArray;
+@synthesize gameLayer;
 @synthesize isCanTap;
 
 @synthesize dirty = dirty_;

@@ -14,12 +14,17 @@
 
 @interface GameLayer : CCLayer
 {
+    GameLayer *layer;
     NSInteger screenWidth;
     NSInteger screenHeight;
+    NSInteger countOfBushes;
+    
+    NSInteger time;
     
     NSMutableArray *animalsArray;
     NSMutableArray *starsArray;
     NSMutableArray *bushesArray;
+    NSMutableArray *numbersArray;
     
     NSString *coordinats;
     NSString *subZeroCoordinats;
@@ -33,6 +38,9 @@
 - (void) pause;
 - (void) unPause;
 - (void) showMotherScene;
+- (void) playBushAnimation: (NSInteger) bushNum;
+- (void) showTagOfAnimal: (NSInteger) tagOfAnimal;
 
+@property (nonatomic, assign) GameLayer *layer;
 
 @end

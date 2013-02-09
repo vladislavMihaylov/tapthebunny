@@ -13,6 +13,7 @@
 #import "Common.h"
 #import "Settings.h"
 #import "SimpleAudioEngine.h"
+#import "Congratulations.h"
 
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
@@ -26,10 +27,54 @@
 // HelloWorldLayer implementation
 @implementation GameLayer
 
+@synthesize layer;
+
+- (void) dealloc
+{
+    [super dealloc];
+    [animalsArray release];
+    [starsArray release];
+    [bushesArray release];
+    [numbersArray release];
+}
+
+- (void) showTagOfAnimal: (NSInteger) tagOfAnimal
+{
+    CCLOG(@"MyTag: %i", tagOfAnimal);
+    
+    NSString *animalTag = [NSString stringWithFormat: @"%i", tagOfAnimal];
+    
+    NSString *animalNumber = [animalTag substringFromIndex: 1];
+    
+    CCLOG(@"TagStr: %@", animalNumber);
+    
+    NSInteger tagForBush = [[NSString stringWithFormat: @"%i00%@", sceneNum, animalNumber] integerValue];
+    
+    [self playBushAnimation: tagForBush];
+}
+
+- (void) playBushAnimation: (NSInteger) bushNum
+{
+    for(CCSprite *curBush in arr)
+    {
+            if(curBush.tag == bushNum)
+            {
+                [curBush runAction:
+                  [CCAnimate actionWithAnimation:
+                   [[CCAnimationCache sharedAnimationCache] animationByName: [NSString stringWithFormat: @"scene_%i_bush_%i_", sceneNum, (bushNum - 1000 * sceneNum)]]
+                  ]
+                 ];
+            }
+    }
+}
 
 -(void) didLoadFromCCB
 {
+    
+    CCLOG(@"Parent: %@",[self parent]);
+    
     arr = [self children];
+    
     
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"bg.mp3"];
     [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: [Settings sharedSettings].soundLevel];
@@ -37,6 +82,7 @@
     animalsArray = [[NSMutableArray alloc] init];
     starsArray = [[NSMutableArray alloc] init];
     bushesArray = [[NSMutableArray alloc] init];
+    numbersArray = [[NSMutableArray alloc] init];
     
     tutorialSprite = [CCSprite spriteWithFile: @"tutorial.png"];
     tutorialSprite.position = ccp(GameCenterX, GameCenterY * 3);
@@ -105,6 +151,8 @@
         [curBush stopAllActions];
     }
     
+    [self stopAllActions];
+    
     for(int i = 0; i < [animalsArray count]; i++)
     {
         NSInteger posX = [[coordinatsItems objectAtIndex: 2 * i + 0] integerValue];
@@ -116,6 +164,9 @@
     [bushesArray removeAllObjects];
     [animalsArray removeAllObjects];
     
+    time = 30;
+    
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: [NSString stringWithFormat: @"numbers.plist"]];
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: [NSString stringWithFormat: @"animalsAnimation.plist"]];
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: [NSString stringWithFormat: @"scene_%i_bushes.plist", sceneNum]];
     
@@ -124,12 +175,14 @@
         [Common loadAnimationWithPlist: @"Animations" andName: [NSString stringWithFormat: @"animal_%i_pos_%i_film_", animalNum, i]];
     }
     
-    NSInteger countOfBushes = 0;
+    
+    countOfBushes = 0;
     
     for(CCSprite *curBush in arr)
     {
         if(curBush.tag > (sceneNum * 1000))
         {
+            
             countOfBushes++;
         }
     }
@@ -141,32 +194,11 @@
         [Common loadAnimationWithPlist: @"bushesAnimations" andName: [NSString stringWithFormat: @"scene_%i_bush_%i_", sceneNum, i]];
     }
     
-    for(CCSprite *curBush in arr)
-    {
-        for (int i = 1; i <= countOfBushes; i++)
-        {
-            NSString *curNum = [NSString stringWithFormat: @"%i00%i", sceneNum, i];
-            NSInteger curTag = [curNum integerValue];
-            
-            
-            
-            if(curBush.tag == curTag)
-            {
-                [bushesArray addObject: curBush];
-                
-                [curBush runAction:
-                            [CCRepeatForever actionWithAction:
-                                                [CCAnimate actionWithAnimation:
-        [[CCAnimationCache sharedAnimationCache] animationByName: [NSString stringWithFormat: @"scene_%i_bush_%i_", sceneNum, i]]
-                                                 ]
-                             ]
-                 ];
-            }
-        }
-    }
+    
     
     for(CCSprite *curSpr in arr)
     {
+        
         for (int i = 1; i < 7; i++)
         {
             NSString *curNum = [NSString stringWithFormat: @"%i%i", animalNum, i];
@@ -177,6 +209,7 @@
             
             if(curSpr.tag == curTag)
             {
+                curSpr.gameLayer = self;
                 CCLOG(@"CurTag: %i", curTag);
                 
                 [curSpr runAction:
@@ -199,10 +232,88 @@
         }
     }
     
+    
+    
+    if([Settings sharedSettings].gameMode == 1)
+    {
+        [self schedule: @selector(timer) interval: 1];
+    }
+    
+    if([Settings sharedSettings].gameMode == 0)
+    {
+        for(CCMenu *curMenu in arr)
+        {
+            if(curMenu.tag == 66)
+            {
+                CCArray *menuArr = [curMenu children];
+                
+                for(CCMenuItemImage *curItem in menuArr)
+                {
+                    if(curItem.tag == 660)
+                    {
+                        curItem.isEnabled = NO;
+                        curItem.visible = NO;
+                        
+                        CCMenuItemImage *goToMainMenu = [CCMenuItemImage itemWithNormalImage: @"homeBtn.png"
+                                                                               selectedImage: @"homeBtnOn.png"
+                                                                                      target: self
+                                                                                    selector: @selector(showMainMenu)];
+                        
+                        CCMenu *mainMenu = [CCMenu menuWithItems: goToMainMenu, nil];
+                        mainMenu.position = curItem.position;
+                        [self addChild: mainMenu];
+                    }
+                }
+            }
+        }
+    }
+    
     [coordinats retain];
     [coordinatsItems retain];
     
 }
+
+- (void) timer
+{
+    if(time > 0)
+    {
+        time--;
+    }
+    
+    if(time > 0 && time <= 10)
+    {
+        for(CCNode *xNode in arr)
+        {
+            if(xNode.tag == 99)
+            {
+                CCSprite *timeSpr = [CCSprite spriteWithSpriteFrameName: [NSString stringWithFormat: @"num%i.png", time]];
+                timeSpr.position = ccp(GameCenterX * 0.2, GameCenterY * 1.8);
+                [xNode addChild: timeSpr];
+                
+                [numbersArray addObject: timeSpr];
+            }
+        }
+    }
+    if(time <= 0)
+    {
+        for(CCSprite *curNode in animalsArray)
+        {
+            [curNode pauseSchedulerAndActions];
+        }
+        
+        for (CCSprite *curBush in bushesArray)
+        {
+            [curBush pauseSchedulerAndActions];
+        }
+        
+        [self pauseSchedulerAndActions];
+        
+        self.isTouchEnabled = NO;
+        
+        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: [Congratulations sceneWithStars:[starsArray count]]]];
+    }
+}
+
 - (void) showTutorial
 {
     [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
@@ -275,21 +386,30 @@
             curNode.isCanTap = NO;
             [curNode stopAllActions];
             
-            [curNode runAction: [CCSequence actions:
-                                        [CCJumpTo actionWithDuration: 1 position: animalFlyPoint height: 50 jumps: 1],
-                                 [CCCallBlock actionWithBlock: ^(id sender){
+            if([Settings sharedSettings].gameMode == 1)
+            {
+            
+                [curNode runAction: [CCSequence actions:
+                                            [CCJumpTo actionWithDuration: 1 position: animalFlyPoint height: 50 jumps: 1],
+                                     [CCCallBlock actionWithBlock: ^(id sender){
+                    
+                                     if([starsArray count] >= 6)
+                                     {
+                                         [self showMotherScene];
+                                     }
+                                     }],
+                                     nil]
+                ];
                 
-                                 if([starsArray count] >= 6)
-                                 {
-                                     [self showMotherScene];
-                                 }
-                                 }],
-                                 nil]
-            ];
+                [self addStar];
+            }
             
-            
-            
-            [self addStar];
+            if ([Settings sharedSettings].gameMode == 0)
+            {
+                [[SimpleAudioEngine sharedEngine] playEffect: [NSString stringWithFormat: @"%ianimal.mp3", animalNum]];
+                
+                [curNode hideAnimal];
+            }
         }
     }
     
@@ -298,12 +418,14 @@
 
 - (void) restart
 {
+    [self resumeSchedulerAndActions];
+    
     [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
     
     [self runAction: [CCSequence actions:
                                     [CCCallBlock actionWithBlock: ^(id sender){[self unPause];}],
-                                    [CCCallBlock actionWithBlock: ^(id sender){[self restartLevel];}],
                                     [CCCallBlock actionWithBlock: ^(id sender){[self removeStars];}],
+                                    [CCCallBlock actionWithBlock: ^(id sender){[self restartLevel];}],
                       nil]
      ];
 }
@@ -374,6 +496,8 @@
     {
         [curBush pauseSchedulerAndActions];
     }
+    
+    [self pauseSchedulerAndActions];
 }
 
 - (void) unPause
@@ -441,6 +565,8 @@
     {
         [curBush resumeSchedulerAndActions];
     }
+    
+    [self resumeSchedulerAndActions];
 }
 
 - (void) showMainMenu
@@ -496,10 +622,16 @@
             {
                 [xNode removeChild: spriteToRemove cleanup: YES];
             }
+            
+            for(CCSprite *numToRemove in numbersArray)
+            {
+                [xNode removeChild: numToRemove cleanup: YES];
+            }
         }
     }
     
     [starsArray removeAllObjects];
+    [numbersArray removeAllObjects];
 }
 
 @end

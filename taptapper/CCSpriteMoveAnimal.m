@@ -2,6 +2,7 @@
 #import "cocos2d.h"
 
 #import "Settings.h"
+#import "GameLayer.h"
 
 @implementation CCSprite (CCSpriteMoveAnimal)
 
@@ -14,6 +15,10 @@
     if(randomNum == 5)
     {
         [self moveAction];
+        
+        //CCLOG(@"gLayer: %@", self.gameLayer);
+        
+        [self.gameLayer showTagOfAnimal: self.tag];
     }
     else
     {
@@ -37,16 +42,8 @@
     float moveTime;
     float delayTime;
     
-    if([Settings sharedSettings].gameMode == 0)
-    {
-        moveTime = 0.3;
-        delayTime = 1;
-    }
-    else
-    {
-        moveTime = 0.15;
-        delayTime = 0.5;
-    }
+    moveTime = 0.2;
+    delayTime = 0.5;
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
@@ -68,6 +65,26 @@
                                     [CCCallBlock actionWithBlock: ^(id sender) {[self moveAnimal];} ],
                       nil]
      ];
+}
+
+- (void) hideAnimal
+{
+    float height;
+    
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        height = 120;
+    }
+    else
+    {
+        height = 50;
+    }
+    
+    [self runAction: [CCSequence actions:
+                      [CCMoveTo actionWithDuration: 0.2
+                                          position: ccp(self.position.x, self.position.y - height)],
+                      [CCCallBlock actionWithBlock: ^(id sender) {[self moveAnimal];} ],
+                      nil]];
 }
 
 - (void) pauseActions

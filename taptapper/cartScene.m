@@ -40,7 +40,17 @@
     {
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: @"selectAnimal.plist"];
        
-        CCSprite *bgSprite = [CCSprite spriteWithSpriteFrameName: @"bg.png"];
+        CCSprite *bgSprite;
+        
+        if(IS_WIDESCREEN == YES)
+        {
+            bgSprite = [CCSprite spriteWithFile: @"selectAnimalBg.png"];
+        }
+        else
+        {
+            bgSprite = [CCSprite spriteWithSpriteFrameName: @"bg.png"];
+        }
+        
         bgSprite.position = ccp(GameCenterX, GameCenterY);
         
         [self addChild: bgSprite];
@@ -56,80 +66,62 @@
         [self addChild: menu];
         
         
-        CCMenuItemImage *buyOwl = [CCMenuItemImage itemWithNormalImage: @"owlShop.png"
-                                                         selectedImage: @"owlShop.png"
+        CCMenuItemImage *buyOwl = [CCMenuItemImage itemWithNormalImage: @"animalsShop.png"
+                                                         selectedImage: @"animalsShop.png"
                                                                 target: self
                                                               selector: @selector(buy:)
                                    ];
         
-        CCMenuItemImage *buyOwlOk = [CCMenuItemImage itemWithNormalImage: @"owlShopOk.png"
-                                                         selectedImage: @"owlShopOk.png"
-                                                                target: self
-                                                              selector: @selector(buy:)
+        CCMenuItemImage *buyOwlOk = [CCMenuItemImage itemWithNormalImage: @"animalsShopOk.png"
+                                                           selectedImage: @"animalsShopOk.png"
+                                                                  target: self
+                                                                selector: @selector(buy:)
                                    ];
         
-        CCMenuItemImage *buySquirrel = [CCMenuItemImage itemWithNormalImage: @"squirrelShop.png"
-                                                              selectedImage: @"squirrelShop.png"
+        CCMenuItemImage *buySquirrel = [CCMenuItemImage itemWithNormalImage: @"BMShop.png"
+                                                              selectedImage: @"BMShop.png"
                                                                      target: self
                                                                    selector: @selector(buy:)
                                    ];
         
-        CCMenuItemImage *buySquirrelOk = [CCMenuItemImage itemWithNormalImage: @"squirrelShopOk.png"
-                                                                selectedImage: @"squirrelShopOk.png"
+        CCMenuItemImage *buySquirrelOk = [CCMenuItemImage itemWithNormalImage: @"BMShopOk.png"
+                                                                selectedImage: @"BMShopOk.png"
                                                                        target: self
                                                                      selector: @selector(buy:)
                                      ];
         
-        CCMenuItemImage *noAd = [CCMenuItemImage itemWithNormalImage: @"noAdsShop.png"
-                                                       selectedImage: @"noAdsShop.png"
-                                                              target: self
-                                                            selector: @selector(buy:)
-                                        ];
-        
-        CCMenuItemImage *noAdOk = [CCMenuItemImage itemWithNormalImage: @"noAdsShopOk.png"
-                                                         selectedImage: @"noAdsShopOk.png"
-                                                                target: self
-                                                              selector: @selector(buy:)
-                                          ];
-        
-        
-        
-        if ([Settings sharedSettings].openOwl == 0)
+        if ([Settings sharedSettings].openAnimals == 0)
         {
             CCMenuItemToggle *owl = [CCMenuItemToggle itemWithTarget: self selector: @selector(buy:) items: buyOwl, buyOwlOk, nil];
-            owl.position = ccp(GameCenterX * 0.5, GameCenterY * 1.1);
+            owl.position = ccp(GameCenterX * 0.75, GameCenterY * 1.1);
             owl.tag = 1;
             [menu addChild: owl];
+            
         }
         else
         {
             CCMenuItemToggle *owl = [CCMenuItemToggle itemWithTarget: self selector: @selector(buy:) items: buyOwlOk, buyOwl, nil];
-            owl.position = ccp(GameCenterX * 0.5, GameCenterY * 1.1);
+            owl.position = ccp(GameCenterX * 0.75, GameCenterY * 1.1);
             owl.tag = 1;
             [menu addChild: owl];
+            
         }
         
-        if ([Settings sharedSettings].openSquirrel == 0)
+        if ([Settings sharedSettings].openBabyMode == 0)
         {
             CCMenuItemToggle *squirrel = [CCMenuItemToggle itemWithTarget: self selector: @selector(buy:) items: buySquirrel, buySquirrelOk, nil];
-            squirrel.position = ccp(GameCenterX, GameCenterY * 1.1);
+            squirrel.position = ccp(GameCenterX * 1.25, GameCenterY * 1.1);
             squirrel.tag = 2;
             [menu addChild: squirrel];
         }
         else
         {
             CCMenuItemToggle *squirrel = [CCMenuItemToggle itemWithTarget: self selector: @selector(buy:) items: buySquirrelOk, buySquirrel, nil];
-            squirrel.position = ccp(GameCenterX, GameCenterY * 1.1);
+            squirrel.position = ccp(GameCenterX * 1.25, GameCenterY * 1.1);
             squirrel.tag = 2;
             [menu addChild: squirrel];
         }
-        
-        CCMenuItemToggle *noAds = [CCMenuItemToggle itemWithTarget: self selector: @selector(buy:) items: noAd, noAdOk, nil];
-        noAds.position = ccp(GameCenterX * 1.5, GameCenterY * 1.1);
-        noAds.tag = 3;
-        [menu addChild: noAds];
-        
-        //
+
         
         CCMenuItemImage *mainMenu = [CCMenuItemImage itemWithNormalSprite: backBtnSprite
                                                            selectedSprite: backBtnOnSprite
@@ -143,10 +135,10 @@
         backMenu.position = ccp(0, 0);
         [self addChild: backMenu];
         
-        for(int i = 0; i < 3; i++)
+        for(int i = 0; i < 2; i++)
         {
-            CCLabelBMFont *cost = [CCLabelBMFont labelWithString: @"0,99$" fntFile: @"bip.fnt"];
-            cost.position = ccp((GameCenterX / 2) * (i + 1), GameCenterY * 0.65);
+            CCLabelBMFont *cost = [CCLabelBMFont labelWithString: [NSString stringWithFormat: @"%i,99$", i] fntFile: @"bip.fnt"];
+            cost.position = ccp((GameCenterX / 2) * (i + 1) + GameCenterX/4, GameCenterY * 0.65);
             [self addChild: cost];
         }
         
@@ -164,13 +156,13 @@
     
     if(sender.tag == 1)
     {
-        [Settings sharedSettings].openOwl = ![Settings sharedSettings].openOwl;
+        [Settings sharedSettings].openAnimals = ![Settings sharedSettings].openAnimals;
         
         [[Settings sharedSettings] save];
     }
     if(sender.tag == 2)
     {
-        [Settings sharedSettings].openSquirrel = ![Settings sharedSettings].openSquirrel;
+        [Settings sharedSettings].openBabyMode = ![Settings sharedSettings].openBabyMode;
         
         [[Settings sharedSettings] save];
     }
@@ -181,8 +173,19 @@
 {
     [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
     
-    CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"MainMenuScene.ccbi"];
-    [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
+    if(IS_WIDESCREEN == YES)
+    {
+        CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"MainMenuScene-five.ccbi"];
+        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
+    }
+    else
+    {
+        CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"MainMenuScene.ccbi"];
+        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
+    }
+    
+    
+    
 }
 
 @end
