@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/MainMenuScene.m"
-         timestampString = "382257700.092798"
+         timestampString = "382297827.796538"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "52"
-         endingLineNumber = "52"
+         startingLineNumber = "49"
+         endingLineNumber = "49"
          landmarkName = "-pressedShare"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/MainMenuScene.m"
-         timestampString = "382257700.092798"
+         timestampString = "382297827.796538"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "55"
-         endingLineNumber = "55"
+         startingLineNumber = "52"
+         endingLineNumber = "52"
          landmarkName = "-pressedOptions:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -60,24 +60,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/MainMenuScene.m"
-         timestampString = "382257700.092798"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "59"
-         endingLineNumber = "59"
-         landmarkName = "-pressedOptions:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "taptapper/MainMenuScene.m"
-         timestampString = "382257700.092798"
+         timestampString = "382297827.796538"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "56"
          endingLineNumber = "56"
+         landmarkName = "-pressedOptions:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/MainMenuScene.m"
+         timestampString = "382297827.796538"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "53"
+         endingLineNumber = "53"
          landmarkName = "-pressedOptions:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -131,19 +131,6 @@
          startingLineNumber = "59"
          endingLineNumber = "59"
          landmarkName = "-isTapped:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "taptapper/SelectAnimalScene.m"
-         timestampString = "382256235.585771"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "58"
-         endingLineNumber = "58"
-         landmarkName = "-playWith:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -424,11 +411,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/MainMenuScene.m"
-         timestampString = "382257700.092798"
+         timestampString = "382297827.796538"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "213"
-         endingLineNumber = "213"
+         startingLineNumber = "218"
+         endingLineNumber = "218"
          landmarkName = "-didLoadFromCCB"
          landmarkType = "5">
       </FileBreakpoint>
@@ -437,11 +424,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/MainMenuScene.m"
-         timestampString = "382257700.092798"
+         timestampString = "382297827.796538"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "220"
-         endingLineNumber = "220"
+         startingLineNumber = "229"
+         endingLineNumber = "229"
          landmarkName = "-didLoadFromCCB"
          landmarkType = "5">
       </FileBreakpoint>
@@ -450,11 +437,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/MainMenuScene.m"
-         timestampString = "382257700.092798"
+         timestampString = "382297827.796538"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "204"
-         endingLineNumber = "204"
+         startingLineNumber = "206"
+         endingLineNumber = "206"
          landmarkName = "-didLoadFromCCB"
          landmarkType = "5">
       </FileBreakpoint>
@@ -463,11 +450,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "taptapper/MainMenuScene.m"
-         timestampString = "382257700.092798"
+         timestampString = "382297827.796538"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "236"
-         endingLineNumber = "236"
+         startingLineNumber = "256"
+         endingLineNumber = "256"
          landmarkName = "-didLoadFromCCB"
          landmarkType = "5">
       </FileBreakpoint>
@@ -803,6 +790,84 @@
          startingLineNumber = "93"
          endingLineNumber = "93"
          landmarkName = "-init"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/SelectAnimalScene.m"
+         timestampString = "382261488.714302"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "79"
+         endingLineNumber = "79"
+         landmarkName = "-lockMenu"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/SelectAnimalScene.m"
+         timestampString = "382261488.714302"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "58"
+         endingLineNumber = "58"
+         landmarkName = "-playWith:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/MainMenuScene.m"
+         timestampString = "382297827.796538"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "311"
+         endingLineNumber = "311"
+         landmarkName = "-productBPurchased"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/MainMenuScene.m"
+         timestampString = "382297827.796538"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "318"
+         endingLineNumber = "318"
+         landmarkName = "-productBPurchased"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/MainMenuScene.m"
+         timestampString = "382297827.796538"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "240"
+         endingLineNumber = "240"
+         landmarkName = "-didLoadFromCCB"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "taptapper/MainMenuScene.m"
+         timestampString = "382297827.796538"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "309"
+         endingLineNumber = "309"
+         landmarkName = "-productBPurchased"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

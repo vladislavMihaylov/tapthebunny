@@ -43,19 +43,7 @@
         [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
     }
     
-    if(animalNum == 2)
-    {
-        if([MKStoreManager featureAPurchased])
-        {
-            
-            
-            CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"gameScene_%i%@.ccbi", sceneNum, postFix]];
-            
-            [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
-        }
-    }
-    
-    if(animalNum == 3)
+    if(animalNum == 2 || animalNum == 3)
     {
         if([MKStoreManager featureAPurchased])
         {
@@ -63,8 +51,41 @@
             
             [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
         }
+        
+        else
+        {
+            [[MKStoreManager sharedManager] buyFeatureA];
+            [self lockMenu];
+            
+        }
     }
-    
+}
+
+- (void) lockMenu
+{
+    for(CCMenu *curMenu in arr)
+    {
+        curMenu.isTouchEnabled = NO;
+    }
+}
+
+- (void) unlockMenu
+{
+    for(CCMenu *curMenu in arr)
+    {
+        curMenu.isTouchEnabled = YES;
+    }
+}
+
+- (void)productAPurchased
+{
+    [self unlockMenu];
+    [self playAnimalsAnimation];
+}
+
+- (void)failed
+{
+    [self unlockMenu];
 }
 
 - (void) dealloc
@@ -74,6 +95,9 @@
 
 - (void) didLoadFromCCB
 {
+    arr = [self children];
+    [MKStoreManager sharedManager].delegate = self;
+    
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"chooseAnimal.mp3"];
     [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: [Settings sharedSettings].soundLevel];
     
@@ -82,10 +106,10 @@
     CCSprite *sprite = [CCSprite spriteWithFile: @"Icon.png"];
     sprite.anchorPoint = ccp(0.5, 0);
     
-    CCSprite *sprite2 = [CCSprite spriteWithFile: @"animal_2_lock.png"];
+    sprite2 = [CCSprite spriteWithFile: @"animal_2_lock.png"];
     sprite2.anchorPoint = ccp(0.5, 0);
     
-    CCSprite *sprite3 = [CCSprite spriteWithFile: @"animal_3_lock.png"];
+    sprite3 = [CCSprite spriteWithFile: @"animal_3_lock.png"];
     sprite3.anchorPoint = ccp(0.5, 0);
    
     sprite.position = posForSprite1;
@@ -112,7 +136,13 @@
     
     if([MKStoreManager featureAPurchased])
     {
-        [sprite2 runAction:
+        [self playAnimalsAnimation];
+    }
+}
+
+- (void) playAnimalsAnimation
+{
+    [sprite2 runAction:
                 [CCRepeatForever actionWithAction:
                                     [CCAnimate actionWithAnimation:
                                             [[CCAnimationCache sharedAnimationCache] animationByName: @"owlAnimation"]
@@ -120,15 +150,13 @@
                  ]
          ];
     
-    
-        [sprite3 runAction:
-                [CCRepeatForever actionWithAction:
-                                    [CCAnimate actionWithAnimation:
-                                            [[CCAnimationCache sharedAnimationCache] animationByName: @"squirrelAnimation"]
-                                     ]
-                 ]
-         ];
-    }
+    [sprite3 runAction:
+            [CCRepeatForever actionWithAction:
+                                [CCAnimate actionWithAnimation:
+                                        [[CCAnimationCache sharedAnimationCache] animationByName: @"squirrelAnimation"]
+                                 ]
+             ]
+     ];
 }
 
 @end

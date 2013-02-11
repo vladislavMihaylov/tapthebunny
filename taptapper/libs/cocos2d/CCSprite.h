@@ -113,6 +113,7 @@
     
     
     BOOL isCanTap;
+    BOOL isTouchEnabled;
     GameLayer *gameLayer;
     CCArray *gameLayerArray;
 }
@@ -120,6 +121,7 @@
 @property (nonatomic, assign) CCArray *gameLayerArray;
 @property (nonatomic, assign) GameLayer *gameLayer;
 @property (nonatomic, assign) BOOL isCanTap;
+@property (nonatomic, assign) BOOL isTouchEnabled;
 /** whether or not the Sprite needs to be updated in the Atlas */
 @property (nonatomic,readwrite) BOOL dirty;
 /** the quad (tex coords, vertex coords and color) information */

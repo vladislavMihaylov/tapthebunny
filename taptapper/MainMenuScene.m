@@ -7,21 +7,18 @@
 //
 
 #import "MainMenuScene.h"
+#import "CartScene.h"
+#import "GameConfig.h"
 
 #import "CCBReader.h"
-
 #import "SimpleAudioEngine.h"
-
-#import "CartScene.h"
-
-#import "GameConfig.h"
 #import "Settings.h"
-
 #import "MKStoreManager.h"
 
 #import "SHKItem.h"
 #import "SHKFacebook.h"
 #import "SHKTwitter.h"
+
 
 @implementation MainMenuScene
 
@@ -95,6 +92,11 @@
     
     [self hideSlideForButton: 105];
     [self hideSlideForButton: 106];
+    
+    NSString *GiftAppURL = [NSString stringWithFormat:@"itms-appss://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/giftSongsWizard?gift=1&salableAdamId=%d&productType=C&pricingParameter=STDQ&mt=8&ign-mscache=1",
+                            APP_ID];
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:GiftAppURL]];
 }
 
 - (void) sendFB
@@ -154,6 +156,8 @@
 
 - (void) didLoadFromCCB
 {
+    [MKStoreManager sharedManager].delegate = self;
+    
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"menu.mp3"];
     if([Settings sharedSettings].soundLevel == 1)
     {
@@ -190,8 +194,6 @@
     CCMenuItemImage *on = [CCMenuItemImage itemWithNormalSprite: soundOnBtn selectedSprite: select];
     CCMenuItemImage *off = [CCMenuItemImage itemWithNormalSprite: soundOffBtn selectedSprite: select];
     
-    CCMenuItemImage *baby = [CCMenuItemImage itemWithNormalSprite: babySpeedBtn selectedSprite: select];
-    CCMenuItemImage *monster = [CCMenuItemImage itemWithNormalSprite: monsterSpeedBtn selectedSprite: select];
     
     CCMenu *optionMenu = [CCMenu menuWithItems: optionsBtn, nil];
     optionMenu.position = ccp(0, 0);
@@ -201,48 +203,75 @@
     soundMenu.position = ccp(0, 0);
     [self addChild: soundMenu z:1 tag: -1];
     
-    CCMenu *speedMenu = [CCMenu menuWithItems: nil];
+    speedMenu = [CCMenu menuWithItems: nil];
     speedMenu.position = ccp(0, 0);
     [self addChild: speedMenu z:1 tag: -1];
     
-    CCLOG(@"gameMode: %i", [Settings sharedSettings].gameMode);
-    CCLOG(@"soundMode: %i", [Settings sharedSettings].soundLevel);
+    buyBabyMenu = [CCMenu menuWithItems: nil];
+    buyBabyMenu.position = ccp(0, 0);
+    [self addChild: buyBabyMenu z:1 tag: -1];
+    
     
     if ([Settings sharedSettings].soundLevel == 0)
     {
-        CCMenuItemToggle *sound = [CCMenuItemToggle itemWithTarget:self selector:@selector(soundMode) items: off, on, nil];
+        CCMenuItemToggle *sound = [CCMenuItemToggle itemWithTarget:self
+                                                          selector:@selector(soundMode)
+                                                             items: off, on, nil
+                                   ];
+        
         sound.position = posForOptionsMenu;
         sound.isEnabled = NO;
         [soundMenu addChild: sound z: 1 tag: kSoundBtnTag];
     }
     else if ([Settings sharedSettings].soundLevel == 1)
     {
-        CCMenuItemToggle *sound = [CCMenuItemToggle itemWithTarget:self selector:@selector(soundMode) items: on, off, nil];
+        CCMenuItemToggle *sound = [CCMenuItemToggle itemWithTarget:self
+                                                          selector:@selector(soundMode)
+                                                             items: on, off, nil
+                                   ];
+        
         sound.position = posForOptionsMenu;
         sound.isEnabled = NO;
         [soundMenu addChild: sound z: 1 tag: kSoundBtnTag];
     }
     
-    if([Settings sharedSettings].openBabyMode == 0)
+    if([Settings sharedSettings].openBabyMode == 0) // если бэби мод не куплен - предлагать его купить
     {
-        [speedMenu addChild: monster z: 1 tag: kSpeedBtnTag];
-        monster.position = posForOptionsMenu;
-        monster.isEnabled = NO;
-        monster.opacity = 180;
+        buyBaby = [CCMenuItemImage itemWithNormalSprite: monsterSpeedBtn
+                                         selectedSprite: select
+                                                 target: self
+                                               selector: @selector(buyBabyMode)
+                   ];
+        
+        [buyBabyMenu addChild: buyBaby z: 1 tag: kSpeedBtnTag];
+        buyBaby.position = posForOptionsMenu;
+        buyBaby.isEnabled = NO;
+        buyBaby.opacity = 180;
     }
     else
     {
-    
+        baby = [CCMenuItemImage itemWithNormalSprite: babySpeedBtn selectedSprite: select];
+        monster = [CCMenuItemImage itemWithNormalSprite: monsterSpeedBtn selectedSprite: select];
+        
         if ([Settings sharedSettings].gameMode == 0)
         {
-            CCMenuItemToggle *speed = [CCMenuItemToggle itemWithTarget:self selector:@selector(speedMode) items: baby, monster, nil];
+            
+            CCMenuItemToggle *speed = [CCMenuItemToggle itemWithTarget:self
+                                                              selector:@selector(speedMode)
+                                                                 items: baby, monster, nil
+                                       ];
+            
             speed.position = posForOptionsMenu;
             speed.isEnabled = NO;
             [speedMenu addChild: speed z: 1 tag: kSpeedBtnTag];
         }
         else if ([Settings sharedSettings].gameMode == 1)
         {
-            CCMenuItemToggle *speed = [CCMenuItemToggle itemWithTarget:self selector:@selector(speedMode) items: monster, baby, nil];
+            CCMenuItemToggle *speed = [CCMenuItemToggle itemWithTarget:self
+                                                              selector:@selector(speedMode)
+                                                                 items: monster, baby, nil
+                                       ];
+            
             speed.position = posForOptionsMenu;
             speed.isEnabled = NO;
             [speedMenu addChild: speed z: 1 tag: kSpeedBtnTag];
@@ -251,6 +280,71 @@
     }
     
     arr = [self children];
+}
+
+- (void) buyBabyMode
+{
+    [[MKStoreManager sharedManager] buyFeatureB];
+    [self lockMenu];
+}
+
+- (void) lockMenu
+{
+    for(CCMenu *curMenu in arr)
+    {
+        curMenu.isTouchEnabled = NO;
+    }
+}
+
+- (void) unlockMenu
+{
+    for(CCMenu *curMenu in arr)
+    {
+        curMenu.isTouchEnabled = YES;
+    }
+}
+
+- (void)productBPurchased
+{
+    CGPoint btnPosition;
+    
+    [Settings sharedSettings].openBabyMode = 1;
+    [[Settings sharedSettings] save];
+    
+    btnPosition = CGPointMake(buyBaby.position.x, buyBaby.position.y);
+    [self unlockMenu];
+    [buyBabyMenu removeChild: buyBaby cleanup: YES];
+    
+    if([Settings sharedSettings].openBabyMode == 1)
+    {
+        CCSprite *babySpeedBtn2 = [CCSprite spriteWithSpriteFrameName: @"speed1Btn.png"];
+        CCSprite *monsterSpeedBtn2 = [CCSprite spriteWithSpriteFrameName: @"speed2Btn.png"];
+        CCSprite *select2 = [CCSprite spriteWithFile: @"icon.png"];
+        
+        baby = [CCMenuItemImage itemWithNormalSprite: babySpeedBtn2 selectedSprite: select2];
+        monster = [CCMenuItemImage itemWithNormalSprite: monsterSpeedBtn2 selectedSprite: select2];
+        
+        if ([Settings sharedSettings].gameMode == 0)
+        {
+            
+            CCMenuItemToggle *speed = [CCMenuItemToggle itemWithTarget:self selector:@selector(speedMode) items: baby, monster, nil];
+            speed.position = btnPosition;
+            //speed.isEnabled = NO;
+            [speedMenu addChild: speed z: 1 tag: kSpeedBtnTag];
+        }
+        else if ([Settings sharedSettings].gameMode == 1)
+        {
+            CCMenuItemToggle *speed = [CCMenuItemToggle itemWithTarget:self selector:@selector(speedMode) items: monster, baby, nil];
+            speed.position = btnPosition;
+            //speed.isEnabled = NO;
+            [speedMenu addChild: speed z: 1 tag: kSpeedBtnTag];
+        }
+    }
+}
+
+- (void)failed
+{
+    [self unlockMenu];
 }
 
 - (void) showSlideForButton: (NSInteger) sliderTag

@@ -68,6 +68,7 @@
 @synthesize gameLayerArray;
 @synthesize gameLayer;
 @synthesize isCanTap;
+@synthesize isTouchEnabled;
 
 @synthesize dirty = dirty_;
 @synthesize quad = quad_;

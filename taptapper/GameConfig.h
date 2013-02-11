@@ -18,6 +18,8 @@
 
 #define IS_WIDESCREEN ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 
+#define APP_ID 602012993
+
 extern float GameCenterX;
 extern float GameCenterY;
 

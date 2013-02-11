@@ -15,6 +15,14 @@
     BOOL isOpenOptionsMenu;
     
     CCArray *arr;
+    
+    CCMenuItemImage *buyBaby;
+    CCMenuItemImage *monster;
+    CCMenuItemImage *baby;
+    
+    CCMenu *speedMenu;
+    CCMenu *buyBabyMenu;
+    
 }
 
 @end
