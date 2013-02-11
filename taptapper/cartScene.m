@@ -16,6 +16,8 @@
 
 #import "SimpleAudioEngine.h"
 
+#import "MKStoreManager.h"
+
 @implementation CartScene
 
 + (CCScene *) scene
@@ -39,7 +41,10 @@
     if(self = [super init])
     {
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: @"selectAnimal.plist"];
-       
+        
+        CCSprite *backBtnSprite = [CCSprite spriteWithSpriteFrameName: @"backBtn.png"];
+        CCSprite *backBtnOnSprite = [CCSprite spriteWithSpriteFrameName: @"backBtnOn.png"];
+        
         CCSprite *bgSprite;
         
         if(IS_WIDESCREEN == YES)
@@ -55,73 +60,70 @@
         
         [self addChild: bgSprite];
         
-        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: @"selectAnimal.plist"];
+        ///////////////////////////////////////////////////////////////////////////
         
-        CCSprite *backBtnSprite = [CCSprite spriteWithSpriteFrameName: @"backBtn.png"];
-        CCSprite *backBtnOnSprite = [CCSprite spriteWithSpriteFrameName: @"backBtnOn.png"];
+        animalsPackBuyed = [CCSprite spriteWithFile: @"animalsShopOk.png"];
+        animalsPackBuyed.position = ccp(GameCenterX * 0.75, GameCenterY * 1.1);
+        animalsPackBuyed.visible = NO;
+        [self addChild: animalsPackBuyed];
         
-        //
-        CCMenu *menu = [CCMenu menuWithItems: nil];
-        menu.position = ccp(0, 0);
-        [self addChild: menu];
+        babyModeBuyed = [CCSprite spriteWithFile: @"BMShopOk.png"];
+        babyModeBuyed.position = ccp(GameCenterX * 1.25, GameCenterY * 1.1);
+        babyModeBuyed.visible = NO;
+        [self addChild: babyModeBuyed];
         
+        [MKStoreManager sharedManager].delegate = self;
         
-        CCMenuItemImage *buyOwl = [CCMenuItemImage itemWithNormalImage: @"animalsShop.png"
-                                                         selectedImage: @"animalsShop.png"
-                                                                target: self
-                                                              selector: @selector(buy:)
-                                   ];
-        
-        CCMenuItemImage *buyOwlOk = [CCMenuItemImage itemWithNormalImage: @"animalsShopOk.png"
-                                                           selectedImage: @"animalsShopOk.png"
-                                                                  target: self
-                                                                selector: @selector(buy:)
-                                   ];
-        
-        CCMenuItemImage *buySquirrel = [CCMenuItemImage itemWithNormalImage: @"BMShop.png"
-                                                              selectedImage: @"BMShop.png"
-                                                                     target: self
-                                                                   selector: @selector(buy:)
-                                   ];
-        
-        CCMenuItemImage *buySquirrelOk = [CCMenuItemImage itemWithNormalImage: @"BMShopOk.png"
-                                                                selectedImage: @"BMShopOk.png"
-                                                                       target: self
-                                                                     selector: @selector(buy:)
-                                     ];
-        
-        if ([Settings sharedSettings].openAnimals == 0)
+        if([MKStoreManager featureAPurchased])
         {
-            CCMenuItemToggle *owl = [CCMenuItemToggle itemWithTarget: self selector: @selector(buy:) items: buyOwl, buyOwlOk, nil];
-            owl.position = ccp(GameCenterX * 0.75, GameCenterY * 1.1);
-            owl.tag = 1;
-            [menu addChild: owl];
+            animalsPackBuyed.visible = YES;
             
+            animalsMenu.isTouchEnabled = NO;
+            animalsMenu.visible = NO;
         }
         else
         {
-            CCMenuItemToggle *owl = [CCMenuItemToggle itemWithTarget: self selector: @selector(buy:) items: buyOwlOk, buyOwl, nil];
-            owl.position = ccp(GameCenterX * 0.75, GameCenterY * 1.1);
-            owl.tag = 1;
-            [menu addChild: owl];
+            animalsPackBuyed.visible = NO;
+            
+            CCMenuItemImage *animalsPack = [CCMenuItemImage itemWithNormalImage: @"animalsShop.png"
+                                                                  selectedImage: @"animalsShop.png"
+                                                                         target: self
+                                                                       selector: @selector(buy:)
+                                            ];
+            animalsPack.position = ccp(GameCenterX * 0.75, GameCenterY * 1.1);
+            animalsPack.tag = 1;
+            
+            animalsMenu = [CCMenu menuWithItems: animalsPack, nil];
+            animalsMenu.position = ccp(0, 0);
+            [self addChild: animalsMenu];
+            
             
         }
         
-        if ([Settings sharedSettings].openBabyMode == 0)
+        if ([MKStoreManager featureBPurchased]) // если куплена фича 2
         {
-            CCMenuItemToggle *squirrel = [CCMenuItemToggle itemWithTarget: self selector: @selector(buy:) items: buySquirrel, buySquirrelOk, nil];
-            squirrel.position = ccp(GameCenterX * 1.25, GameCenterY * 1.1);
-            squirrel.tag = 2;
-            [menu addChild: squirrel];
+            babyModeBuyed.visible = YES;
+            
+            babyModeMenu.isTouchEnabled = NO;
+            babyModeMenu.visible = NO;
         }
         else
         {
-            CCMenuItemToggle *squirrel = [CCMenuItemToggle itemWithTarget: self selector: @selector(buy:) items: buySquirrelOk, buySquirrel, nil];
-            squirrel.position = ccp(GameCenterX * 1.25, GameCenterY * 1.1);
-            squirrel.tag = 2;
-            [menu addChild: squirrel];
+            babyModeBuyed.visible = NO;
+            
+            CCMenuItemImage *babyMode = [CCMenuItemImage itemWithNormalImage: @"BMShop.png"
+                                                               selectedImage: @"BMShop.png"
+                                                                      target: self
+                                                                    selector: @selector(buy:)
+                                         ];
+            babyMode.position = ccp(GameCenterX * 1.25, GameCenterY * 1.1);
+            babyMode.tag = 2;
+            
+            babyModeMenu = [CCMenu menuWithItems: babyMode, nil];
+            babyModeMenu.position = ccp(0, 0);
+            [self addChild: babyModeMenu];
         }
-
+        
         
         CCMenuItemImage *mainMenu = [CCMenuItemImage itemWithNormalSprite: backBtnSprite
                                                            selectedSprite: backBtnOnSprite
@@ -131,7 +133,7 @@
         
         mainMenu.position = ccp(GameCenterX * 0.2, GameCenterY * 0.3);
         
-        CCMenu *backMenu = [CCMenu menuWithItems: mainMenu, nil];
+        backMenu = [CCMenu menuWithItems: mainMenu, nil];
         backMenu.position = ccp(0, 0);
         [self addChild: backMenu];
         
@@ -150,24 +152,66 @@
     return self;
 }
 
-- (void) buy: (CCMenuItemToggle *) sender
+- (void) buy: (CCMenuItemImage *) sender
 {
     [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
     
     if(sender.tag == 1)
     {
-        [Settings sharedSettings].openAnimals = ![Settings sharedSettings].openAnimals;
+        [self lockMenu];
         
-        [[Settings sharedSettings] save];
+        [[MKStoreManager sharedManager] buyFeatureA];
     }
+    
     if(sender.tag == 2)
     {
-        [Settings sharedSettings].openBabyMode = ![Settings sharedSettings].openBabyMode;
+        [self lockMenu];
         
-        [[Settings sharedSettings] save];
+        [[MKStoreManager sharedManager] buyFeatureB];
     }
 }
 
+- (void) lockMenu
+{
+    animalsMenu.isTouchEnabled = NO;
+    babyModeMenu.isTouchEnabled = NO;
+    backMenu.isTouchEnabled = NO;
+}
+
+- (void) unlockMenu
+{
+    animalsMenu.isTouchEnabled = YES;
+    babyModeMenu.isTouchEnabled = YES;
+    backMenu.isTouchEnabled = YES;
+}
+
+- (void)productAPurchased
+{
+    animalsPackBuyed.visible = YES;
+    animalsMenu.isTouchEnabled = NO;
+    animalsMenu.visible = NO;
+    
+    babyModeMenu.isTouchEnabled = YES;
+    backMenu.isTouchEnabled = YES;
+}
+
+- (void)productBPurchased
+{
+    babyModeBuyed.visible = YES;
+    babyModeMenu.isTouchEnabled = NO;
+    babyModeMenu.visible = NO;
+    
+    animalsMenu.isTouchEnabled = YES;
+    backMenu.isTouchEnabled = YES;
+    
+    [Settings sharedSettings].openBabyMode = 1;
+    [[Settings sharedSettings] save];
+}
+
+- (void)failed
+{
+    [self unlockMenu];
+}
 
 - (void) gotoMainMenu
 {

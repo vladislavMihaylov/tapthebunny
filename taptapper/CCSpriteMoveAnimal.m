@@ -16,9 +16,7 @@
     {
         [self moveAction];
         
-        //CCLOG(@"gLayer: %@", self.gameLayer);
-        
-        [self.gameLayer showTagOfAnimal: self.tag];
+        [self.gameLayer playAnimationForBush: self.tag];
     }
     else
     {

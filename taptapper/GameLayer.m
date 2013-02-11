@@ -38,15 +38,10 @@
     [numbersArray release];
 }
 
-- (void) showTagOfAnimal: (NSInteger) tagOfAnimal
+- (void) playAnimationForBush: (NSInteger) tagOfAnimal
 {
-    CCLOG(@"MyTag: %i", tagOfAnimal);
-    
     NSString *animalTag = [NSString stringWithFormat: @"%i", tagOfAnimal];
-    
     NSString *animalNumber = [animalTag substringFromIndex: 1];
-    
-    CCLOG(@"TagStr: %@", animalNumber);
     
     NSInteger tagForBush = [[NSString stringWithFormat: @"%i00%@", sceneNum, animalNumber] integerValue];
     
@@ -60,9 +55,9 @@
             if(curBush.tag == bushNum)
             {
                 [curBush runAction:
-                  [CCAnimate actionWithAnimation:
-                   [[CCAnimationCache sharedAnimationCache] animationByName: [NSString stringWithFormat: @"scene_%i_bush_%i_", sceneNum, (bushNum - 1000 * sceneNum)]]
-                  ]
+                                [CCAnimate actionWithAnimation:
+                                                    [[CCAnimationCache sharedAnimationCache] animationByName: [NSString stringWithFormat: @"scene_%i_bush_%i_", sceneNum, (bushNum - 1000 * sceneNum)]]
+                                 ]
                  ];
             }
     }
@@ -70,11 +65,7 @@
 
 -(void) didLoadFromCCB
 {
-    
-    CCLOG(@"Parent: %@",[self parent]);
-    
     arr = [self children];
-    
     
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"bg.mp3"];
     [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: [Settings sharedSettings].soundLevel];
@@ -129,15 +120,11 @@
         sound.position = posForSoundBtnInGameMenuHide;
         [soundMenu addChild: sound z: 1 tag: kSoundBtnTag];
     }
-    
-    
-
 }
 
 - (void) restartLevel
 {
     NSArray *coordinatsItems = [subZeroCoordinats componentsSeparatedByString: @"/"];
-    CCLOG(@"Coordinats %@", subZeroCoordinats);
     
     coordinats = [NSString stringWithFormat: @""];
     
@@ -175,7 +162,6 @@
         [Common loadAnimationWithPlist: @"Animations" andName: [NSString stringWithFormat: @"animal_%i_pos_%i_film_", animalNum, i]];
     }
     
-    
     countOfBushes = 0;
     
     for(CCSprite *curBush in arr)
@@ -187,14 +173,10 @@
         }
     }
     
-    CCLOG(@"Bushes: %i", countOfBushes);
-    
     for (int i = 1; i <= countOfBushes; i++)
     {
         [Common loadAnimationWithPlist: @"bushesAnimations" andName: [NSString stringWithFormat: @"scene_%i_bush_%i_", sceneNum, i]];
     }
-    
-    
     
     for(CCSprite *curSpr in arr)
     {
@@ -205,12 +187,9 @@
             
             NSInteger curTag = [curNum integerValue];
             
-            
-            
             if(curSpr.tag == curTag)
             {
                 curSpr.gameLayer = self;
-                CCLOG(@"CurTag: %i", curTag);
                 
                 [curSpr runAction:
                             [CCRepeatForever actionWithAction:
@@ -257,7 +236,8 @@
                         CCMenuItemImage *goToMainMenu = [CCMenuItemImage itemWithNormalImage: @"homeBtn.png"
                                                                                selectedImage: @"homeBtnOn.png"
                                                                                       target: self
-                                                                                    selector: @selector(showMainMenu)];
+                                                                                    selector: @selector(showMainMenu)
+                                                         ];
                         
                         CCMenu *mainMenu = [CCMenu menuWithItems: goToMainMenu, nil];
                         mainMenu.position = curItem.position;
@@ -382,7 +362,6 @@
         
         if((Ax <= curNode.contentSize.width / 2) && (Ay <= curNode.contentSize.height / 2) && curNode.isCanTap == YES)
         {
-            CCLOG(@"TAAP");
             curNode.isCanTap = NO;
             [curNode stopAllActions];
             
@@ -390,14 +369,17 @@
             {
             
                 [curNode runAction: [CCSequence actions:
-                                            [CCJumpTo actionWithDuration: 1 position: animalFlyPoint height: 50 jumps: 1],
-                                     [CCCallBlock actionWithBlock: ^(id sender){
-                    
-                                     if([starsArray count] >= 6)
-                                     {
-                                         [self showMotherScene];
-                                     }
-                                     }],
+                                            [CCJumpTo actionWithDuration: 1
+                                                                position: animalFlyPoint
+                                                                  height: 50
+                                                                   jumps: 1],
+                                            [CCCallBlock actionWithBlock: ^(id sender)
+                                                {
+                                                    if([starsArray count] >= 6)
+                                                    {
+                                                        [self showMotherScene];
+                                                    }
+                                                }],
                                      nil]
                 ];
                 

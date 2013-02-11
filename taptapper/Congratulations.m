@@ -71,19 +71,13 @@
         
         CCMenu *backMenu = [CCMenu menuWithItems: mainMenu, nil];
         backMenu.position = ccp(0, 0);
+        
         [self addChild: backMenu];
-        
-        
         
         CCSprite *congratulations = [CCSprite spriteWithFile: @"congrats.png"];
         congratulations.position = ccp(GameCenterX, GameCenterY * 1.45);
         
         [self addChild: congratulations];
-        
-        
-        
-        
-       
         
         CCSprite *starSprite1 = [CCSprite spriteWithFile: @"star.png"];
         
@@ -116,9 +110,6 @@
         CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"MainMenuScene.ccbi"];
         [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
     }
-    
-    
-    
 }
 
 @end

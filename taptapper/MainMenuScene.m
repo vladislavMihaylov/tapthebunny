@@ -17,6 +17,8 @@
 #import "GameConfig.h"
 #import "Settings.h"
 
+#import "MKStoreManager.h"
+
 #import "SHKItem.h"
 #import "SHKFacebook.h"
 #import "SHKTwitter.h"

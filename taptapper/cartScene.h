@@ -11,7 +11,12 @@
 
 @interface CartScene: CCLayer
 {
+    CCSprite *animalsPackBuyed;
+    CCSprite *babyModeBuyed;
     
+    CCMenu *animalsMenu;
+    CCMenu *babyModeMenu;
+    CCMenu *backMenu;
 }
 
 + (CCScene *) scene;

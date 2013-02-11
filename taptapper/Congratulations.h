@@ -11,7 +11,6 @@
 
 @interface Congratulations: CCLayer
 {
-    
 }
 
 + (CCScene *) sceneWithStars: (NSInteger) stars;

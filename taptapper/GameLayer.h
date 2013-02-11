@@ -39,7 +39,7 @@
 - (void) unPause;
 - (void) showMotherScene;
 - (void) playBushAnimation: (NSInteger) bushNum;
-- (void) showTagOfAnimal: (NSInteger) tagOfAnimal;
+- (void) playAnimationForBush: (NSInteger) tagOfAnimal;
 
 @property (nonatomic, assign) GameLayer *layer;
 

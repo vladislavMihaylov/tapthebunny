@@ -16,8 +16,8 @@
 @synthesize delegate;
 
 // all your features should be managed one and only by StoreManager
-static NSString *featureAId = @"com.wordpress.indiedevelop.InAppPurchasesExample.f1";
-static NSString *featureBId = @"com.wordpress.indiedevelop.InAppPurchasesExample.f2";
+static NSString *featureAId = @"com.punchzip.bunny.animalpack";
+static NSString *featureBId = @"com.punchzip.bunny.babymode";
 
 BOOL featureAPurchased;
 BOOL featureBPurchased;

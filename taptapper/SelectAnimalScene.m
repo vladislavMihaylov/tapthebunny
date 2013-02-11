@@ -18,6 +18,8 @@
 #import "SimpleAudioEngine.h"
 #import "Settings.h"
 
+#import "MKStoreManager.h"
+
 @implementation SelectAnimalScene
 
 - (void) back
@@ -43,7 +45,7 @@
     
     if(animalNum == 2)
     {
-        if([Settings sharedSettings].openAnimals == 1)
+        if([MKStoreManager featureAPurchased])
         {
             
             
@@ -55,7 +57,7 @@
     
     if(animalNum == 3)
     {
-        if([Settings sharedSettings].openAnimals == 1)
+        if([MKStoreManager featureAPurchased])
         {
             CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"gameScene_%i%@.ccbi", sceneNum, postFix]];
             
@@ -108,7 +110,7 @@
              ]
      ];
     
-    if([Settings sharedSettings].openAnimals == 1)
+    if([MKStoreManager featureAPurchased])
     {
         [sprite2 runAction:
                 [CCRepeatForever actionWithAction:
