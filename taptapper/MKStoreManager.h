@@ -17,17 +17,26 @@
 - (void)failed;
 @end
 
+@class CartScene;
+
 @interface MKStoreManager : NSObject<SKProductsRequestDelegate> {
 
 	NSMutableArray *purchasableObjects;
 	MKStoreObserver *storeObserver;	
 
 	id<MKStoreKitDelegate> delegate;
+    
+    NSMutableArray *cost;
+    CartScene *cartScene;
 }
 
+@property (nonatomic, retain) CartScene *cartScene;
 @property (nonatomic, retain) id<MKStoreKitDelegate> delegate;
 @property (nonatomic, retain) NSMutableArray *purchasableObjects;
+@property (nonatomic, retain) NSMutableArray *cost;
 @property (nonatomic, retain) MKStoreObserver *storeObserver;
+
+- (NSMutableArray *) getCostArray;
 
 - (void) requestProductData;
 

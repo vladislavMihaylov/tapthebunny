@@ -40,6 +40,10 @@
 {
     if(self = [super init])
     {
+        [MKStoreManager sharedManager].delegate = self;
+        
+        [MKStoreManager sharedManager].cartScene = self;
+        
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: @"selectAnimal.plist"];
         
         CCSprite *backBtnSprite = [CCSprite spriteWithSpriteFrameName: @"backBtn.png"];
@@ -72,7 +76,7 @@
         babyModeBuyed.visible = NO;
         [self addChild: babyModeBuyed];
         
-        [MKStoreManager sharedManager].delegate = self;
+        
         
         if([MKStoreManager featureAPurchased])
         {
@@ -137,19 +141,27 @@
         backMenu.position = ccp(0, 0);
         [self addChild: backMenu];
         
-        for(int i = 0; i < 2; i++)
-        {
-            CCLabelBMFont *cost = [CCLabelBMFont labelWithString: [NSString stringWithFormat: @"%i,99$", i] fntFile: @"bip.fnt"];
-            cost.position = ccp((GameCenterX / 2) * (i + 1) + GameCenterX/4, GameCenterY * 0.65);
-            [self addChild: cost];
-        }
+        
         
         CCLabelBMFont *shopLabel = [CCLabelBMFont labelWithString: @"Shop" fntFile: @"shopFnt.fnt"];
         shopLabel.position = ccp(GameCenterX, GameCenterY * 1.7);
         [self addChild: shopLabel];
+        
+        NSMutableArray *costArray = [[MKStoreManager sharedManager] getCostArray];
+        [self setPrice: costArray];
     }
     
     return self;
+}
+
+- (void) setPrice: (NSMutableArray *) priceArray
+{
+    for(int i = 0; i < [priceArray count]; i++)
+    {
+        CCLabelBMFont *costLabel = [CCLabelBMFont labelWithString: [NSString stringWithFormat: @"Cost: %@", [priceArray objectAtIndex: i]] fntFile: @"bip.fnt"];
+        costLabel.position = ccp((GameCenterX / 2) * (i + 1) + GameCenterX/4, GameCenterY * 0.65);
+        [self addChild: costLabel];
+    }
 }
 
 - (void) buy: (CCMenuItemImage *) sender

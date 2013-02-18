@@ -61,7 +61,7 @@ Settings *sharedSettings = nil;
     }
     else
     {
-        self.gameMode = 1;
+        self.gameMode = 0;
     }
     
     NSNumber *animalsData = [defaults objectForKey: kAnimalsKey];
@@ -83,6 +83,17 @@ Settings *sharedSettings = nil;
     {
         self.openBabyMode = 0;
     }
+    
+    NSNumber *enabledBabyModeData = [defaults objectForKey: kEnabledBabyModeKey];
+    if(enabledBabyModeData)
+    {
+        self.enabledBabyMode = [enabledBabyModeData boolValue];
+    }
+    else
+    {
+        self.enabledBabyMode = 0;
+    }
+
 }
 
 - (void) save
@@ -93,6 +104,7 @@ Settings *sharedSettings = nil;
     [defaults setObject: [NSNumber numberWithInteger: self.gameMode] forKey: kGameModeKey];
     [defaults setObject: [NSNumber numberWithInteger: self.openAnimals] forKey: kAnimalsKey];
     [defaults setObject: [NSNumber numberWithInteger: self.openBabyMode] forKey: kOpenBabyModeKey];
+    [defaults setObject: [NSNumber numberWithBool:    self.enabledBabyMode] forKey: kEnabledBabyModeKey];
     
     [defaults synchronize];
 }

@@ -41,6 +41,8 @@
         [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
         [[SimpleAudioEngine sharedEngine] playEffect: @"win.mp3"];
         
+        [[SimpleAudioEngine sharedEngine] stopEffect: 2];
+        
         CCSprite *bgSprite;
         
         if(IS_WIDESCREEN == YES)
@@ -102,12 +104,12 @@
     
     if(IS_WIDESCREEN == YES)
     {
-        CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"MainMenuScene-five.ccbi"];
+        CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"SelectAnimal-five.ccbi"];
         [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
     }
     else
     {
-        CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"MainMenuScene.ccbi"];
+        CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"SelectAnimal.ccbi"];
         [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
     }
 }

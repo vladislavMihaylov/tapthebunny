@@ -8,10 +8,13 @@
 
 #import "MKStoreManager.h"
 
+#import "CartScene.h"
 
 @implementation MKStoreManager
 
 @synthesize purchasableObjects;
+@synthesize cartScene;
+@synthesize cost;
 @synthesize storeObserver;
 @synthesize delegate;
 
@@ -27,6 +30,7 @@ static MKStoreManager* _sharedStoreManager; // self
 - (void)dealloc {
 	
 	[_sharedStoreManager release];
+    [cost release];
 	[storeObserver release];
 	[super dealloc];
 }
@@ -48,12 +52,17 @@ static MKStoreManager* _sharedStoreManager; // self
         if (_sharedStoreManager == nil) {
 			
             [[self alloc] init]; // assignment not done here
-			_sharedStoreManager.purchasableObjects = [[NSMutableArray alloc] init];			
+			_sharedStoreManager.purchasableObjects = [[NSMutableArray alloc] init];
+            
+            _sharedStoreManager.cost = [[NSMutableArray alloc] init];
+            
 			[_sharedStoreManager requestProductData];
 			
 			[MKStoreManager loadPurchases];
 			_sharedStoreManager.storeObserver = [[MKStoreObserver alloc] init];
 			[[SKPaymentQueue defaultQueue] addTransactionObserver:_sharedStoreManager.storeObserver];
+            
+            
         }
     }
     return _sharedStoreManager;
@@ -123,10 +132,21 @@ static MKStoreManager* _sharedStoreManager; // self
 		SKProduct *product = [purchasableObjects objectAtIndex:i];
 		NSLog(@"Feature: %@, Cost: %f, ID: %@",[product localizedTitle],
 			  [[product price] doubleValue], [product productIdentifier]);
+        
+        //NSLog (@"PRICE %@", [product price]);
+        [cost addObject: [product price]];
 	}
+    
+    [cartScene setPrice: cost];
 	
 	[request autorelease];
 }
+
+- (NSMutableArray *) getCostArray
+{
+    return cost;
+}
+
 
 - (void) buyFeatureA
 {

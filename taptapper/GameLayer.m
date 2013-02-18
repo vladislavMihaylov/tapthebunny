@@ -152,7 +152,7 @@
     [animalsArray removeAllObjects];
     
     time = 30;
-    
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: [NSString stringWithFormat: @"alarm.plist"]];
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: [NSString stringWithFormat: @"numbers.plist"]];
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: [NSString stringWithFormat: @"animalsAnimation.plist"]];
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: [NSString stringWithFormat: @"scene_%i_bushes.plist", sceneNum]];
@@ -161,6 +161,8 @@
     {
         [Common loadAnimationWithPlist: @"Animations" andName: [NSString stringWithFormat: @"animal_%i_pos_%i_film_", animalNum, i]];
     }
+    
+    [Common loadAnimationWithPlist: @"Animations" andName: @"clock_"];
     
     countOfBushes = 0;
     
@@ -213,12 +215,12 @@
     
     
     
-    if([Settings sharedSettings].gameMode == 1)
+    if([Settings sharedSettings].enabledBabyMode == 0)
     {
         [self schedule: @selector(timer) interval: 1];
     }
     
-    if([Settings sharedSettings].gameMode == 0)
+    if([Settings sharedSettings].enabledBabyMode == 1)
     {
         for(CCMenu *curMenu in arr)
         {
@@ -260,8 +262,12 @@
         time--;
     }
     
+    
+    
     if(time > 0 && time <= 10)
     {
+        [[SimpleAudioEngine sharedEngine] playEffect: @"clock.wav"];
+        
         for(CCNode *xNode in arr)
         {
             if(xNode.tag == 99)
@@ -276,6 +282,9 @@
     }
     if(time <= 0)
     {
+        
+        [[SimpleAudioEngine sharedEngine] playEffect: @"alarm.mp3"];
+        
         for(CCSprite *curNode in animalsArray)
         {
             [curNode pauseSchedulerAndActions];
@@ -290,7 +299,30 @@
         
         self.isTouchEnabled = NO;
         
-        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: [Congratulations sceneWithStars:[starsArray count]]]];
+        
+            CCSprite *centerSprite = [CCSprite spriteWithFile: @"Icon.png"];
+            centerSprite.position = ccp(GameCenterX, GameCenterY);
+            [self addChild: centerSprite];
+        
+        CCLOG(@"OJ");
+            
+            [centerSprite runAction:
+                                                [CCAnimate actionWithAnimation:
+        [[CCAnimationCache sharedAnimationCache] animationByName: @"clock_"]
+                                                 ]
+                             
+                 ];
+        [self runAction: [CCSequence actions:
+                          [CCDelayTime actionWithDuration: 1.8],
+                          
+                          [CCCallBlock actionWithBlock: ^(id sender)
+        {
+             [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: [Congratulations sceneWithStars:[starsArray count]]]];
+        }],
+                          nil]
+         ];
+        
+       
     }
 }
 
@@ -365,7 +397,7 @@
             curNode.isCanTap = NO;
             [curNode stopAllActions];
             
-            if([Settings sharedSettings].gameMode == 1)
+            if([Settings sharedSettings].enabledBabyMode == 0)
             {
             
                 [curNode runAction: [CCSequence actions:
@@ -386,7 +418,7 @@
                 [self addStar];
             }
             
-            if ([Settings sharedSettings].gameMode == 0)
+            if ([Settings sharedSettings].enabledBabyMode == 1)
             {
                 [[SimpleAudioEngine sharedEngine] playEffect: [NSString stringWithFormat: @"%ianimal.mp3", animalNum]];
                 

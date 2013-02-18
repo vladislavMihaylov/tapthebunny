@@ -15,6 +15,7 @@
 #define kGameModeKey        @"gameModeKey"
 #define kAnimalsKey         @"animalsKey"
 #define kOpenBabyModeKey    @"openBabyModeKey"
+#define kEnabledBabyModeKey @"enabledBabyModeKey"
 
 #define IS_WIDESCREEN ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 

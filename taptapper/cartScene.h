@@ -20,5 +20,6 @@
 }
 
 + (CCScene *) scene;
+- (void) setPrice: (NSMutableArray *) priceArray;
 
 @end

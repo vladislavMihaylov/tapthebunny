@@ -218,9 +218,31 @@
 		F514DD1C16BF926C00B0A0B2 /* buttonsAnimations-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = F514DD1A16BF926C00B0A0B2 /* buttonsAnimations-ipadhd.plist */; };
 		F514DD1D16BF926C00B0A0B2 /* buttonsAnimations-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F514DD1B16BF926C00B0A0B2 /* buttonsAnimations-ipadhd.png */; };
 		F514DD2716BFA44900B0A0B2 /* CartScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F514DD2616BFA44900B0A0B2 /* CartScene.m */; };
+		F515FA3816CCF18500F36C07 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F515FA3716CCF18500F36C07 /* alarm.mp3 */; };
 		F529F68B16B3BA0400EB0CE8 /* MySHKConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = F529F68916B3BA0400EB0CE8 /* MySHKConfigurator.m */; };
 		F529F68C16B3BA0400EB0CE8 /* SHKSharers.plist in Resources */ = {isa = PBXBuildFile; fileRef = F529F68A16B3BA0400EB0CE8 /* SHKSharers.plist */; };
 		F52C60A016B2EE4800751BA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F52C609F16B2EE4800751BA6 /* AppDelegate.m */; };
+		F538854F16CCFD6700995CE5 /* clock.wav in Resources */ = {isa = PBXBuildFile; fileRef = F538854E16CCFD6700995CE5 /* clock.wav */; };
+		F538858C16CD06AC00995CE5 /* speed0-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F538858016CD06AC00995CE5 /* speed0-hd.png */; };
+		F538858D16CD06AC00995CE5 /* speed0-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F538858116CD06AC00995CE5 /* speed0-ipad.png */; };
+		F538858E16CD06AC00995CE5 /* speed0-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F538858216CD06AC00995CE5 /* speed0-ipadhd.png */; };
+		F538858F16CD06AC00995CE5 /* speed0.png in Resources */ = {isa = PBXBuildFile; fileRef = F538858316CD06AC00995CE5 /* speed0.png */; };
+		F538859016CD06AC00995CE5 /* speed1-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F538858416CD06AC00995CE5 /* speed1-hd.png */; };
+		F538859116CD06AC00995CE5 /* speed1-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F538858516CD06AC00995CE5 /* speed1-ipad.png */; };
+		F538859216CD06AC00995CE5 /* speed1-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F538858616CD06AC00995CE5 /* speed1-ipadhd.png */; };
+		F538859316CD06AC00995CE5 /* speed1.png in Resources */ = {isa = PBXBuildFile; fileRef = F538858716CD06AC00995CE5 /* speed1.png */; };
+		F538859416CD06AC00995CE5 /* speed2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F538858816CD06AC00995CE5 /* speed2-hd.png */; };
+		F538859516CD06AC00995CE5 /* speed2-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F538858916CD06AC00995CE5 /* speed2-ipad.png */; };
+		F538859616CD06AC00995CE5 /* speed2-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F538858A16CD06AC00995CE5 /* speed2-ipadhd.png */; };
+		F538859716CD06AC00995CE5 /* speed2.png in Resources */ = {isa = PBXBuildFile; fileRef = F538858B16CD06AC00995CE5 /* speed2.png */; };
+		F53885A416CD30B500995CE5 /* alarm-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = F538859C16CD30B500995CE5 /* alarm-hd.plist */; };
+		F53885A516CD30B500995CE5 /* alarm-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F538859D16CD30B500995CE5 /* alarm-hd.png */; };
+		F53885A616CD30B500995CE5 /* alarm-ipad.plist in Resources */ = {isa = PBXBuildFile; fileRef = F538859E16CD30B500995CE5 /* alarm-ipad.plist */; };
+		F53885A716CD30B500995CE5 /* alarm-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F538859F16CD30B500995CE5 /* alarm-ipad.png */; };
+		F53885A816CD30B500995CE5 /* alarm-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = F53885A016CD30B500995CE5 /* alarm-ipadhd.plist */; };
+		F53885A916CD30B500995CE5 /* alarm-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F53885A116CD30B500995CE5 /* alarm-ipadhd.png */; };
+		F53885AA16CD30B500995CE5 /* alarm.plist in Resources */ = {isa = PBXBuildFile; fileRef = F53885A216CD30B500995CE5 /* alarm.plist */; };
+		F53885AB16CD30B500995CE5 /* alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = F53885A316CD30B500995CE5 /* alarm.png */; };
 		F53F6BBF16B2DAB900444747 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53F6BBE16B2DAB900444747 /* QuartzCore.framework */; };
 		F53F6BC116B2DAB900444747 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53F6BC016B2DAB900444747 /* OpenGLES.framework */; };
 		F53F6BC316B2DAB900444747 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53F6BC216B2DAB900444747 /* OpenAL.framework */; };
@@ -860,10 +882,32 @@
 		F514DD1B16BF926C00B0A0B2 /* buttonsAnimations-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonsAnimations-ipadhd.png"; path = "Resources/selectAnimal/buttonsAnimations-ipadhd.png"; sourceTree = "<group>"; };
 		F514DD2516BFA44900B0A0B2 /* CartScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartScene.h; sourceTree = "<group>"; };
 		F514DD2616BFA44900B0A0B2 /* CartScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartScene.m; sourceTree = "<group>"; };
+		F515FA3716CCF18500F36C07 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 		F529F68816B3BA0400EB0CE8 /* MySHKConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySHKConfigurator.h; sourceTree = "<group>"; };
 		F529F68916B3BA0400EB0CE8 /* MySHKConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySHKConfigurator.m; sourceTree = "<group>"; };
 		F529F68A16B3BA0400EB0CE8 /* SHKSharers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SHKSharers.plist; sourceTree = "<group>"; };
 		F52C609F16B2EE4800751BA6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F538854E16CCFD6700995CE5 /* clock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clock.wav; sourceTree = "<group>"; };
+		F538858016CD06AC00995CE5 /* speed0-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speed0-hd.png"; sourceTree = "<group>"; };
+		F538858116CD06AC00995CE5 /* speed0-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speed0-ipad.png"; sourceTree = "<group>"; };
+		F538858216CD06AC00995CE5 /* speed0-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speed0-ipadhd.png"; sourceTree = "<group>"; };
+		F538858316CD06AC00995CE5 /* speed0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speed0.png; sourceTree = "<group>"; };
+		F538858416CD06AC00995CE5 /* speed1-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speed1-hd.png"; sourceTree = "<group>"; };
+		F538858516CD06AC00995CE5 /* speed1-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speed1-ipad.png"; sourceTree = "<group>"; };
+		F538858616CD06AC00995CE5 /* speed1-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speed1-ipadhd.png"; sourceTree = "<group>"; };
+		F538858716CD06AC00995CE5 /* speed1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speed1.png; sourceTree = "<group>"; };
+		F538858816CD06AC00995CE5 /* speed2-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speed2-hd.png"; sourceTree = "<group>"; };
+		F538858916CD06AC00995CE5 /* speed2-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speed2-ipad.png"; sourceTree = "<group>"; };
+		F538858A16CD06AC00995CE5 /* speed2-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speed2-ipadhd.png"; sourceTree = "<group>"; };
+		F538858B16CD06AC00995CE5 /* speed2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speed2.png; sourceTree = "<group>"; };
+		F538859C16CD30B500995CE5 /* alarm-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "alarm-hd.plist"; sourceTree = "<group>"; };
+		F538859D16CD30B500995CE5 /* alarm-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-hd.png"; sourceTree = "<group>"; };
+		F538859E16CD30B500995CE5 /* alarm-ipad.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "alarm-ipad.plist"; sourceTree = "<group>"; };
+		F538859F16CD30B500995CE5 /* alarm-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-ipad.png"; sourceTree = "<group>"; };
+		F53885A016CD30B500995CE5 /* alarm-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "alarm-ipadhd.plist"; sourceTree = "<group>"; };
+		F53885A116CD30B500995CE5 /* alarm-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-ipadhd.png"; sourceTree = "<group>"; };
+		F53885A216CD30B500995CE5 /* alarm.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = alarm.plist; sourceTree = "<group>"; };
+		F53885A316CD30B500995CE5 /* alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm.png; sourceTree = "<group>"; };
 		F53F6BBA16B2DAB900444747 /* taptapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taptapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53F6BBE16B2DAB900444747 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F53F6BC016B2DAB900444747 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1258,6 +1302,7 @@
 		F5079A7016B412100084A9DD /* Menus */ = {
 			isa = PBXGroup;
 			children = (
+				F538857F16CD069B00995CE5 /* pow */,
 				F513647C16C02ED400FC8CA4 /* shop */,
 				F50C03E316B57FB100247182 /* gameMenu */,
 				F5079B2816B4777D0084A9DD /* selectAnimalMenu */,
@@ -1564,6 +1609,8 @@
 		F50E285A16BAFA190050A6EC /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				F515FA3716CCF18500F36C07 /* alarm.mp3 */,
+				F538854E16CCFD6700995CE5 /* clock.wav */,
 				F505C1A916BC36E600F82E68 /* FamilyWin.mp3 */,
 				F502C6D916C6577E004BAC93 /* win.mp3 */,
 				F505C19B16BC2D1700F82E68 /* bg.mp3 */,
@@ -1613,6 +1660,25 @@
 				F50FB3D216C4E540001B519F /* BMShopOk.png */,
 			);
 			name = shop;
+			sourceTree = "<group>";
+		};
+		F538857F16CD069B00995CE5 /* pow */ = {
+			isa = PBXGroup;
+			children = (
+				F538858016CD06AC00995CE5 /* speed0-hd.png */,
+				F538858116CD06AC00995CE5 /* speed0-ipad.png */,
+				F538858216CD06AC00995CE5 /* speed0-ipadhd.png */,
+				F538858316CD06AC00995CE5 /* speed0.png */,
+				F538858416CD06AC00995CE5 /* speed1-hd.png */,
+				F538858516CD06AC00995CE5 /* speed1-ipad.png */,
+				F538858616CD06AC00995CE5 /* speed1-ipadhd.png */,
+				F538858716CD06AC00995CE5 /* speed1.png */,
+				F538858816CD06AC00995CE5 /* speed2-hd.png */,
+				F538858916CD06AC00995CE5 /* speed2-ipad.png */,
+				F538858A16CD06AC00995CE5 /* speed2-ipadhd.png */,
+				F538858B16CD06AC00995CE5 /* speed2.png */,
+			);
+			name = pow;
 			sourceTree = "<group>";
 		};
 		F53F6BAF16B2DAB900444747 = {
@@ -1686,6 +1752,14 @@
 		F53F6BD116B2DAB900444747 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F538859C16CD30B500995CE5 /* alarm-hd.plist */,
+				F538859D16CD30B500995CE5 /* alarm-hd.png */,
+				F538859E16CD30B500995CE5 /* alarm-ipad.plist */,
+				F538859F16CD30B500995CE5 /* alarm-ipad.png */,
+				F53885A016CD30B500995CE5 /* alarm-ipadhd.plist */,
+				F53885A116CD30B500995CE5 /* alarm-ipadhd.png */,
+				F53885A216CD30B500995CE5 /* alarm.plist */,
+				F53885A316CD30B500995CE5 /* alarm.png */,
 				F502C6E516C65C18004BAC93 /* congrats-ipadhd.png */,
 				F502C6E616C65C18004BAC93 /* congrats-ipad.png */,
 				F502C6E716C65C18004BAC93 /* congrats-hd.png */,
@@ -2644,6 +2718,28 @@
 				F502C6F816C66062004BAC93 /* Icon-72@2x.png in Resources */,
 				F502C6F916C66062004BAC93 /* Icon-72.png in Resources */,
 				F502C6FA16C66062004BAC93 /* Icon-Small.png in Resources */,
+				F515FA3816CCF18500F36C07 /* alarm.mp3 in Resources */,
+				F538854F16CCFD6700995CE5 /* clock.wav in Resources */,
+				F538858C16CD06AC00995CE5 /* speed0-hd.png in Resources */,
+				F538858D16CD06AC00995CE5 /* speed0-ipad.png in Resources */,
+				F538858E16CD06AC00995CE5 /* speed0-ipadhd.png in Resources */,
+				F538858F16CD06AC00995CE5 /* speed0.png in Resources */,
+				F538859016CD06AC00995CE5 /* speed1-hd.png in Resources */,
+				F538859116CD06AC00995CE5 /* speed1-ipad.png in Resources */,
+				F538859216CD06AC00995CE5 /* speed1-ipadhd.png in Resources */,
+				F538859316CD06AC00995CE5 /* speed1.png in Resources */,
+				F538859416CD06AC00995CE5 /* speed2-hd.png in Resources */,
+				F538859516CD06AC00995CE5 /* speed2-ipad.png in Resources */,
+				F538859616CD06AC00995CE5 /* speed2-ipadhd.png in Resources */,
+				F538859716CD06AC00995CE5 /* speed2.png in Resources */,
+				F53885A416CD30B500995CE5 /* alarm-hd.plist in Resources */,
+				F53885A516CD30B500995CE5 /* alarm-hd.png in Resources */,
+				F53885A616CD30B500995CE5 /* alarm-ipad.plist in Resources */,
+				F53885A716CD30B500995CE5 /* alarm-ipad.png in Resources */,
+				F53885A816CD30B500995CE5 /* alarm-ipadhd.plist in Resources */,
+				F53885A916CD30B500995CE5 /* alarm-ipadhd.png in Resources */,
+				F53885AA16CD30B500995CE5 /* alarm.plist in Resources */,
+				F53885AB16CD30B500995CE5 /* alarm.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

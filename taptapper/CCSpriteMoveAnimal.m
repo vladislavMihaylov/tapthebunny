@@ -40,8 +40,8 @@
     float moveTime;
     float delayTime;
     
-    moveTime = 0.2;
-    delayTime = 0.5;
+    moveTime = 0.7;
+    delayTime = 0.7;
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
@@ -53,12 +53,12 @@
     }
     
     [self runAction: [CCSequence actions:
-                                    [CCMoveTo actionWithDuration: moveTime
+                                    [CCMoveTo actionWithDuration: (moveTime - [Settings sharedSettings].gameMode * 0.25)
                                                         position: ccp(self.position.x, self.position.y + height)],
                                     [CCCallBlock actionWithBlock: ^(id sender) {self.isCanTap = YES;} ],
-                                    [CCDelayTime actionWithDuration: delayTime],
+                                    [CCDelayTime actionWithDuration: (delayTime - [Settings sharedSettings].gameMode * 0.1)],
                                     [CCCallBlock actionWithBlock: ^(id sender) {self.isCanTap = NO;} ],
-                                    [CCMoveTo actionWithDuration: moveTime
+                                    [CCMoveTo actionWithDuration: (0.4 - [Settings sharedSettings].gameMode * 0.1)
                                                         position: ccp(self.position.x, self.position.y)],
                                     [CCCallBlock actionWithBlock: ^(id sender) {[self moveAnimal];} ],
                       nil]

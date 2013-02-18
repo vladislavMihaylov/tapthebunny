@@ -13,7 +13,6 @@
 #import "CCBReader.h"
 #import "SimpleAudioEngine.h"
 #import "Settings.h"
-#import "MKStoreManager.h"
 
 #import "SHKItem.h"
 #import "SHKFacebook.h"
@@ -133,17 +132,15 @@
     [[Settings sharedSettings] save];
 }
 
-- (void) speedMode
+- (void) speedMode: (CCMenuItem *) sender
 {
     [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
     
-    if ([Settings sharedSettings].gameMode == 1)
+    [Settings sharedSettings].gameMode +=1;
+    
+    if([Settings sharedSettings].gameMode > 2)
     {
         [Settings sharedSettings].gameMode = 0;
-    }
-    else
-    {
-        [Settings sharedSettings].gameMode = 1;
     }
     
     [[Settings sharedSettings] save];
@@ -155,9 +152,7 @@
 }
 
 - (void) didLoadFromCCB
-{
-    [MKStoreManager sharedManager].delegate = self;
-    
+{    
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"menu.mp3"];
     if([Settings sharedSettings].soundLevel == 1)
     {
@@ -179,8 +174,9 @@
     CCSprite *optionsOn = [CCSprite spriteWithSpriteFrameName: @"optionBtnOn.png"];
     CCSprite *soundOnBtn = [CCSprite spriteWithSpriteFrameName: @"soundOnBtnmm.png"];
     CCSprite *soundOffBtn = [CCSprite spriteWithSpriteFrameName: @"soundOffBtnmm.png"];
-    CCSprite *babySpeedBtn = [CCSprite spriteWithSpriteFrameName: @"speed1Btn.png"];
-    CCSprite *monsterSpeedBtn = [CCSprite spriteWithSpriteFrameName: @"speed2Btn.png"];
+    CCSprite *Speed0Btn = [CCSprite spriteWithFile: @"speed0.png"];
+    CCSprite *Speed1Btn = [CCSprite spriteWithFile: @"speed1.png"];
+    CCSprite *Speed2Btn = [CCSprite spriteWithFile: @"speed2.png"];
     CCSprite *select = [CCSprite spriteWithFile: @"icon.png"];
     
     CCMenuItemImage *optionsBtn = [CCMenuItemImage itemWithNormalSprite: options
@@ -190,6 +186,9 @@
     
     optionsBtn.position = posForOptionsMenu;
 
+    CCMenuItemImage *speed0 = [CCMenuItemImage itemWithNormalSprite: Speed0Btn selectedSprite: select];
+    CCMenuItemImage *speed1 = [CCMenuItemImage itemWithNormalSprite: Speed1Btn selectedSprite: select];
+    CCMenuItemImage *speed2 = [CCMenuItemImage itemWithNormalSprite: Speed2Btn selectedSprite: select];
     
     CCMenuItemImage *on = [CCMenuItemImage itemWithNormalSprite: soundOnBtn selectedSprite: select];
     CCMenuItemImage *off = [CCMenuItemImage itemWithNormalSprite: soundOffBtn selectedSprite: select];
@@ -203,14 +202,10 @@
     soundMenu.position = ccp(0, 0);
     [self addChild: soundMenu z:1 tag: -1];
     
-    speedMenu = [CCMenu menuWithItems: nil];
+    CCMenu *speedMenu = [CCMenu menuWithItems: nil];
     speedMenu.position = ccp(0, 0);
     [self addChild: speedMenu z:1 tag: -1];
-    
-    buyBabyMenu = [CCMenu menuWithItems: nil];
-    buyBabyMenu.position = ccp(0, 0);
-    [self addChild: buyBabyMenu z:1 tag: -1];
-    
+        
     
     if ([Settings sharedSettings].soundLevel == 0)
     {
@@ -235,117 +230,43 @@
         [soundMenu addChild: sound z: 1 tag: kSoundBtnTag];
     }
     
-    if([Settings sharedSettings].openBabyMode == 0) // если бэби мод не куплен - предлагать его купить
+    if ([Settings sharedSettings].gameMode == 0)
     {
-        buyBaby = [CCMenuItemImage itemWithNormalSprite: monsterSpeedBtn
-                                         selectedSprite: select
-                                                 target: self
-                                               selector: @selector(buyBabyMode)
-                   ];
+        CCMenuItemToggle *speed = [CCMenuItemToggle itemWithTarget:self
+                                                          selector:@selector(speedMode:)
+                                                             items: speed0, speed1, speed2, nil
+                                   ];
         
-        [buyBabyMenu addChild: buyBaby z: 1 tag: kSpeedBtnTag];
-        buyBaby.position = posForOptionsMenu;
-        buyBaby.isEnabled = NO;
-        buyBaby.opacity = 180;
+        speed.position = posForOptionsMenu;
+        speed.isEnabled = NO;
+        [speedMenu addChild: speed z: 1 tag: kSpeedBtnTag];
     }
-    else
+    else if ([Settings sharedSettings].gameMode == 1)
     {
-        baby = [CCMenuItemImage itemWithNormalSprite: babySpeedBtn selectedSprite: select];
-        monster = [CCMenuItemImage itemWithNormalSprite: monsterSpeedBtn selectedSprite: select];
+        CCMenuItemToggle *speed = [CCMenuItemToggle itemWithTarget:self
+                                                          selector:@selector(speedMode:)
+                                                             items: speed1, speed2, speed0, nil
+                                   ];
         
-        if ([Settings sharedSettings].gameMode == 0)
-        {
-            
-            CCMenuItemToggle *speed = [CCMenuItemToggle itemWithTarget:self
-                                                              selector:@selector(speedMode)
-                                                                 items: baby, monster, nil
-                                       ];
-            
-            speed.position = posForOptionsMenu;
-            speed.isEnabled = NO;
-            [speedMenu addChild: speed z: 1 tag: kSpeedBtnTag];
-        }
-        else if ([Settings sharedSettings].gameMode == 1)
-        {
-            CCMenuItemToggle *speed = [CCMenuItemToggle itemWithTarget:self
-                                                              selector:@selector(speedMode)
-                                                                 items: monster, baby, nil
-                                       ];
-            
-            speed.position = posForOptionsMenu;
-            speed.isEnabled = NO;
-            [speedMenu addChild: speed z: 1 tag: kSpeedBtnTag];
-        }
-        
+        speed.position = posForOptionsMenu;
+        speed.isEnabled = NO;
+        [speedMenu addChild: speed z: 1 tag: kSpeedBtnTag];
     }
-    
+    else if ([Settings sharedSettings].gameMode == 2)
+    {
+        CCMenuItemToggle *speed = [CCMenuItemToggle itemWithTarget:self
+                                                          selector:@selector(speedMode:)
+                                                             items: speed2, speed0, speed1, nil
+                                   ];
+        
+        speed.position = posForOptionsMenu;
+        speed.isEnabled = NO;
+        [speedMenu addChild: speed z: 1 tag: kSpeedBtnTag];
+    }
+        
     arr = [self children];
 }
 
-- (void) buyBabyMode
-{
-    [[MKStoreManager sharedManager] buyFeatureB];
-    [self lockMenu];
-}
-
-- (void) lockMenu
-{
-    for(CCMenu *curMenu in arr)
-    {
-        curMenu.isTouchEnabled = NO;
-    }
-}
-
-- (void) unlockMenu
-{
-    for(CCMenu *curMenu in arr)
-    {
-        curMenu.isTouchEnabled = YES;
-    }
-}
-
-- (void)productBPurchased
-{
-    CGPoint btnPosition;
-    
-    [Settings sharedSettings].openBabyMode = 1;
-    [[Settings sharedSettings] save];
-    
-    btnPosition = CGPointMake(buyBaby.position.x, buyBaby.position.y);
-    [self unlockMenu];
-    [buyBabyMenu removeChild: buyBaby cleanup: YES];
-    
-    if([Settings sharedSettings].openBabyMode == 1)
-    {
-        CCSprite *babySpeedBtn2 = [CCSprite spriteWithSpriteFrameName: @"speed1Btn.png"];
-        CCSprite *monsterSpeedBtn2 = [CCSprite spriteWithSpriteFrameName: @"speed2Btn.png"];
-        CCSprite *select2 = [CCSprite spriteWithFile: @"icon.png"];
-        
-        baby = [CCMenuItemImage itemWithNormalSprite: babySpeedBtn2 selectedSprite: select2];
-        monster = [CCMenuItemImage itemWithNormalSprite: monsterSpeedBtn2 selectedSprite: select2];
-        
-        if ([Settings sharedSettings].gameMode == 0)
-        {
-            
-            CCMenuItemToggle *speed = [CCMenuItemToggle itemWithTarget:self selector:@selector(speedMode) items: baby, monster, nil];
-            speed.position = btnPosition;
-            //speed.isEnabled = NO;
-            [speedMenu addChild: speed z: 1 tag: kSpeedBtnTag];
-        }
-        else if ([Settings sharedSettings].gameMode == 1)
-        {
-            CCMenuItemToggle *speed = [CCMenuItemToggle itemWithTarget:self selector:@selector(speedMode) items: monster, baby, nil];
-            speed.position = btnPosition;
-            //speed.isEnabled = NO;
-            [speedMenu addChild: speed z: 1 tag: kSpeedBtnTag];
-        }
-    }
-}
-
-- (void)failed
-{
-    [self unlockMenu];
-}
 
 - (void) showSlideForButton: (NSInteger) sliderTag
 {

@@ -110,7 +110,7 @@
         posForMenu = ccp(330, 0);
         posForOpenMenu = ccp(0, 0);
         
-        posForOptionsMenu = ccp(270, 80);
+        posForOptionsMenu = ccp(370, 80);
         
         posForOkBtn = ccp(80, 120);
         
@@ -139,7 +139,7 @@
             GameCenterX = 284;
             GameCenterY = 160;
             
-            posForOptionsMenu = ccp(170, 50);
+            posForOptionsMenu = ccp(220, 50);
             
             posForSprite1 = ccp(134, 84);
             posForSprite2 = ccp(284, 84);
@@ -164,7 +164,7 @@
             GameCenterX = 240;
             GameCenterY = 160;
             
-            posForOptionsMenu = ccp(140, 50);
+            posForOptionsMenu = ccp(180, 50);
             
             posForSprite1 = ccp(90, 84);
             posForSprite2 = ccp(240, 84);
