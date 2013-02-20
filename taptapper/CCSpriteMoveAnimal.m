@@ -53,12 +53,12 @@
     }
     
     [self runAction: [CCSequence actions:
-                                    [CCMoveTo actionWithDuration: (moveTime - [Settings sharedSettings].gameMode * 0.25)
+                                    [CCMoveTo actionWithDuration: (moveTime - [Settings sharedSettings].gameMode * 0.2)
                                                         position: ccp(self.position.x, self.position.y + height)],
                                     [CCCallBlock actionWithBlock: ^(id sender) {self.isCanTap = YES;} ],
-                                    [CCDelayTime actionWithDuration: (delayTime - [Settings sharedSettings].gameMode * 0.1)],
+                                    [CCDelayTime actionWithDuration: (delayTime - [Settings sharedSettings].gameMode * 0.07)],
                                     [CCCallBlock actionWithBlock: ^(id sender) {self.isCanTap = NO;} ],
-                                    [CCMoveTo actionWithDuration: (0.4 - [Settings sharedSettings].gameMode * 0.1)
+                                    [CCMoveTo actionWithDuration: (0.4 - [Settings sharedSettings].gameMode * 0.07)
                                                         position: ccp(self.position.x, self.position.y)],
                                     [CCCallBlock actionWithBlock: ^(id sender) {[self moveAnimal];} ],
                       nil]

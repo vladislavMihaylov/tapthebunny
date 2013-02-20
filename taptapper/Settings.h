@@ -8,7 +8,7 @@
     NSInteger openAnimals;
     NSInteger openBabyMode;
     
-    BOOL      enabledBabyMode;
+    NSInteger enabledBabyMode;
 }
 
 + (Settings *) sharedSettings;
@@ -21,6 +21,6 @@
 @property (nonatomic, assign) NSInteger openAnimals;
 @property (nonatomic, assign) NSInteger openBabyMode;
 
-@property (nonatomic, assign) BOOL      enabledBabyMode;
+@property (nonatomic, assign) NSInteger enabledBabyMode;
 
 @end

@@ -21,11 +21,17 @@ CGPoint posForBoxSpriteHide;
 CGPoint posForMenu;
 CGPoint posForOpenMenu;
 
-CGPoint posForOkBtn;
+CGPoint posForNextTutorialBtn;
+CGPoint posForExitTutorialBtn;
 
 CGPoint posForOptionsMenu;
 CGPoint posForSoundBtnInGameMenu;
 CGPoint posForSoundBtnInGameMenuHide;
+
+NSInteger lenght;
+NSInteger rasstoyanie;
+
+float coefficientForTutorial;
 
 float heightForStar;
 float widthForStar;
@@ -36,3 +42,14 @@ float firstBtnHeight;
 float secondBtnHeight;
 
 float slideScale;
+
+float xPosAnimBtn;
+float xPosS1;
+float xPosS2;
+float xPosS3;
+float displaymentX;
+float anBtnHeightCoef;
+float BMBtnHeightCoef;
+float speedBtnHeightCoef;
+
+float speedBtnScale;

@@ -27,6 +27,9 @@ extern float GameCenterY;
 extern NSInteger animalNum;
 extern NSInteger sceneNum;
 
+extern NSInteger lenght;
+extern NSInteger rasstoyanie;
+
 extern NSString *postFix;
 
 extern CGPoint posForSprite1;
@@ -40,11 +43,14 @@ extern CGPoint posForBoxSpriteHide;
 extern CGPoint posForMenu;
 extern CGPoint posForOpenMenu;
 
-extern CGPoint posForOkBtn;
+extern CGPoint posForNextTutorialBtn;
+extern CGPoint posForExitTutorialBtn;
 
 extern CGPoint posForOptionsMenu;
 extern CGPoint posForSoundBtnInGameMenu;
 extern CGPoint posForSoundBtnInGameMenuHide;
+
+extern float coefficientForTutorial;
 
 extern float heightForStar;
 extern float widthForStar;
@@ -55,3 +61,14 @@ extern float firstBtnHeight;
 extern float secondBtnHeight;
 
 extern float slideScale;
+
+extern float xPosAnimBtn;
+extern float xPosS1;
+extern float xPosS2;
+extern float xPosS3;
+extern float displaymentX;
+extern float anBtnHeightCoef;
+extern float BMBtnHeightCoef;
+extern float speedBtnHeightCoef;
+
+extern float speedBtnScale;

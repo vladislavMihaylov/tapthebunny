@@ -10,6 +10,7 @@ Settings *sharedSettings = nil;
 @synthesize gameMode;
 @synthesize openAnimals;
 @synthesize openBabyMode;
+@synthesize enabledBabyMode;
 
 + (Settings *) sharedSettings
 {
@@ -87,7 +88,7 @@ Settings *sharedSettings = nil;
     NSNumber *enabledBabyModeData = [defaults objectForKey: kEnabledBabyModeKey];
     if(enabledBabyModeData)
     {
-        self.enabledBabyMode = [enabledBabyModeData boolValue];
+        self.enabledBabyMode = [enabledBabyModeData integerValue];
     }
     else
     {
@@ -104,7 +105,7 @@ Settings *sharedSettings = nil;
     [defaults setObject: [NSNumber numberWithInteger: self.gameMode] forKey: kGameModeKey];
     [defaults setObject: [NSNumber numberWithInteger: self.openAnimals] forKey: kAnimalsKey];
     [defaults setObject: [NSNumber numberWithInteger: self.openBabyMode] forKey: kOpenBabyModeKey];
-    [defaults setObject: [NSNumber numberWithBool:    self.enabledBabyMode] forKey: kEnabledBabyModeKey];
+    [defaults setObject: [NSNumber numberWithInteger: self.enabledBabyMode] forKey: kEnabledBabyModeKey];
     
     [defaults synchronize];
 }

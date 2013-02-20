@@ -30,6 +30,7 @@
     NSString *subZeroCoordinats;
     
     CCSprite *tutorialSprite;
+    CCSprite *secondTutorialSprite;
     
     CCArray *arr;
 }

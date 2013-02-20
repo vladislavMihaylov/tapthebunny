@@ -94,6 +94,13 @@
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
+        displaymentX = 0;
+        
+        lenght = 35;
+        rasstoyanie = 80;
+        
+        speedBtnScale = 1.15;
+        
         postFix = @"-ipad";
         
         GameCenterX = 512;
@@ -112,10 +119,13 @@
         
         posForOptionsMenu = ccp(370, 80);
         
-        posForOkBtn = ccp(80, 120);
+        posForNextTutorialBtn = ccp(900, 140);
+        posForExitTutorialBtn = ccp(1944, 100);
         
         posForSoundBtnInGameMenu = ccp(810, 80);
         posForSoundBtnInGameMenuHide = ccp(1140, 80);
+        
+        coefficientForTutorial = 1;
         
         heightForStar = 700;
         widthForStar = 315;
@@ -126,6 +136,15 @@
         secondBtnHeight = 260;
         
         slideScale = 0.9;
+        
+        xPosAnimBtn = 1256;
+        xPosS1 = 1341;
+        xPosS2 = 1520;
+        xPosS3 = 1715;
+        
+        anBtnHeightCoef = 0.89;
+        BMBtnHeightCoef = 1.21;
+        speedBtnHeightCoef = 1.42;
     }
     else
     {
@@ -134,6 +153,8 @@
         
         if(IS_WIDESCREEN == YES)
         {
+            displaymentX = 88;
+            
             postFix = @"-five";
             
             GameCenterX = 284;
@@ -159,6 +180,8 @@
         }
         else
         {
+            displaymentX = 0;
+            
             postFix = @"";
             
             GameCenterX = 240;
@@ -181,9 +204,28 @@
             posForSoundBtnInGameMenuHide = ccp(545, 40);
             
             widthForStar = 125;
+            
+            
         }
         
-        posForOkBtn = ccp(40, 60);
+        lenght = 20;
+        rasstoyanie = 40;
+        
+        speedBtnScale = 1;
+        
+        xPosAnimBtn = 590;
+        xPosS1 = 629;
+        xPosS2 = 712;
+        xPosS3 = 803;
+        
+        anBtnHeightCoef = 1.03;
+        BMBtnHeightCoef = 1.39;
+        speedBtnHeightCoef = 1.62;
+        
+        coefficientForTutorial = 1.15;
+        
+        posForNextTutorialBtn = ccp(430, 70);
+        posForExitTutorialBtn = ccp(910 + displaymentX, 50);
         
         heightForStar = 290;
         stepOfStar = 40;

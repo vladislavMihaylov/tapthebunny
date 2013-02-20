@@ -42,8 +42,6 @@
     {
         [MKStoreManager sharedManager].delegate = self;
         
-        [MKStoreManager sharedManager].cartScene = self;
-        
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: @"selectAnimal.plist"];
         
         CCSprite *backBtnSprite = [CCSprite spriteWithSpriteFrameName: @"backBtn.png"];
@@ -147,21 +145,22 @@
         shopLabel.position = ccp(GameCenterX, GameCenterY * 1.7);
         [self addChild: shopLabel];
         
-        NSMutableArray *costArray = [[MKStoreManager sharedManager] getCostArray];
-        [self setPrice: costArray];
+        //NSMutableArray *costArray = [[MKStoreManager sharedManager] getCostArray];
+        [self setPrice];
     }
     
     return self;
 }
 
-- (void) setPrice: (NSMutableArray *) priceArray
+- (void) setPrice
 {
-    for(int i = 0; i < [priceArray count]; i++)
-    {
-        CCLabelBMFont *costLabel = [CCLabelBMFont labelWithString: [NSString stringWithFormat: @"Cost: %@", [priceArray objectAtIndex: i]] fntFile: @"bip.fnt"];
-        costLabel.position = ccp((GameCenterX / 2) * (i + 1) + GameCenterX/4, GameCenterY * 0.65);
-        [self addChild: costLabel];
-    }
+    CCSprite *cost099 = [CCSprite spriteWithFile: @"099.png"];
+    cost099.position = ccp(GameCenterX * 0.75, GameCenterY * 0.7);
+    [self addChild: cost099];
+    
+    CCSprite *cost199 = [CCSprite spriteWithFile: @"199.png"];
+    cost199.position = ccp(GameCenterX * 1.25, GameCenterY * 0.7);
+    [self addChild: cost199];
 }
 
 - (void) buy: (CCMenuItemImage *) sender
@@ -222,6 +221,7 @@
 
 - (void)failed
 {
+    
     [self unlockMenu];
 }
 

@@ -95,6 +95,8 @@
 
 - (void) didLoadFromCCB
 {
+    CCLOG(@"ENABLED: %i", [Settings sharedSettings].enabledBabyMode);
+    
     arr = [self children];
     [MKStoreManager sharedManager].delegate = self;
     

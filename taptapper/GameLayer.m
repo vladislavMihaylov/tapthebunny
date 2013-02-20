@@ -23,6 +23,7 @@
 #import "CCSpriteMoveAnimal.h"
 
 #import "FinishGame.h"
+#import "CartScene.h"
 
 // HelloWorldLayer implementation
 @implementation GameLayer
@@ -65,6 +66,8 @@
 
 -(void) didLoadFromCCB
 {
+    CCLOG(@"ENABLED: %i", [Settings sharedSettings].enabledBabyMode);
+    
     arr = [self children];
     
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"bg.mp3"];
@@ -75,23 +78,9 @@
     bushesArray = [[NSMutableArray alloc] init];
     numbersArray = [[NSMutableArray alloc] init];
     
-    tutorialSprite = [CCSprite spriteWithFile: @"tutorial.png"];
-    tutorialSprite.position = ccp(GameCenterX, GameCenterY * 3);
-    [self addChild: tutorialSprite z: 3];
-        
+    [self preloadTutorial];
+    
     [self restartLevel];
-    
-    CCMenuItemImage *okBtn = [CCMenuItemImage itemWithNormalImage: @"ok.png"
-                                                    selectedImage: @"okOn.png"
-                                                           target: self
-                                                         selector: @selector(hideTutorial)
-                              ];
-    
-    okBtn.position = posForOkBtn;
-    
-    CCMenu *tutorialMenu = [CCMenu menuWithItems: okBtn, nil];
-    tutorialMenu.position = ccp(0, 0);
-    [tutorialSprite addChild: tutorialMenu z:1 tag: 9999];
     
     subZeroCoordinats = coordinats;
 
@@ -120,6 +109,99 @@
         sound.position = posForSoundBtnInGameMenuHide;
         [soundMenu addChild: sound z: 1 tag: kSoundBtnTag];
     }
+}
+
+- (void) preloadTutorial
+{
+    tutorialSprite = [CCSprite spriteWithFile: @"tutorial.png"];
+    tutorialSprite.position = ccp(GameCenterX, GameCenterY * 3);
+    [self addChild: tutorialSprite z: 3];
+    
+    secondTutorialSprite = [CCSprite spriteWithFile: @"tutorial2.png"];
+    secondTutorialSprite.position = ccp(GameCenterX * 3 - displaymentX / 2, GameCenterY * coefficientForTutorial);
+    [tutorialSprite addChild: secondTutorialSprite];
+    
+    CCMenuItemImage *nextBtn = [CCMenuItemImage itemWithNormalImage: @"nextBtn.png"
+                                                    selectedImage: @"nextBtnOn.png"
+                                                           target: self
+                                                         selector: @selector(showNextTutorialList)
+                              ];
+    
+    CCMenuItemImage *exitBtn = [CCMenuItemImage itemWithNormalImage: @"exitBtn.png"
+                                                      selectedImage: @"exitBtnOn.png"
+                                                             target: self
+                                                           selector: @selector(hideTutorial)
+                                ];
+    
+    CCMenuItemImage *animalsPackBtn = [CCMenuItemImage itemWithNormalImage: @"animalsShop.png"
+                                                             selectedImage: @"animalsShop.png"
+                                                                    target: self
+                                                                  selector: @selector(goToShop)
+                                ];
+    
+    CCMenuItemImage *babyModeBtn = [CCMenuItemImage itemWithNormalImage: @"BMShop.png"
+                                                             selectedImage: @"BMShop.png"
+                                                                    target: self
+                                                                  selector: @selector(goToShop)
+                                       ];
+    
+    CCMenuItemImage *speedOne = [CCMenuItemImage itemWithNormalImage: @"speed0.png"
+                                                       selectedImage: @"speed0.png"
+                                                              target: self
+                                                            selector: @selector(setSpeed:)
+                                    ];
+    
+    CCMenuItemImage *speedTwo = [CCMenuItemImage itemWithNormalImage: @"speed1.png"
+                                                       selectedImage: @"speed1.png"
+                                                              target: self
+                                                            selector: @selector(setSpeed:)
+                                 ];
+    
+    CCMenuItemImage *speedThree = [CCMenuItemImage itemWithNormalImage: @"speed2.png"
+                                                         selectedImage: @"speed2.png"
+                                                                target: self
+                                                              selector: @selector(setSpeed:)
+                                 ];
+    
+    nextBtn.position = posForNextTutorialBtn;
+    exitBtn.position = posForExitTutorialBtn;
+    
+    speedOne.position = ccp(xPosS1 + displaymentX, GameCenterY * speedBtnHeightCoef);
+    speedTwo.position = ccp(xPosS2 + displaymentX, GameCenterY * speedBtnHeightCoef);
+    speedThree.position = ccp(xPosS3 + displaymentX, GameCenterY * speedBtnHeightCoef);
+    
+    speedOne.tag = 0;
+    speedTwo.tag = 1;
+    speedThree.tag = 2;
+    
+    speedOne.scale = speedBtnScale;
+    speedTwo.scale = speedBtnScale;
+    speedThree.scale = speedBtnScale;
+    
+    animalsPackBtn.position = ccp(xPosAnimBtn + displaymentX, GameCenterY * anBtnHeightCoef);
+    babyModeBtn.position = ccp(xPosAnimBtn + displaymentX, GameCenterY * BMBtnHeightCoef);
+    
+    animalsPackBtn.scale = 0.66;
+    babyModeBtn.scale = 0.66;
+    
+    CCMenu *tutorialMenu = [CCMenu menuWithItems: nextBtn, exitBtn, animalsPackBtn, babyModeBtn, speedOne, speedTwo, speedThree, nil];
+    tutorialMenu.position = ccp(0, 0);
+    [tutorialSprite addChild: tutorialMenu z:1 tag: 9999];
+}
+
+- (void) setSpeed: (CCMenuItemImage *) sender
+{
+    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
+    
+    [Settings sharedSettings].gameMode = sender.tag;
+    [[Settings sharedSettings] save];
+}
+
+- (void) goToShop
+{
+    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
+    
+    [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1.0 scene: [CartScene scene]]];
 }
 
 - (void) restartLevel
@@ -214,7 +296,6 @@
     }
     
     
-    
     if([Settings sharedSettings].enabledBabyMode == 0)
     {
         [self schedule: @selector(timer) interval: 1];
@@ -261,8 +342,6 @@
     {
         time--;
     }
-    
-    
     
     if(time > 0 && time <= 10)
     {
@@ -346,7 +425,12 @@
 {
     [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
     
-    [tutorialSprite runAction: [CCMoveTo actionWithDuration: 0.2 position: ccp(GameCenterX, GameCenterY * 3)]];
+    [tutorialSprite runAction: [CCSequence actions:
+                                            [CCMoveTo actionWithDuration: 0.2 position: ccp(-GameCenterX, GameCenterY * 3)],
+                                            [CCMoveTo actionWithDuration: 0 position: ccp(GameCenterX, GameCenterY * 3)],
+                                            nil
+                                ]
+     ];
     
     for(CCMenu *curMenu in arr)
     {
@@ -356,6 +440,13 @@
         }
     }
 
+}
+
+- (void) showNextTutorialList
+{
+    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
+    
+    [tutorialSprite runAction: [CCMoveTo actionWithDuration: 0.5 position: ccp(-GameCenterX, GameCenterY)]];
 }
 
 - (void) soundMode

@@ -16,7 +16,11 @@
     
     CCArray *arr;
     
+    NSMutableArray *optionBtnsArray;
     
+    CCMenuItemToggle *sound;
+    CCMenuItemToggle *speed;
+    CCMenuItemToggle *babyMode;
 }
 
 @end

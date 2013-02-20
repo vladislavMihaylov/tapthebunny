@@ -39,11 +39,27 @@
     if(self = [super init])
     {
         [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
-        [[SimpleAudioEngine sharedEngine] playEffect: @"win.mp3"];
+        
+        CCSprite *congratulations;
+        
+        if(stars)
+        {
+            [[SimpleAudioEngine sharedEngine] playEffect: @"win.mp3"];
+            congratulations = [CCSprite spriteWithFile: @"congrats.png"];
+            congratulations.position = ccp(GameCenterX, GameCenterY * 1.45);
+        }
+        else
+        {
+            [[SimpleAudioEngine sharedEngine] playEffect: @"TryAgain.mp3"];
+            congratulations = [CCSprite spriteWithFile: @"tryAgain.png"];
+            congratulations.position = ccp(GameCenterX, GameCenterY);
+        }
         
         [[SimpleAudioEngine sharedEngine] stopEffect: 2];
         
         CCSprite *bgSprite;
+        
+        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: @"mainMenu.plist"];
         
         if(IS_WIDESCREEN == YES)
         {
@@ -59,8 +75,8 @@
         [self addChild: bgSprite];
         
         
-        CCSprite *backBtnSprite = [CCSprite spriteWithSpriteFrameName: @"backBtn.png"];
-        CCSprite *backBtnOnSprite = [CCSprite spriteWithSpriteFrameName: @"backBtnOn.png"];
+        CCSprite *backBtnSprite = [CCSprite spriteWithSpriteFrameName: @"playBtn.png"];
+        CCSprite *backBtnOnSprite = [CCSprite spriteWithSpriteFrameName: @"playBtnOn.png"];
 
         
         CCMenuItemImage *mainMenu = [CCMenuItemImage itemWithNormalSprite: backBtnSprite
@@ -69,15 +85,15 @@
                                                                  selector: @selector(gotoMainMenu)
                                      ];
         
-        mainMenu.position = ccp(GameCenterX * 0.2, GameCenterY * 0.3);
+        mainMenu.position = ccp(GameCenterX * 2 * 0.9, GameCenterY * 2 * 0.15);
         
         CCMenu *backMenu = [CCMenu menuWithItems: mainMenu, nil];
         backMenu.position = ccp(0, 0);
         
         [self addChild: backMenu];
         
-        CCSprite *congratulations = [CCSprite spriteWithFile: @"congrats.png"];
-        congratulations.position = ccp(GameCenterX, GameCenterY * 1.45);
+        
+        
         
         [self addChild: congratulations];
         
