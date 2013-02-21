@@ -141,11 +141,10 @@
         
         
         
-        CCLabelBMFont *shopLabel = [CCLabelBMFont labelWithString: @"Shop" fntFile: @"shopFnt.fnt"];
+        CCSprite *shopLabel = [CCSprite spriteWithFile: @"shopLabel.png"];
         shopLabel.position = ccp(GameCenterX, GameCenterY * 1.7);
         [self addChild: shopLabel];
         
-        //NSMutableArray *costArray = [[MKStoreManager sharedManager] getCostArray];
         [self setPrice];
     }
     

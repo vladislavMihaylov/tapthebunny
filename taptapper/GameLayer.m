@@ -127,8 +127,8 @@
                                                          selector: @selector(showNextTutorialList)
                               ];
     
-    CCMenuItemImage *exitBtn = [CCMenuItemImage itemWithNormalImage: @"exitBtn.png"
-                                                      selectedImage: @"exitBtnOn.png"
+    CCMenuItemImage *exitBtn = [CCMenuItemImage itemWithNormalImage: @"ok.png"
+                                                      selectedImage: @"okOn.png"
                                                              target: self
                                                            selector: @selector(hideTutorial)
                                 ];

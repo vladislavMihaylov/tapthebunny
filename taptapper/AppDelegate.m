@@ -120,7 +120,7 @@
         posForOptionsMenu = ccp(370, 80);
         
         posForNextTutorialBtn = ccp(900, 140);
-        posForExitTutorialBtn = ccp(1944, 100);
+        posForExitTutorialBtn = ccp(1944, 130);
         
         posForSoundBtnInGameMenu = ccp(810, 80);
         posForSoundBtnInGameMenuHide = ccp(1140, 80);
@@ -137,14 +137,14 @@
         
         slideScale = 0.9;
         
-        xPosAnimBtn = 1256;
-        xPosS1 = 1341;
-        xPosS2 = 1520;
-        xPosS3 = 1715;
+        xPosAnimBtn = 1260;
+        xPosS1 = 1344;
+        xPosS2 = 1523;
+        xPosS3 = 1718;
         
-        anBtnHeightCoef = 0.89;
-        BMBtnHeightCoef = 1.21;
-        speedBtnHeightCoef = 1.42;
+        anBtnHeightCoef = 0.69;
+        BMBtnHeightCoef = 1.01;
+        speedBtnHeightCoef = 1.22;
     }
     else
     {
@@ -213,19 +213,19 @@
         
         speedBtnScale = 1;
         
-        xPosAnimBtn = 590;
-        xPosS1 = 629;
-        xPosS2 = 712;
-        xPosS3 = 803;
+        xPosAnimBtn = 592;
+        xPosS1 = 631;
+        xPosS2 = 714;
+        xPosS3 = 805;
         
-        anBtnHeightCoef = 1.03;
-        BMBtnHeightCoef = 1.39;
-        speedBtnHeightCoef = 1.62;
+        anBtnHeightCoef = 0.81;
+        BMBtnHeightCoef = 1.16;
+        speedBtnHeightCoef = 1.40;
         
         coefficientForTutorial = 1.15;
         
         posForNextTutorialBtn = ccp(430, 70);
-        posForExitTutorialBtn = ccp(910 + displaymentX, 50);
+        posForExitTutorialBtn = ccp(910 + displaymentX, 70);
         
         heightForStar = 290;
         stepOfStar = 40;
