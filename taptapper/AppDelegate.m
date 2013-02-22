@@ -20,6 +20,8 @@
 
 #import "SHKFacebook.h"
 
+#import "ChartBoost.h"
+
 @implementation AppController
 
 @synthesize window=window_, navController=navController_, director=director_;
@@ -278,6 +280,18 @@
     [[CCDirector sharedDirector] resume];
     
     [SHKFacebook handleDidBecomeActive]; /////////////////////////////////////////////////////////////////////////////////////////
+    
+    Chartboost *cb = [Chartboost sharedChartboost];
+    //cb.delegate = self;
+    
+    cb.appId = @"4f5f7267f776593d68000022";
+    cb.appSignature = @"ef18edfc558e7339a1874a787ba12a33590e8445";
+    
+    // Notify an install
+    [cb startSession];
+    
+    // Load interstitial
+    [cb showInterstitial];
 }
 
 -(void) applicationDidEnterBackground:(UIApplication*)application
@@ -344,6 +358,28 @@
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#pragma mark chartboost
+
+- (BOOL)shouldDisplayInterstitial: (UIView *) interstitialView
+{
+    return !isGameActive;
+}
+
+- (BOOL)shouldDisplayMoreApps:(UIView *)moreAppsView
+{
+    return !isGameActive;
+}
+
+- (void) requestMoreApps: (NSNotification *) notification
+{
+    [[Chartboost sharedChartboost] showMoreApps];
+}
+
+- (void) requestMoreInterstitial: (NSNotification *) notification
+{
+    [[Chartboost sharedChartboost] showInterstitial];
+}
 
 @end
 

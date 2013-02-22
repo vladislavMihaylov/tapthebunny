@@ -125,7 +125,7 @@
     }
     else
     {
-        CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: @"SelectAnimal.ccbi"];
+        CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"SelectAnimal%@.ccbi", postFix]];
         [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
     }
 }

@@ -5,6 +5,8 @@
 float GameCenterX;
 float GameCenterY;
 
+BOOL isGameActive = NO;
+
 NSInteger animalNum = 0;
 NSInteger sceneNum = 1;
 

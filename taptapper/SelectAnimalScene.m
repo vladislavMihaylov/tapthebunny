@@ -32,6 +32,8 @@
 
 - (void) playWith: (CCMenuItemImage *) sender
 {
+    CCLOG(@"SCENE: %i", sceneNum);
+    
     [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
     
     animalNum = sender.tag;
@@ -95,7 +97,6 @@
 
 - (void) didLoadFromCCB
 {
-    CCLOG(@"ENABLED: %i", [Settings sharedSettings].enabledBabyMode);
     
     arr = [self children];
     [MKStoreManager sharedManager].delegate = self;
@@ -103,7 +104,7 @@
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"chooseAnimal.mp3"];
     [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: [Settings sharedSettings].soundLevel];
     
-    sceneNum = arc4random() % 3 + 1;
+    sceneNum = 3;//arc4random() % 3 + 1;
     
     CCSprite *sprite = [CCSprite spriteWithFile: @"Icon.png"];
     sprite.anchorPoint = ccp(0.5, 0);

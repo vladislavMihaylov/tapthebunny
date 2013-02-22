@@ -25,6 +25,8 @@
 #import "FinishGame.h"
 #import "CartScene.h"
 
+#import "Chartboost.h"
+
 // HelloWorldLayer implementation
 @implementation GameLayer
 
@@ -41,8 +43,11 @@
 
 - (void) playAnimationForBush: (NSInteger) tagOfAnimal
 {
+    
     NSString *animalTag = [NSString stringWithFormat: @"%i", tagOfAnimal];
     NSString *animalNumber = [animalTag substringFromIndex: 1];
+    
+    CCLOG(@"tagOfAnimal : %@", animalNumber);
     
     NSInteger tagForBush = [[NSString stringWithFormat: @"%i00%@", sceneNum, animalNumber] integerValue];
     
@@ -55,6 +60,8 @@
     {
             if(curBush.tag == bushNum)
             {
+                CCLOG(@"curBushTag : %i  BushNum: %i", curBush.tag, bushNum);
+                
                 [curBush runAction:
                                 [CCAnimate actionWithAnimation:
                                                     [[CCAnimationCache sharedAnimationCache] animationByName: [NSString stringWithFormat: @"scene_%i_bush_%i_", sceneNum, (bushNum - 1000 * sceneNum)]]
@@ -66,8 +73,6 @@
 
 -(void) didLoadFromCCB
 {
-    CCLOG(@"ENABLED: %i", [Settings sharedSettings].enabledBabyMode);
-    
     arr = [self children];
     
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"bg.mp3"];
@@ -109,6 +114,8 @@
         sound.position = posForSoundBtnInGameMenuHide;
         [soundMenu addChild: sound z: 1 tag: kSoundBtnTag];
     }
+    
+    isGameActive = YES;
 }
 
 - (void) preloadTutorial
@@ -537,6 +544,10 @@
 
 - (void) pause
 {
+    isGameActive = NO;
+    
+    [[Chartboost sharedChartboost] showInterstitial];
+    
     [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
     
     self.isTouchEnabled = NO;
@@ -607,6 +618,8 @@
 
 - (void) unPause
 {
+    isGameActive = YES;
+    
     [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
     
     self.isTouchEnabled = YES;

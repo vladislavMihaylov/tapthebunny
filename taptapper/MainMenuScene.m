@@ -265,7 +265,6 @@
         [speedMenu addChild: speed z: 1 tag: kSpeedBtnTag];
     }
     
-    CCLOG(@"ENABLEDDD: %i", [Settings sharedSettings].enabledBabyMode);
     ////
     
     if ([Settings sharedSettings].openBabyMode == 0)
@@ -310,8 +309,6 @@
     [optionBtnsArray addObject: babyMode];
     
     arr = [self children];
-    
-    CCLOG(@"ENABLED: %i", [Settings sharedSettings].enabledBabyMode);
 }
 
 - (void) selectGameMode
@@ -326,8 +323,6 @@
     }
     
     [[Settings sharedSettings] save];
-    
-    CCLOG(@"ENABLED: %i", [Settings sharedSettings].enabledBabyMode);
 }
 
 - (void) showSlideForButton: (NSInteger) sliderTag

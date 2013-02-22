@@ -104,13 +104,13 @@
 		F505C1A816BC2D1700F82E68 /* chooseAnimal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F505C1A116BC2D1700F82E68 /* chooseAnimal.mp3 */; };
 		F505C1AA16BC36E600F82E68 /* FamilyWin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F505C1A916BC36E600F82E68 /* FamilyWin.mp3 */; };
 		F505C95916B84D5800FDBBA5 /* FinishGame.m in Sources */ = {isa = PBXBuildFile; fileRef = F505C95816B84D5800FDBBA5 /* FinishGame.m */; };
+		F5065C0616D747A400F62CB9 /* libChartboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5065C0416D747A400F62CB9 /* libChartboost.a */; };
+		F5065C0716D747A400F62CB9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F5065C0516D747A400F62CB9 /* README.md */; };
 		F50688BA16BA82F90035216A /* tutorial-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F50688B616BA82F90035216A /* tutorial-hd.png */; };
 		F50688BB16BA82F90035216A /* tutorial-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F50688B716BA82F90035216A /* tutorial-ipad.png */; };
 		F50688BC16BA82F90035216A /* tutorial-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F50688B816BA82F90035216A /* tutorial-ipadhd.png */; };
 		F50688BD16BA82F90035216A /* tutorial.png in Resources */ = {isa = PBXBuildFile; fileRef = F50688B916BA82F90035216A /* tutorial.png */; };
 		F506E54016C0ED1200A9B84F /* bushesAnimations.plist in Resources */ = {isa = PBXBuildFile; fileRef = F506E53F16C0ED1200A9B84F /* bushesAnimations.plist */; };
-		F506E54716C0F1CE00A9B84F /* scene_3_bushes-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = F506E54216C0F1CE00A9B84F /* scene_3_bushes-ipadhd.plist */; };
-		F506E54816C0F1CE00A9B84F /* scene_3_bushes-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F506E54316C0F1CE00A9B84F /* scene_3_bushes-ipadhd.png */; };
 		F506E54D16C0FD2D00A9B84F /* scene_3_bushes-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F506E54B16C0FD2D00A9B84F /* scene_3_bushes-ipad.png */; };
 		F506E54E16C0FD2D00A9B84F /* scene_3_bushes-ipad.plist in Resources */ = {isa = PBXBuildFile; fileRef = F506E54C16C0FD2D00A9B84F /* scene_3_bushes-ipad.plist */; };
 		F5079AC716B425000084A9DD /* mainMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5079AC516B424FF0084A9DD /* mainMenu.plist */; };
@@ -130,6 +130,8 @@
 		F508371F16B2F422007967B6 /* MainMenuScene.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = F508371E16B2F422007967B6 /* MainMenuScene.ccbi */; };
 		F508372116B2F91E007967B6 /* SelectAnimal.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = F508372016B2F91E007967B6 /* SelectAnimal.ccbi */; };
 		F508372416B2F939007967B6 /* SelectAnimalScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F508372316B2F938007967B6 /* SelectAnimalScene.m */; };
+		F5089E2916D7B3DF00485A43 /* scene_3_bushes-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5089E2716D7B3DD00485A43 /* scene_3_bushes-ipadhd.plist */; };
+		F5089E2A16D7B3DF00485A43 /* scene_3_bushes-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F5089E2816D7B3DE00485A43 /* scene_3_bushes-ipadhd.png */; };
 		F509879116BE3D8C000AB88E /* scene_2_pics-five.plist in Resources */ = {isa = PBXBuildFile; fileRef = F509878F16BE3D8C000AB88E /* scene_2_pics-five.plist */; };
 		F509879216BE3D8C000AB88E /* scene_2_pics-five.png in Resources */ = {isa = PBXBuildFile; fileRef = F509879016BE3D8C000AB88E /* scene_2_pics-five.png */; };
 		F509879516BE5825000AB88E /* scene_3_pics-five.plist in Resources */ = {isa = PBXBuildFile; fileRef = F509879316BE5825000AB88E /* scene_3_pics-five.plist */; };
@@ -793,13 +795,15 @@
 		F505C1A916BC36E600F82E68 /* FamilyWin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FamilyWin.mp3; sourceTree = "<group>"; };
 		F505C95716B84D5800FDBBA5 /* FinishGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishGame.h; sourceTree = "<group>"; };
 		F505C95816B84D5800FDBBA5 /* FinishGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishGame.m; sourceTree = "<group>"; };
+		F5065C0216D747A400F62CB9 /* CBAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAnalytics.h; sourceTree = "<group>"; };
+		F5065C0316D747A400F62CB9 /* Chartboost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chartboost.h; sourceTree = "<group>"; };
+		F5065C0416D747A400F62CB9 /* libChartboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChartboost.a; sourceTree = "<group>"; };
+		F5065C0516D747A400F62CB9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		F50688B616BA82F90035216A /* tutorial-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tutorial-hd.png"; sourceTree = "<group>"; };
 		F50688B716BA82F90035216A /* tutorial-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tutorial-ipad.png"; sourceTree = "<group>"; };
 		F50688B816BA82F90035216A /* tutorial-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tutorial-ipadhd.png"; sourceTree = "<group>"; };
 		F50688B916BA82F90035216A /* tutorial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial.png; sourceTree = "<group>"; };
 		F506E53F16C0ED1200A9B84F /* bushesAnimations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bushesAnimations.plist; sourceTree = "<group>"; };
-		F506E54216C0F1CE00A9B84F /* scene_3_bushes-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "scene_3_bushes-ipadhd.plist"; sourceTree = "<group>"; };
-		F506E54316C0F1CE00A9B84F /* scene_3_bushes-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scene_3_bushes-ipadhd.png"; sourceTree = "<group>"; };
 		F506E54B16C0FD2D00A9B84F /* scene_3_bushes-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scene_3_bushes-ipad.png"; sourceTree = "<group>"; };
 		F506E54C16C0FD2D00A9B84F /* scene_3_bushes-ipad.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "scene_3_bushes-ipad.plist"; sourceTree = "<group>"; };
 		F5079AC516B424FF0084A9DD /* mainMenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = mainMenu.plist; path = Resources/menu/mainMenu.plist; sourceTree = "<group>"; };
@@ -821,6 +825,8 @@
 		F508372016B2F91E007967B6 /* SelectAnimal.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = SelectAnimal.ccbi; path = Resources/SelectAnimal.ccbi; sourceTree = "<group>"; };
 		F508372216B2F938007967B6 /* SelectAnimalScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectAnimalScene.h; sourceTree = "<group>"; };
 		F508372316B2F938007967B6 /* SelectAnimalScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectAnimalScene.m; sourceTree = "<group>"; };
+		F5089E2716D7B3DD00485A43 /* scene_3_bushes-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "scene_3_bushes-ipadhd.plist"; sourceTree = "<group>"; };
+		F5089E2816D7B3DE00485A43 /* scene_3_bushes-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scene_3_bushes-ipadhd.png"; sourceTree = "<group>"; };
 		F509878F16BE3D8C000AB88E /* scene_2_pics-five.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "scene_2_pics-five.plist"; path = "Resources/five/scene_2_pics-five.plist"; sourceTree = "<group>"; };
 		F509879016BE3D8C000AB88E /* scene_2_pics-five.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "scene_2_pics-five.png"; path = "Resources/five/scene_2_pics-five.png"; sourceTree = "<group>"; };
 		F509879316BE5825000AB88E /* scene_3_pics-five.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "scene_3_pics-five.plist"; path = "Resources/five/scene_3_pics-five.plist"; sourceTree = "<group>"; };
@@ -1303,6 +1309,7 @@
 				F53F6BCB16B2DAB900444747 /* Foundation.framework in Frameworks */,
 				F53F6BCD16B2DAB900444747 /* CoreGraphics.framework in Frameworks */,
 				F53F6BCF16B2DAB900444747 /* GameKit.framework in Frameworks */,
+				F5065C0616D747A400F62CB9 /* libChartboost.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1325,6 +1332,17 @@
 			name = animalsAnimation;
 			sourceTree = "<group>";
 		};
+		F5065BE716D742D700F62CB9 /* chartBoost */ = {
+			isa = PBXGroup;
+			children = (
+				F5065C0216D747A400F62CB9 /* CBAnalytics.h */,
+				F5065C0316D747A400F62CB9 /* Chartboost.h */,
+				F5065C0416D747A400F62CB9 /* libChartboost.a */,
+				F5065C0516D747A400F62CB9 /* README.md */,
+			);
+			name = chartBoost;
+			sourceTree = "<group>";
+		};
 		F506E53416C0EA3E00A9B84F /* bushes */ = {
 			isa = PBXGroup;
 			children = (
@@ -1343,10 +1361,10 @@
 				F513D6BE16C19D93006E7C1A /* scene_2_bushes-hd.plist */,
 				F513D6BF16C19D93006E7C1A /* scene_2_bushes.png */,
 				F513D6C016C19D93006E7C1A /* scene_2_bushes.plist */,
-				F513D6C116C19D93006E7C1A /* scene_2_bushes-ipadhd.plist */,
 				F513D6C216C19D93006E7C1A /* scene_2_bushes-ipadhd.png */,
-				F506E54216C0F1CE00A9B84F /* scene_3_bushes-ipadhd.plist */,
-				F506E54316C0F1CE00A9B84F /* scene_3_bushes-ipadhd.png */,
+				F513D6C116C19D93006E7C1A /* scene_2_bushes-ipadhd.plist */,
+				F5089E2716D7B3DD00485A43 /* scene_3_bushes-ipadhd.plist */,
+				F5089E2816D7B3DE00485A43 /* scene_3_bushes-ipadhd.png */,
 				F506E54C16C0FD2D00A9B84F /* scene_3_bushes-ipad.plist */,
 				F506E54B16C0FD2D00A9B84F /* scene_3_bushes-ipad.png */,
 				F513D6A316C17605006E7C1A /* scene_3_bushes-hd.png */,
@@ -1804,6 +1822,7 @@
 		F53F6BD016B2DAB900444747 /* taptapper */ = {
 			isa = PBXGroup;
 			children = (
+				F5065BE716D742D700F62CB9 /* chartBoost */,
 				F5FB2D0916C5215900FD626B /* MKStoreKit */,
 				F542BE5716B2E9BC00DBBD42 /* CCBReader */,
 				F5079B2B16B477E60084A9DD /* Menu */,
@@ -2707,8 +2726,6 @@
 				F50CA51E16BFCB1600E9B657 /* animal_3_lock-ipadhd.png in Resources */,
 				F50CA51F16BFCB1600E9B657 /* animal_3_lock.png in Resources */,
 				F506E54016C0ED1200A9B84F /* bushesAnimations.plist in Resources */,
-				F506E54716C0F1CE00A9B84F /* scene_3_bushes-ipadhd.plist in Resources */,
-				F506E54816C0F1CE00A9B84F /* scene_3_bushes-ipadhd.png in Resources */,
 				F506E54D16C0FD2D00A9B84F /* scene_3_bushes-ipad.png in Resources */,
 				F506E54E16C0FD2D00A9B84F /* scene_3_bushes-ipad.plist in Resources */,
 				F513D6A516C17605006E7C1A /* scene_3_bushes-hd.png in Resources */,
@@ -2856,6 +2873,9 @@
 				F509C37616D5D5BB002EC8BC /* okOn-ipad.png in Resources */,
 				F509C37716D5D5BB002EC8BC /* okOn-ipadhd.png in Resources */,
 				F509C37816D5D5BB002EC8BC /* okOn.png in Resources */,
+				F5065C0716D747A400F62CB9 /* README.md in Resources */,
+				F5089E2916D7B3DF00485A43 /* scene_3_bushes-ipadhd.plist in Resources */,
+				F5089E2A16D7B3DF00485A43 /* scene_3_bushes-ipadhd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3060,6 +3080,10 @@
 				HEADER_SEARCH_PATHS = "\"taptapper/libs/kazmath/include\"";
 				INFOPLIST_FILE = taptapper/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/taptapper\"",
+				);
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
@@ -3081,6 +3105,10 @@
 				HEADER_SEARCH_PATHS = "\"taptapper/libs/kazmath/include\"";
 				INFOPLIST_FILE = taptapper/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/taptapper\"",
+				);
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
