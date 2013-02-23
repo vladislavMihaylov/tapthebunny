@@ -104,7 +104,7 @@
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"chooseAnimal.mp3"];
     [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: [Settings sharedSettings].soundLevel];
     
-    sceneNum = 3;//arc4random() % 3 + 1;
+    sceneNum = arc4random() % 3 + 1;
     
     CCSprite *sprite = [CCSprite spriteWithFile: @"Icon.png"];
     sprite.anchorPoint = ccp(0.5, 0);
