@@ -22,6 +22,7 @@
 #define APP_ID 602012993
 
 extern BOOL isGameActive;
+extern BOOL isFirstRun;
 
 extern float GameCenterX;
 extern float GameCenterY;

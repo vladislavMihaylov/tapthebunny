@@ -21,6 +21,9 @@
     CCMenuItemToggle *sound;
     CCMenuItemToggle *speed;
     CCMenuItemToggle *babyMode;
+    
+    CCSprite *tutorialSprite;
+    CCSprite *secondTutorialSprite;
 }
 
 @end

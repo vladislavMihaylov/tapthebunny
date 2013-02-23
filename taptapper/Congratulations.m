@@ -50,7 +50,10 @@
         }
         else
         {
-            [[SimpleAudioEngine sharedEngine] playEffect: @"TryAgain.mp3"];
+            [self runAction: [CCSequence actions: [CCDelayTime actionWithDuration: 1.2],
+                              [CCCallBlock actionWithBlock: ^ (id sender) {[[SimpleAudioEngine sharedEngine] playEffect: @"TryAgain.mp3"];} ], nil]];
+            
+            
             congratulations = [CCSprite spriteWithFile: @"tryAgain.png"];
             congratulations.position = ccp(GameCenterX, GameCenterY);
         }

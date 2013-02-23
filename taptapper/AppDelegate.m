@@ -28,6 +28,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    isFirstRun = YES;
+    
     DefaultSHKConfigurator *configurator = [[[MySHKConfigurator alloc] init] autorelease];
     
     [SHKConfiguration sharedInstanceWithConfigurator: configurator];
