@@ -41,8 +41,10 @@
 {
     [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
     
-    [self hideSubButtonsWithTag: kSpeedBtnTag andSecondTag: kSoundBtnTag];
-    [self hideSlideForButton: 106];
+    //[self hideSubButtonsWithTag: kSpeedBtnTag andSecondTag: kSoundBtnTag];
+    //[self hideSlideForButton: 106];
+    
+    [self hideButtons: optionBtnsArray];
     
     if(!isOpenShareMenu)
     {
@@ -82,10 +84,12 @@
     [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
     
     [self hideSubButtonsWithTag: kFaceBookBtnTag andSecondTag: kTwitterBtnTag];
-    [self hideSubButtonsWithTag: kSpeedBtnTag andSecondTag: kSoundBtnTag];
+    //[self hideSubButtonsWithTag: kSpeedBtnTag andSecondTag: kSoundBtnTag];
+    
+    [self hideButtons: optionBtnsArray];
     
     [self hideSlideForButton: 105];
-    [self hideSlideForButton: 106];
+    //[self hideSlideForButton: 106];
     
     CCLOG(@"Cart");
     
