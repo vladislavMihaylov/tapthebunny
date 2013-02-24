@@ -4,6 +4,19 @@
     <dict>
         <key>frames</key>
         <dict>
+            <key>num0.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{84,248},{80,80}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{80,80}}</string>
+                <key>sourceSize</key>
+                <string>{80,80}</string>
+            </dict>
             <key>num1.png</key>
             <dict>
                 <key>frame</key>
@@ -144,7 +157,7 @@
             <key>size</key>
             <string>{256,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:0f2f086a8964d906f5db9c3710c3981c$</string>
+            <string>$TexturePacker:SmartUpdate:f6f1f20e978b95f71f487ca87ecacce8$</string>
             <key>textureFileName</key>
             <string>numbers-hd.png</string>
         </dict>

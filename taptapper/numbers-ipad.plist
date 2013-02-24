@@ -4,10 +4,23 @@
     <dict>
         <key>frames</key>
         <dict>
+            <key>num0.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,872},{85,85}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{85,85}}</string>
+                <key>sourceSize</key>
+                <string>{85,85}</string>
+            </dict>
             <key>num1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{89,350},{85,85}}</string>
+                <string>{{2,785},{85,85}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +46,7 @@
             <key>num2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{89,263},{85,85}}</string>
+                <string>{{2,698},{85,85}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +59,7 @@
             <key>num3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,350},{85,85}}</string>
+                <string>{{2,611},{85,85}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +72,7 @@
             <key>num4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,263},{85,85}}</string>
+                <string>{{2,524},{85,85}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,7 +85,7 @@
             <key>num5.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{89,176},{85,85}}</string>
+                <string>{{2,437},{85,85}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -85,7 +98,7 @@
             <key>num6.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,176},{85,85}}</string>
+                <string>{{2,350},{85,85}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -98,7 +111,7 @@
             <key>num7.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{89,89},{85,85}}</string>
+                <string>{{2,263},{85,85}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -111,7 +124,7 @@
             <key>num8.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,89},{85,85}}</string>
+                <string>{{2,176},{85,85}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -124,7 +137,7 @@
             <key>num9.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{89,2},{85,85}}</string>
+                <string>{{2,89},{85,85}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -142,9 +155,9 @@
             <key>realTextureFileName</key>
             <string>numbers-ipad.png</string>
             <key>size</key>
-            <string>{256,512}</string>
+            <string>{128,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:b8bbea5f97577a699e7ce26c93ce972d$</string>
+            <string>$TexturePacker:SmartUpdate:3aba7e452453ff1db81b73c950fbfc8b$</string>
             <key>textureFileName</key>
             <string>numbers-ipad.png</string>
         </dict>

@@ -208,11 +208,9 @@
             posForSoundBtnInGameMenuHide = ccp(545, 40);
             
             widthForStar = 125;
-            
-            
         }
         
-        lenght = 20;
+        lenght = 17;
         rasstoyanie = 40;
         
         speedBtnScale = 1;

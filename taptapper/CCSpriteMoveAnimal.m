@@ -33,7 +33,7 @@
      ];
 }
 
-- (void) moveAction
+- (void) moveAction // название - пиздос =)
 {
     NSInteger height;
     

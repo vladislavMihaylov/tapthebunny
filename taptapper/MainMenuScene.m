@@ -21,142 +21,21 @@
 
 @implementation MainMenuScene
 
-- (void) pressedPlay: (id) sender
-{
-    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
-    
-    if(isFirstRun)
-    {
-        isFirstRun = NO;
-        [self showTutorial];
-    }
-    else
-    {
-        CCScene* selectAnimalScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"SelectAnimal%@.ccbi", postFix]];
-        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: selectAnimalScene]];
-    }
-}
-
-- (void) pressedShare
-{
-    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
-    
-    //[self hideSubButtonsWithTag: kSpeedBtnTag andSecondTag: kSoundBtnTag];
-    //[self hideSlideForButton: 106];
-    
-    [self hideButtons: optionBtnsArray];
-    
-    if(!isOpenShareMenu)
-    {
-        [self showSubButtonsWithTag: kFaceBookBtnTag andSecondTag: kTwitterBtnTag];
-        [self showSlideForButton: 105];
-    }
-    else
-    {
-        [self hideSubButtonsWithTag: kFaceBookBtnTag andSecondTag: kTwitterBtnTag];
-        [self hideSlideForButton: 105];
-    }
-}
-
-- (void) pressedOptions: (id) sender
-{
-    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
-    
-    [self hideSubButtonsWithTag: kFaceBookBtnTag andSecondTag: kTwitterBtnTag];
-    [self hideSlideForButton: 105];
-    
-    
-    
-    if(!isOpenOptionsMenu)
-    {
-        [self showButtons: optionBtnsArray];
-        //[self showSlideForButton: 106];
-    }
-    else
-    {
-        [self hideButtons: optionBtnsArray];
-        //[self hideSlideForButton: 106];
-    }
-}
-
-- (void) pressedCart: (id) sender
-{
-    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
-    
-    [self hideSubButtonsWithTag: kFaceBookBtnTag andSecondTag: kTwitterBtnTag];
-    //[self hideSubButtonsWithTag: kSpeedBtnTag andSecondTag: kSoundBtnTag];
-    
-    [self hideButtons: optionBtnsArray];
-    
-    [self hideSlideForButton: 105];
-    //[self hideSlideForButton: 106];
-    
-    CCLOG(@"Cart");
-    
-    [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: [CartScene scene]]];
-}
-
-- (void) sendFB
-{
-    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
-    
-    SHKItem *facebookItem = [SHKItem text: @"Best game ever for toddlers and preschoolers!!! #tapthebunny"];
-    [SHKFacebook shareItem: facebookItem];
-}
-
-- (void) sendTweet
-{
-    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
-    
-    SHKItem *tweetItem = [SHKItem text: @"Best game ever for toddlers and preschoolers!!! #tapthebunny"];
-    [SHKTwitter shareItem: tweetItem];
-}
-
-- (void) soundMode
-{
-    if ([Settings sharedSettings].soundLevel == 1)
-    {
-        [Settings sharedSettings].soundLevel = 0;
-        [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: 0];
-        [[SimpleAudioEngine sharedEngine] setEffectsVolume: 0];
-    }
-    else
-    {
-        [Settings sharedSettings].soundLevel = 1;
-        [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: 1];
-        [[SimpleAudioEngine sharedEngine] setEffectsVolume: 1];
-    }
-    
-    [[Settings sharedSettings] save];
-}
-
-- (void) speedMode: (CCMenuItem *) sender
-{
-    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
-    
-    [Settings sharedSettings].gameMode +=1;
-    
-    if([Settings sharedSettings].gameMode > 2)
-    {
-        [Settings sharedSettings].gameMode = 0;
-    }
-    
-    [[Settings sharedSettings] save];
-}
-
 - (void) dealloc
 {
     [optionBtnsArray release];
+    [shareBtnsArray release];
+    
     [super dealloc];
 }
 
 - (void) didLoadFromCCB
 {
-    
-    
     optionBtnsArray = [[NSMutableArray alloc] init];
+    shareBtnsArray = [[NSMutableArray alloc] init];
     
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"menu.mp3"];
+    
     if([Settings sharedSettings].soundLevel == 1)
     {
         [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: 1];
@@ -189,7 +68,7 @@
     
     optionsBtn.position = posForOptionsMenu;
     optionsBtn.tag = 1002;
-
+    
     CCMenuItemImage *speed0 = [CCMenuItemImage itemWithNormalSprite: Speed0Btn selectedSprite: select];
     CCMenuItemImage *speed1 = [CCMenuItemImage itemWithNormalSprite: Speed1Btn selectedSprite: select];
     CCMenuItemImage *speed2 = [CCMenuItemImage itemWithNormalSprite: Speed2Btn selectedSprite: select];
@@ -211,18 +90,17 @@
     CCMenu *speedMenu = [CCMenu menuWithItems: nil];
     speedMenu.position = ccp(0, 0);
     [self addChild: speedMenu z:1 tag: -1];
-        
+    
     CCMenu *babyModeMenu = [CCMenu menuWithItems: nil];
     babyModeMenu.position = ccp(0, 0);
     [self addChild: babyModeMenu z:1 tag: -1];
     
-        
     if ([Settings sharedSettings].soundLevel == 0)
     {
         sound = [CCMenuItemToggle itemWithTarget:self
-                                                          selector:@selector(soundMode)
-                                                             items: off, on, nil
-                                   ];
+                                        selector:@selector(soundMode)
+                                           items: off, on, nil
+                 ];
         
         sound.position = posForOptionsMenu;
         sound.isEnabled = NO;
@@ -231,24 +109,21 @@
     else if ([Settings sharedSettings].soundLevel == 1)
     {
         sound = [CCMenuItemToggle itemWithTarget:self
-                                                          selector:@selector(soundMode)
-                                                             items: on, off, nil
-                                   ];
+                                        selector:@selector(soundMode)
+                                           items: on, off, nil
+                 ];
         
         sound.position = posForOptionsMenu;
         sound.isEnabled = NO;
         [soundMenu addChild: sound z: 1 tag: kSoundBtnTag];
     }
     
-    
-
-    
     if ([Settings sharedSettings].gameMode == 0)
     {
         speed = [CCMenuItemToggle itemWithTarget:self
-                                                          selector:@selector(speedMode:)
-                                                             items: speed0, speed1, speed2, nil
-                                   ];
+                                        selector:@selector(speedMode:)
+                                           items: speed0, speed1, speed2, nil
+                 ];
         
         speed.position = posForOptionsMenu;
         speed.isEnabled = NO;
@@ -257,9 +132,9 @@
     else if ([Settings sharedSettings].gameMode == 1)
     {
         speed = [CCMenuItemToggle itemWithTarget:self
-                                                          selector:@selector(speedMode:)
-                                                             items: speed1, speed2, speed0, nil
-                                   ];
+                                        selector:@selector(speedMode:)
+                                           items: speed1, speed2, speed0, nil
+                 ];
         
         speed.position = posForOptionsMenu;
         speed.isEnabled = NO;
@@ -268,9 +143,9 @@
     else if ([Settings sharedSettings].gameMode == 2)
     {
         speed = [CCMenuItemToggle itemWithTarget:self
-                                                          selector:@selector(speedMode:)
-                                                             items: speed2, speed0, speed1, nil
-                                   ];
+                                        selector:@selector(speedMode:)
+                                           items: speed2, speed0, speed1, nil
+                 ];
         
         speed.position = posForOptionsMenu;
         speed.isEnabled = NO;
@@ -282,9 +157,9 @@
     if ([Settings sharedSettings].openBabyMode == 0)
     {
         babyMode = [CCMenuItemToggle itemWithTarget:self
-                                        selector:@selector(pressedCart:)
-                                           items: offBM, nil
-                 ];
+                                           selector:@selector(pressedCart:)
+                                              items: offBM, nil
+                    ];
         
         babyMode.position = posForOptionsMenu;
         babyMode.isEnabled = NO;
@@ -323,7 +198,103 @@
     [self preloadTutorial];
     
     arr = [self children];
+    
+    for(CCMenuItemImage *curItem in arr)
+    {
+        if(curItem.tag == 111)
+        {
+            CCArray *items = [curItem children];
+            
+            for(CCMenuItemImage *curNode in items)
+            {
+                if(curNode.tag == 100 || curNode.tag == 101)
+                {
+                    [shareBtnsArray addObject: curNode];
+                }
+            }
+        }
+    }
 }
+
+#pragma mark Pressed methods
+
+- (void) pressedPlay: (id) sender
+{
+    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
+    
+    if(isFirstRun)
+    {
+        isFirstRun = NO;
+        [self showTutorial];
+    }
+    else
+    {
+        CCScene* selectAnimalScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"SelectAnimal%@.ccbi", postFix]];
+        [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: selectAnimalScene]];
+    }
+}
+
+- (void) pressedShare
+{
+    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
+    
+    [self hideButtons: optionBtnsArray];
+    
+    if(!isOpenShareMenu)
+    {
+        [self showButtons: shareBtnsArray];
+    }
+    else
+    {
+        [self hideButtons: shareBtnsArray];
+    }
+}
+
+- (void) pressedOptions: (id) sender
+{
+    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
+    
+    [self hideButtons: shareBtnsArray];
+    
+    if(!isOpenOptionsMenu)
+    {
+        [self showButtons: optionBtnsArray];
+    }
+    else
+    {
+        [self hideButtons: optionBtnsArray];
+    }
+}
+
+- (void) pressedCart: (id) sender
+{
+    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
+    
+    [self hideButtons: optionBtnsArray];
+    [self hideButtons: shareBtnsArray];
+    
+    [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: [CartScene scene]]];
+}
+
+#pragma mark Social
+
+- (void) sendFB
+{
+    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
+    
+    SHKItem *facebookItem = [SHKItem text: @"Best game ever for toddlers and preschoolers!!! #tapthebunny"];
+    [SHKFacebook shareItem: facebookItem];
+}
+
+- (void) sendTweet
+{
+    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
+    
+    SHKItem *tweetItem = [SHKItem text: @"Best game ever for toddlers and preschoolers!!! #tapthebunny"];
+    [SHKTwitter shareItem: tweetItem];
+}
+
+#pragma mark Tutorial
 
 - (void) preloadTutorial
 {
@@ -419,6 +390,15 @@
     
 }
 
+- (void) showNextTutorialList
+{
+    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
+    
+    [tutorialSprite runAction: [CCMoveTo actionWithDuration: 0.5 position: ccp(-GameCenterX, GameCenterY)]];
+}
+
+#pragma mark Settings
+
 - (void) setSpeed: (CCMenuItemImage *) sender
 {
     [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
@@ -427,18 +407,36 @@
     [[Settings sharedSettings] save];
 }
 
-- (void) goToShop
+- (void) soundMode
 {
-    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
+    if ([Settings sharedSettings].soundLevel == 1)
+    {
+        [Settings sharedSettings].soundLevel = 0;
+        [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: 0];
+        [[SimpleAudioEngine sharedEngine] setEffectsVolume: 0];
+    }
+    else
+    {
+        [Settings sharedSettings].soundLevel = 1;
+        [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: 1];
+        [[SimpleAudioEngine sharedEngine] setEffectsVolume: 1];
+    }
     
-    [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1.0 scene: [CartScene scene]]];
+    [[Settings sharedSettings] save];
 }
 
-- (void) showNextTutorialList
+- (void) speedMode: (CCMenuItem *) sender
 {
     [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
     
-    [tutorialSprite runAction: [CCMoveTo actionWithDuration: 0.5 position: ccp(-GameCenterX, GameCenterY)]];
+    [Settings sharedSettings].gameMode +=1;
+    
+    if([Settings sharedSettings].gameMode > 2)
+    {
+        [Settings sharedSettings].gameMode = 0;
+    }
+    
+    [[Settings sharedSettings] save];
 }
 
 - (void) selectGameMode
@@ -455,117 +453,42 @@
     [[Settings sharedSettings] save];
 }
 
-- (void) showSlideForButton: (NSInteger) sliderTag
-{
-    for(CCNode *mynode in arr)
-    {
-        if(mynode.tag == sliderTag)
-        {
-            [mynode runAction: [CCScaleTo actionWithDuration: 0.2 scaleX: 1 scaleY: slideScale]];
-        }
-    }
-}
+#pragma mark Navigation
 
-- (void) hideSlideForButton: (NSInteger) sliderTag
+- (void) goToShop
 {
-    for(CCNode *mynode in arr)
-    {
-        if(mynode.tag == sliderTag)
-        {
-            [mynode runAction: [CCScaleTo actionWithDuration: 0.2 scaleX: 1 scaleY: 0]];
-        }
-    }
-}
-
-- (void) showSubButtonsWithTag: (NSInteger) firstTag andSecondTag: (NSInteger) secondTag
-{
-    if(firstTag == kFaceBookBtnTag)
-    {
-        isOpenShareMenu = YES;
-    }
-    if(firstTag == kSpeedBtnTag)
-    {
-        isOpenOptionsMenu = YES;
-    }
+    [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
     
-    for(CCNode *mynode in arr)
-    {
-        
-        if(mynode.tag == 111)
-        {
-            CCArray *array = [mynode children];
-            for(CCMenuItemImage *curNode in array)
-            {
-                if(curNode.tag == firstTag)
-                {
-                    [curNode runAction: [CCSequence actions:
-                                                        [CCMoveTo actionWithDuration: 0.2
-                                                                            position: ccp(curNode.position.x, firstBtnHeight)],
-                                         [CCCallBlock actionWithBlock: ^(id sender) {curNode.isEnabled = YES;}], nil]];
-                }
-                if(curNode.tag == secondTag)
-                {
-                    [curNode runAction: [CCSequence actions:
-                                         [CCMoveTo actionWithDuration: 0.2
-                                                             position: ccp(curNode.position.x, secondBtnHeight)],
-                                         [CCCallBlock actionWithBlock: ^(id sender) {curNode.isEnabled = YES;}], nil]];
-                }
-            }
-        }
-    }
+    [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1.0 scene: [CartScene scene]]];
 }
 
-- (void) hideSubButtonsWithTag: (NSInteger) firstTag andSecondTag: (NSInteger) secondTag
-{
-    if(firstTag == kFaceBookBtnTag)
-    {
-        isOpenShareMenu = NO;
-    }
-    if(firstTag == kSpeedBtnTag)
-    {
-        isOpenOptionsMenu = NO;
-    }
-    
-    for(CCNode *mynode in arr)
-    {
-        if(mynode.tag == 111)
-        {
-            CCArray *array = [mynode children];
-            for(CCMenuItemImage *curNode in array)
-            {
-                if(curNode.tag == firstTag)
-                {
-                    [curNode runAction: [CCSequence actions:
-                                         [CCMoveTo actionWithDuration: 0.2
-                                                             position: ccp(curNode.position.x, startBtnHeight)],
-                                         [CCCallBlock actionWithBlock: ^(id sender) {curNode.isEnabled = NO;}], nil]];
-                }
-                if(curNode.tag == secondTag)
-                {
-                    [curNode runAction: [CCSequence actions:
-                                         [CCMoveTo actionWithDuration: 0.2
-                                                             position: ccp(curNode.position.x, startBtnHeight)],
-                                         [CCCallBlock actionWithBlock: ^(id sender) {curNode.isEnabled = NO;}], nil]];
-                }
-            }
-        }
-    }
-}
+#pragma mark Methods for move buttons
 
 - (void) showButtons: (NSMutableArray *) buttonsArray
 {
     CCNode *cNode = [buttonsArray objectAtIndex: 0];
     
-    if(cNode.tag = kSoundBtnTag);
+    NSInteger btnTag;
+    float scale;
+    
+    if(cNode.tag == kSoundBtnTag)
     {
         isOpenOptionsMenu = YES;
+        btnTag = 106;
+        scale = 1.25;
+    }
+    if(cNode.tag == kFaceBookBtnTag)
+    {
+        isOpenShareMenu = YES;
+        btnTag = 105;
+        scale = 1;
     }
     
     for(CCNode *mynode in arr)
     {
-        if(mynode.tag == 106)
+        if(mynode.tag == btnTag)
         {
-            [mynode runAction: [CCScaleTo actionWithDuration: 0.2 scaleX: 1 scaleY: 1.25]];
+            [mynode runAction: [CCScaleTo actionWithDuration: 0.2 scaleX: 1 scaleY: scale]];
         }
     }
     
@@ -579,7 +502,7 @@
         
                                                                         }],
                              [CCMoveTo actionWithDuration: 0.2
-                                                 position: ccp(node.position.x, posForOptionsMenu.y + lenght + rasstoyanie * (i + 1))],
+                                                 position: ccp(node.position.x, startBtnHeight + lenght + rasstoyanie * (i + 1))],
                              [CCCallBlock actionWithBlock: ^(id sender) { node.isEnabled = YES; }],
                              nil
                           ]
@@ -591,14 +514,22 @@
 {
     CCNode *cNode = [buttonsArray objectAtIndex: 0];
     
-    if(cNode.tag = kSoundBtnTag);
+    NSInteger btnTag;
+    
+    if(cNode.tag == kSoundBtnTag)
     {
         isOpenOptionsMenu = NO;
+        btnTag = 106;
+    }
+    if(cNode.tag == kFaceBookBtnTag)
+    {
+        isOpenShareMenu = NO;
+        btnTag = 105;
     }
     
     for(CCNode *mynode in arr)
     {
-        if(mynode.tag == 106)
+        if(mynode.tag == btnTag)
         {
             [mynode runAction: [CCScaleTo actionWithDuration: 0.2 scaleX: 1 scaleY: 0]];
         }
@@ -610,7 +541,7 @@
         
         [node runAction: [CCSequence actions:
                           [CCMoveTo actionWithDuration: 0.2
-                                              position: ccp(node.position.x, posForOptionsMenu.y)],
+                                              position: ccp(node.position.x, startBtnHeight)],
                           [CCCallBlock actionWithBlock: ^(id sender) { node.isEnabled = NO; }],
                           nil
                           ]

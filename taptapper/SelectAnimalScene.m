@@ -22,6 +22,61 @@
 
 @implementation SelectAnimalScene
 
+
+- (void) dealloc
+{
+    [super dealloc];
+}
+
+- (void) didLoadFromCCB
+{
+    arr = [self children];
+    [MKStoreManager sharedManager].delegate = self;
+    
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"chooseAnimal.mp3"];
+    [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: [Settings sharedSettings].soundLevel];
+    
+    sceneNum = arc4random() % 3 + 1;
+    
+    CCSprite *sprite = [CCSprite spriteWithFile: @"Icon.png"];
+    sprite.anchorPoint = ccp(0.5, 0);
+    
+    sprite2 = [CCSprite spriteWithFile: @"animal_2_lock.png"];
+    sprite2.anchorPoint = ccp(0.5, 0);
+    
+    sprite3 = [CCSprite spriteWithFile: @"animal_3_lock.png"];
+    sprite3.anchorPoint = ccp(0.5, 0);
+    
+    sprite.position = posForSprite1;
+    sprite2.position = posForSprite2;
+    sprite3.position = posForSprite3;
+    
+    [self addChild: sprite];
+    [self addChild: sprite2];
+    [self addChild: sprite3];
+    
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: @"buttonsAnimations.plist"];
+    
+    [Common loadAnimationWithPlist: @"btnAnimation" andName: [NSString stringWithFormat: @"bunnyAnimation"]];
+    [Common loadAnimationWithPlist: @"btnAnimation" andName: [NSString stringWithFormat: @"squirrelAnimation"]];
+    [Common loadAnimationWithPlist: @"btnAnimation" andName: [NSString stringWithFormat: @"owlAnimation"]];
+    
+    [sprite runAction:
+                [CCRepeatForever actionWithAction:
+                                            [CCAnimate actionWithAnimation:
+                                                                    [[CCAnimationCache sharedAnimationCache] animationByName: @"bunnyAnimation"]
+                                            ]
+                ]
+     ];
+    
+    if([MKStoreManager featureAPurchased])
+    {
+        [self playAnimalsAnimation];
+    }
+}
+
+#pragma mark Navigation 
+
 - (void) back
 {
     [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
@@ -63,6 +118,8 @@
     }
 }
 
+#pragma mark Methods for purshase
+
 - (void) lockMenu
 {
     for(CCMenu *curMenu in arr)
@@ -90,58 +147,7 @@
     [self unlockMenu];
 }
 
-- (void) dealloc
-{
-    [super dealloc];
-}
-
-- (void) didLoadFromCCB
-{
-    
-    arr = [self children];
-    [MKStoreManager sharedManager].delegate = self;
-    
-    [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"chooseAnimal.mp3"];
-    [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: [Settings sharedSettings].soundLevel];
-    
-    sceneNum = arc4random() % 3 + 1;
-    
-    CCSprite *sprite = [CCSprite spriteWithFile: @"Icon.png"];
-    sprite.anchorPoint = ccp(0.5, 0);
-    
-    sprite2 = [CCSprite spriteWithFile: @"animal_2_lock.png"];
-    sprite2.anchorPoint = ccp(0.5, 0);
-    
-    sprite3 = [CCSprite spriteWithFile: @"animal_3_lock.png"];
-    sprite3.anchorPoint = ccp(0.5, 0);
-   
-    sprite.position = posForSprite1;
-    sprite2.position = posForSprite2;
-    sprite3.position = posForSprite3;
-    
-    [self addChild: sprite];
-    [self addChild: sprite2];
-    [self addChild: sprite3];
-    
-    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: @"buttonsAnimations.plist"];
-    
-    [Common loadAnimationWithPlist: @"btnAnimation" andName: [NSString stringWithFormat: @"bunnyAnimation"]];
-    [Common loadAnimationWithPlist: @"btnAnimation" andName: [NSString stringWithFormat: @"squirrelAnimation"]];
-    [Common loadAnimationWithPlist: @"btnAnimation" andName: [NSString stringWithFormat: @"owlAnimation"]];
-    
-    [sprite runAction:
-            [CCRepeatForever actionWithAction:
-                                [CCAnimate actionWithAnimation:
-                                        [[CCAnimationCache sharedAnimationCache] animationByName: @"bunnyAnimation"]
-                                 ]
-             ]
-     ];
-    
-    if([MKStoreManager featureAPurchased])
-    {
-        [self playAnimalsAnimation];
-    }
-}
+#pragma mark Play animation on buttons
 
 - (void) playAnimalsAnimation
 {

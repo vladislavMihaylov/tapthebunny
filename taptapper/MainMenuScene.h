@@ -17,6 +17,7 @@
     CCArray *arr;
     
     NSMutableArray *optionBtnsArray;
+    NSMutableArray *shareBtnsArray;
     
     CCMenuItemToggle *sound;
     CCMenuItemToggle *speed;

@@ -6,7 +6,7 @@
 #define kTwitterBtnTag      101
 
 #define kSpeedBtnTag        110
-#define kSoundBtnTag        111
+#define kSoundBtnTag        112
 
 #define kFirstSlideTag      105
 #define kSecondSlideTag     106

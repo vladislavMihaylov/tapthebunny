@@ -145,22 +145,21 @@
         shopLabel.position = ccp(GameCenterX, GameCenterY * 1.7);
         [self addChild: shopLabel];
         
-        [self setPrice];
+        CCSprite *cost099 = [CCSprite spriteWithFile: @"099.png"];
+        cost099.position = ccp(GameCenterX * 0.75, GameCenterY * 0.7);
+        [self addChild: cost099];
+        
+        CCSprite *cost199 = [CCSprite spriteWithFile: @"199.png"];
+        cost199.position = ccp(GameCenterX * 1.25, GameCenterY * 0.7);
+        [self addChild: cost199];
+        
+        //[self setPrice];
     }
     
     return self;
 }
 
-- (void) setPrice
-{
-    CCSprite *cost099 = [CCSprite spriteWithFile: @"099.png"];
-    cost099.position = ccp(GameCenterX * 0.75, GameCenterY * 0.7);
-    [self addChild: cost099];
-    
-    CCSprite *cost199 = [CCSprite spriteWithFile: @"199.png"];
-    cost199.position = ccp(GameCenterX * 1.25, GameCenterY * 0.7);
-    [self addChild: cost199];
-}
+#pragma mark Methods for purshase
 
 - (void) buy: (CCMenuItemImage *) sender
 {
@@ -224,6 +223,8 @@
     [self unlockMenu];
 }
 
+#pragma mark Navigation
+
 - (void) gotoMainMenu
 {
     [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
@@ -238,8 +239,6 @@
         CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"MainMenuScene%@.ccbi", postFix]];
         [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
     }
-    
-    
     
 }
 
