@@ -179,7 +179,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>bushes</string>
+				<string>animal4</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -193,8 +193,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>512</real>
-							<real>425</real>
+							<real>456</real>
+							<real>427</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -224,6 +224,14 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>tag</string>
+						<key>type</key>
+						<string>Integer</string>
+						<key>value</key>
+						<integer>14</integer>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>ignoreAnchorPointForPosition</string>
 						<key>type</key>
 						<string>Check</string>
@@ -237,8 +245,8 @@
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string>scene_1_pics.plist</string>
-							<string>1bushes.png</string>
+							<string>animalsAnimation.plist</string>
+							<string>animal_1_pos_4_film_1.png</string>
 						</array>
 					</dict>
 				</array>
@@ -265,8 +273,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>631</real>
-							<real>419</real>
+							<real>458</real>
+							<real>411</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -345,8 +353,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>637</real>
-							<real>402</real>
+							<real>449</real>
+							<real>406</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -402,6 +410,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -411,7 +421,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>animal4</string>
+				<string>bushes</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -425,8 +435,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>633</real>
-							<real>420</real>
+							<real>512</real>
+							<real>425</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -456,14 +466,6 @@
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>tag</string>
-						<key>type</key>
-						<string>Integer</string>
-						<key>value</key>
-						<integer>14</integer>
-					</dict>
-					<dict>
-						<key>name</key>
 						<string>ignoreAnchorPointForPosition</string>
 						<key>type</key>
 						<string>Check</string>
@@ -477,8 +479,8 @@
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string>animalsAnimation.plist</string>
-							<string>animal_1_pos_4_film_1.png</string>
+							<string>scene_1_pics.plist</string>
+							<string>1bushes.png</string>
 						</array>
 					</dict>
 				</array>
@@ -722,8 +724,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -1373,6 +1373,86 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
+				<string>animal35</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>0</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>100</real>
+							<real>397</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>tag</string>
+						<key>type</key>
+						<string>Integer</string>
+						<key>value</key>
+						<integer>35</integer>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ignoreAnchorPointForPosition</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>displayFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string>animalsAnimation.plist</string>
+							<string>animal_3_pos_5_film_1.png</string>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
 				<string>trava</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
@@ -1603,8 +1683,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>348</real>
-							<real>197</real>
+							<real>332</real>
+							<real>192</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1626,9 +1706,9 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
+							<real>0.89999997615814209</real>
+							<real>0.89999997615814209</real>
+							<true/>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1683,8 +1763,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>307</real>
-							<real>189</real>
+							<real>336</real>
+							<real>197</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1706,9 +1786,9 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
+							<real>0.94999998807907104</real>
+							<real>0.94999998807907104</real>
+							<true/>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1737,86 +1817,6 @@
 						<array>
 							<string>animalsAnimation.plist</string>
 							<string>animal_2_pos_5_film_1.png</string>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCSprite</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>animal35</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>314</real>
-							<real>172</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.5</real>
-							<real>0.5</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>tag</string>
-						<key>type</key>
-						<string>Integer</string>
-						<key>value</key>
-						<integer>35</integer>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ignoreAnchorPointForPosition</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>displayFrame</string>
-						<key>type</key>
-						<string>SpriteFrame</string>
-						<key>value</key>
-						<array>
-							<string>animalsAnimation.plist</string>
-							<string>animal_3_pos_5_film_1.png</string>
 						</array>
 					</dict>
 				</array>
@@ -1866,9 +1866,9 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
+							<real>1.1000000238418579</real>
+							<real>1.1000000238418579</real>
+							<true/>
 							<integer>0</integer>
 						</array>
 					</dict>
