@@ -1213,8 +1213,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>21</real>
-							<real>87</real>
+							<real>27</real>
+							<real>96</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1293,8 +1293,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>21</real>
-							<real>83</real>
+							<real>24</real>
+							<real>106</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1373,8 +1373,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>28</real>
-							<real>86</real>
+							<real>25</real>
+							<real>101</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1430,6 +1430,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -1453,8 +1455,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>23</real>
-							<real>100</real>
+							<real>26</real>
+							<real>105</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1506,7 +1508,7 @@
 						<key>value</key>
 						<array>
 							<string>scene_2_pics.plist</string>
-							<string>2bush8.png</string>
+							<string>2bush1.png</string>
 						</array>
 					</dict>
 				</array>

@@ -18,6 +18,8 @@
 
 #import "MKStoreManager.h"
 
+#import "Chartboost.h"
+
 @implementation CartScene
 
 + (CCScene *) scene
@@ -40,6 +42,8 @@
 {
     if(self = [super init])
     {
+        [[Chartboost sharedChartboost] showInterstitial];
+        
         [MKStoreManager sharedManager].delegate = self;
         
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile: @"selectAnimal.plist"];

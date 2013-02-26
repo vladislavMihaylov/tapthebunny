@@ -95,15 +95,26 @@
     
     if(animalNum == 1)
     {
+        if ([Settings sharedSettings].enabledBabyMode == 1)
+        {
+            sceneNum = 1;
+        }
+        
         CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"gameScene_%i%@.ccbi", sceneNum, postFix]];
         
         [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];
+        
     }
     
     if(animalNum == 2 || animalNum == 3)
     {
         if([MKStoreManager featureAPurchased])
         {
+            if ([Settings sharedSettings].enabledBabyMode == 1)
+            {
+                sceneNum = 1;
+            }
+            
             CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"gameScene_%i%@.ccbi", sceneNum, postFix]];
             
             [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 1 scene: mainScene]];

@@ -291,7 +291,7 @@
     [cb startSession];
     
     // Load interstitial
-    [cb showInterstitial];
+    //[cb showInterstitial];
 }
 
 -(void) applicationDidEnterBackground:(UIApplication*)application

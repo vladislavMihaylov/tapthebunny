@@ -1361,8 +1361,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>49</real>
-							<real>218</real>
+							<real>57</real>
+							<real>230</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1418,6 +1418,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -1494,7 +1496,7 @@
 						<key>value</key>
 						<array>
 							<string>scene_2_pics.plist</string>
-							<string>2bush8.png</string>
+							<string>2bush1.png</string>
 						</array>
 					</dict>
 				</array>
@@ -2594,8 +2596,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>

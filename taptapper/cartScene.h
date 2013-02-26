@@ -20,6 +20,5 @@
 }
 
 + (CCScene *) scene;
-- (void) setPrice;
 
 @end

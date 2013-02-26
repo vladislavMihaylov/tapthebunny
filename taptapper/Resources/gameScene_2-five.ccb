@@ -474,8 +474,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -1495,11 +1493,13 @@
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<string>five/scene_2_pics-five.plist</string>
-							<string>2bush8_5.png</string>
+							<string>scene_2_pics.plist</string>
+							<string>2bush1.png</string>
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>

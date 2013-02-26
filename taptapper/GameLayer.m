@@ -25,7 +25,9 @@
 #import "FinishGame.h"
 #import "CartScene.h"
 
-#import "Chartboost.h"
+#import "MKStoreManager.h"
+
+//#import "Chartboost.h"
 
 
 @implementation GameLayer
@@ -44,6 +46,8 @@
 -(void) didLoadFromCCB
 {
     arr = [self children];
+    
+    [MKStoreManager sharedManager].delegate = self;
     
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic: @"bg.mp3"];
     [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume: [Settings sharedSettings].soundLevel];
@@ -426,7 +430,7 @@
 {
     isGameActive = NO;
     
-    [[Chartboost sharedChartboost] showInterstitial];
+    //[[Chartboost sharedChartboost] showInterstitial];
     
     [[SimpleAudioEngine sharedEngine] playEffect: @"btn.caf"];
     
@@ -590,8 +594,8 @@
             curNode.isCanTap = NO;
             [curNode stopAllActions];
             
-            if([Settings sharedSettings].enabledBabyMode == 0)
-            {
+            //if([Settings sharedSettings].enabledBabyMode == 0)
+            //{
                 
                 [curNode runAction: [CCSequence actions:
                                      [CCJumpTo actionWithDuration: 1
@@ -602,21 +606,49 @@
                                       {
                                           if([starsArray count] >= 6)
                                           {
-                                              [self showMotherScene];
+                                              if([Settings sharedSettings].enabledBabyMode == 0)
+                                              {
+                                                  [self showMotherScene];
+                                              }
+                                              else
+                                              {
+                                                  sceneNum++;
+                                                  
+                                                  if(sceneNum > 3)
+                                                  {
+                                                      sceneNum = 1;
+                                                      
+                                                      if([MKStoreManager featureAPurchased])
+                                                      {
+                                                          animalNum++;
+                                                          
+                                                          if(animalNum > 3)
+                                                          {
+                                                              animalNum = 1;
+                                                          }
+                                                      }
+                                                  }
+                                                  
+                                                  CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile: [NSString stringWithFormat: @"gameScene_%i%@.ccbi", sceneNum, postFix]];
+                                                  
+                                                  [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration: 0.5 scene: mainScene]];
+                                              }
                                           }
                                       }],
                                      nil]
                  ];
-                
-                [self addStar];
-            }
             
-            if ([Settings sharedSettings].enabledBabyMode == 1)
-            {
-                [[SimpleAudioEngine sharedEngine] playEffect: [NSString stringWithFormat: @"%ianimal.mp3", animalNum]];
+            
+                [self addStar];
+            
+            //}
+            
+           // if ([Settings sharedSettings].enabledBabyMode == 1)
+           // {
+           //     [[SimpleAudioEngine sharedEngine] playEffect: [NSString stringWithFormat: @"%ianimal.mp3", animalNum]];
                 
-                [curNode hideAnimal];
-            }
+            //    [curNode hideAnimal];
+           // }
         }
     }
     
@@ -745,6 +777,11 @@
             CCSprite *starSprite = [CCSprite spriteWithFile: @"star.png"];
             
             starSprite.position = ccp(widthForStar + stepOfStar * [starsArray count], heightForStar);
+            
+            /*if([Settings sharedSettings].enabledBabyMode == 1)
+            {
+                starSprite.visible = NO;
+            }*/
             
             [xNode addChild: starSprite];
             
