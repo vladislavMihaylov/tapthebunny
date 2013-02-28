@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		F5007AE316B66FBB00C6DD9B /* Animations.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5007AE216B66FBB00C6DD9B /* Animations.plist */; };
 		F5007AF716B6737200C6DD9B /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = F5007AF616B6737200C6DD9B /* Animal.m */; };
+		F500EA5916DF12C30077D7C6 /* tutorial.png in Resources */ = {isa = PBXBuildFile; fileRef = F500EA5516DF12C30077D7C6 /* tutorial.png */; };
+		F500EA5A16DF12C30077D7C6 /* tutorial-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F500EA5616DF12C30077D7C6 /* tutorial-hd.png */; };
+		F500EA5B16DF12C30077D7C6 /* tutorial-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F500EA5716DF12C30077D7C6 /* tutorial-ipad.png */; };
+		F500EA5C16DF12C30077D7C6 /* tutorial-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F500EA5816DF12C30077D7C6 /* tutorial-ipadhd.png */; };
 		F501867316B6E69C00CFE969 /* animalsAnimation-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = F501866B16B6E69C00CFE969 /* animalsAnimation-hd.plist */; };
 		F501867416B6E69C00CFE969 /* animalsAnimation-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F501866C16B6E69C00CFE969 /* animalsAnimation-hd.png */; };
 		F501867516B6E69C00CFE969 /* animalsAnimation-ipad.plist in Resources */ = {isa = PBXBuildFile; fileRef = F501866D16B6E69C00CFE969 /* animalsAnimation-ipad.plist */; };
@@ -115,10 +119,6 @@
 		F505C95916B84D5800FDBBA5 /* FinishGame.m in Sources */ = {isa = PBXBuildFile; fileRef = F505C95816B84D5800FDBBA5 /* FinishGame.m */; };
 		F5065C0616D747A400F62CB9 /* libChartboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5065C0416D747A400F62CB9 /* libChartboost.a */; };
 		F5065C0716D747A400F62CB9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F5065C0516D747A400F62CB9 /* README.md */; };
-		F50688BA16BA82F90035216A /* tutorial-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F50688B616BA82F90035216A /* tutorial-hd.png */; };
-		F50688BB16BA82F90035216A /* tutorial-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F50688B716BA82F90035216A /* tutorial-ipad.png */; };
-		F50688BC16BA82F90035216A /* tutorial-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F50688B816BA82F90035216A /* tutorial-ipadhd.png */; };
-		F50688BD16BA82F90035216A /* tutorial.png in Resources */ = {isa = PBXBuildFile; fileRef = F50688B916BA82F90035216A /* tutorial.png */; };
 		F506E54016C0ED1200A9B84F /* bushesAnimations.plist in Resources */ = {isa = PBXBuildFile; fileRef = F506E53F16C0ED1200A9B84F /* bushesAnimations.plist */; };
 		F506E54D16C0FD2D00A9B84F /* scene_3_bushes-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F506E54B16C0FD2D00A9B84F /* scene_3_bushes-ipad.png */; };
 		F506E54E16C0FD2D00A9B84F /* scene_3_bushes-ipad.plist in Resources */ = {isa = PBXBuildFile; fileRef = F506E54C16C0FD2D00A9B84F /* scene_3_bushes-ipad.plist */; };
@@ -699,6 +699,10 @@
 		F5007AE216B66FBB00C6DD9B /* Animations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Animations.plist; sourceTree = "<group>"; };
 		F5007AF516B6737200C6DD9B /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
 		F5007AF616B6737200C6DD9B /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
+		F500EA5516DF12C30077D7C6 /* tutorial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial.png; sourceTree = "<group>"; };
+		F500EA5616DF12C30077D7C6 /* tutorial-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tutorial-hd.png"; sourceTree = "<group>"; };
+		F500EA5716DF12C30077D7C6 /* tutorial-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tutorial-ipad.png"; sourceTree = "<group>"; };
+		F500EA5816DF12C30077D7C6 /* tutorial-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tutorial-ipadhd.png"; sourceTree = "<group>"; };
 		F501866B16B6E69C00CFE969 /* animalsAnimation-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "animalsAnimation-hd.plist"; path = "Resources/animalsAnimation-hd.plist"; sourceTree = "<group>"; };
 		F501866C16B6E69C00CFE969 /* animalsAnimation-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "animalsAnimation-hd.png"; path = "Resources/animalsAnimation-hd.png"; sourceTree = "<group>"; };
 		F501866D16B6E69C00CFE969 /* animalsAnimation-ipad.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "animalsAnimation-ipad.plist"; path = "Resources/animalsAnimation-ipad.plist"; sourceTree = "<group>"; };
@@ -809,10 +813,6 @@
 		F5065C0316D747A400F62CB9 /* Chartboost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chartboost.h; sourceTree = "<group>"; };
 		F5065C0416D747A400F62CB9 /* libChartboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChartboost.a; sourceTree = "<group>"; };
 		F5065C0516D747A400F62CB9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		F50688B616BA82F90035216A /* tutorial-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tutorial-hd.png"; sourceTree = "<group>"; };
-		F50688B716BA82F90035216A /* tutorial-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tutorial-ipad.png"; sourceTree = "<group>"; };
-		F50688B816BA82F90035216A /* tutorial-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tutorial-ipadhd.png"; sourceTree = "<group>"; };
-		F50688B916BA82F90035216A /* tutorial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial.png; sourceTree = "<group>"; };
 		F506E53F16C0ED1200A9B84F /* bushesAnimations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bushesAnimations.plist; sourceTree = "<group>"; };
 		F506E54B16C0FD2D00A9B84F /* scene_3_bushes-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scene_3_bushes-ipad.png"; sourceTree = "<group>"; };
 		F506E54C16C0FD2D00A9B84F /* scene_3_bushes-ipad.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "scene_3_bushes-ipad.plist"; sourceTree = "<group>"; };
@@ -1610,10 +1610,10 @@
 				F5021C5316D4F0810097A369 /* exitBtnOn-ipad.png */,
 				F5021C5416D4F0810097A369 /* exitBtnOn-ipadhd.png */,
 				F5021C5516D4F0810097A369 /* exitBtnOn.png */,
-				F50688B616BA82F90035216A /* tutorial-hd.png */,
-				F50688B716BA82F90035216A /* tutorial-ipad.png */,
-				F50688B816BA82F90035216A /* tutorial-ipadhd.png */,
-				F50688B916BA82F90035216A /* tutorial.png */,
+				F500EA5516DF12C30077D7C6 /* tutorial.png */,
+				F500EA5616DF12C30077D7C6 /* tutorial-hd.png */,
+				F500EA5716DF12C30077D7C6 /* tutorial-ipad.png */,
+				F500EA5816DF12C30077D7C6 /* tutorial-ipadhd.png */,
 				F509C36116D5CEDD002EC8BC /* tutorial2-hd.png */,
 				F509C36216D5CEDD002EC8BC /* tutorial2.png */,
 				F509C36316D5CEDD002EC8BC /* tutorial2-ipad.png */,
@@ -2663,10 +2663,6 @@
 				F50A29CA16B994F000D9BCAF /* gameScene_2-ipad.ccbi in Resources */,
 				F50A29DC16B9A18000D9BCAF /* gameScene_3.ccbi in Resources */,
 				F50A29DE16B9A18900D9BCAF /* gameScene_3-ipad.ccbi in Resources */,
-				F50688BA16BA82F90035216A /* tutorial-hd.png in Resources */,
-				F50688BB16BA82F90035216A /* tutorial-ipad.png in Resources */,
-				F50688BC16BA82F90035216A /* tutorial-ipadhd.png in Resources */,
-				F50688BD16BA82F90035216A /* tutorial.png in Resources */,
 				F50AA15916BBA1B3006950C9 /* scene_3_pics-hd.plist in Resources */,
 				F50AA15A16BBA1B3006950C9 /* scene_3_pics-hd.png in Resources */,
 				F50AA15B16BBA1B3006950C9 /* scene_3_pics-ipad.plist in Resources */,
@@ -2880,6 +2876,10 @@
 				F502BF0816D9C2FC008B5BFA /* numbers-hd.png in Resources */,
 				F502BF0916D9C2FC008B5BFA /* numbers.plist in Resources */,
 				F502BF0B16D9C4C8008B5BFA /* hiddenSprite.png in Resources */,
+				F500EA5916DF12C30077D7C6 /* tutorial.png in Resources */,
+				F500EA5A16DF12C30077D7C6 /* tutorial-hd.png in Resources */,
+				F500EA5B16DF12C30077D7C6 /* tutorial-ipad.png in Resources */,
+				F500EA5C16DF12C30077D7C6 /* tutorial-ipadhd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -218,6 +218,7 @@
     backMenu.isTouchEnabled = YES;
     
     [Settings sharedSettings].openBabyMode = 1;
+    [Settings sharedSettings].enabledBabyMode = 1;
     [[Settings sharedSettings] save];
 }
 

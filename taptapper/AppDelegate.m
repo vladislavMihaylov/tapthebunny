@@ -98,7 +98,7 @@
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
-        displaymentX = 0;
+        displaymentX = 90;
         
         lenght = 35;
         rasstoyanie = 80;
@@ -123,13 +123,13 @@
         
         posForOptionsMenu = ccp(370, 80);
         
-        posForNextTutorialBtn = ccp(900, 140);
-        posForExitTutorialBtn = ccp(1944, 130);
+        posForNextTutorialBtn = ccp(880, 40);
+        posForExitTutorialBtn = ccp(1920, 60);
         
         posForSoundBtnInGameMenu = ccp(810, 80);
         posForSoundBtnInGameMenuHide = ccp(1140, 80);
         
-        coefficientForTutorial = 1;
+        coefficientForTutorial = 0.75;
         
         heightForStar = 700;
         widthForStar = 315;
@@ -141,14 +141,14 @@
         
         slideScale = 0.9;
         
-        xPosAnimBtn = 1260;
-        xPosS1 = 1344;
-        xPosS2 = 1523;
-        xPosS3 = 1718;
+        xPosAnimBtn = 1128; // 1260 132
+        xPosS1 = 1212;
+        xPosS2 = 1391;
+        xPosS3 = 1585;
         
-        anBtnHeightCoef = 0.69;
-        BMBtnHeightCoef = 1.01;
-        speedBtnHeightCoef = 1.22;
+        anBtnHeightCoef = 0.445;
+        BMBtnHeightCoef = 0.765;
+        speedBtnHeightCoef = 0.975; //122 0.245
     }
     else
     {
@@ -157,7 +157,7 @@
         
         if(IS_WIDESCREEN == YES)
         {
-            displaymentX = 88;
+            displaymentX = 118;
             
             postFix = @"-five";
             
@@ -184,7 +184,7 @@
         }
         else
         {
-            displaymentX = 0;
+            displaymentX = 30;
             
             postFix = @"";
             
@@ -215,19 +215,19 @@
         
         speedBtnScale = 1;
         
-        xPosAnimBtn = 592;
-        xPosS1 = 631;
-        xPosS2 = 714;
-        xPosS3 = 805;
+        xPosAnimBtn = 547;
+        xPosS1 = 586;
+        xPosS2 = 669;
+        xPosS3 = 760;
         
-        anBtnHeightCoef = 0.81;
-        BMBtnHeightCoef = 1.16;
-        speedBtnHeightCoef = 1.40;
+        anBtnHeightCoef = 0.565;
+        BMBtnHeightCoef = 0.915;
+        speedBtnHeightCoef = 1.155; // 1.40
         
-        coefficientForTutorial = 1.15;
+        coefficientForTutorial = 0.9;
         
-        posForNextTutorialBtn = ccp(430, 70);
-        posForExitTutorialBtn = ccp(910 + displaymentX, 70);
+        posForNextTutorialBtn = ccp(410, 20);
+        posForExitTutorialBtn = ccp(870 + displaymentX, 30);
         
         heightForStar = 290;
         stepOfStar = 40;
