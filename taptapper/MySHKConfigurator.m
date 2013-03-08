@@ -76,7 +76,7 @@
 // 
 //    Your CFBundleURLSchemes entry: fb555lite
 - (NSString*)facebookAppId {
-	return @"405614939525869";
+	return @"347088822059284";
 }
 
 - (NSString*)facebookLocalAppId {
@@ -139,11 +139,11 @@
 }
 
 - (NSString*)twitterConsumerKey {
-	return @"Dob8jfioVUxD1x0nmVHA";
+	return @"AvQe91yeuOkvxmIo3aPbDg";
 }
 
 - (NSString*)twitterSecret {
-	return @"krSQbw8g5axrj8cgUp1qfQmAkXPuIAKLMCvGdrCWafc";
+	return @"FXywBzf9ijbrnfC6vTXtALJoSjLYh8Jke55jDSXzemg";
 }
 // You need to set this if using OAuth, see note above (xAuth users can skip it)
 - (NSString*)twitterCallbackUrl {

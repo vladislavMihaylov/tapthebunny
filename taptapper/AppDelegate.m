@@ -284,8 +284,8 @@
     Chartboost *cb = [Chartboost sharedChartboost];
     //cb.delegate = self;
     
-    cb.appId = @"4f5f7267f776593d68000022";
-    cb.appSignature = @"ef18edfc558e7339a1874a787ba12a33590e8445";
+    cb.appId = @"5139711e16ba476c0f000023";
+    cb.appSignature = @"9525d14069d431ffb343884cd774199eba3b3c08";
     
     // Notify an install
     [cb startSession];
