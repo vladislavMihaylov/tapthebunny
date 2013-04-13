@@ -67,6 +67,14 @@
 		F5021CB516D54E2C0097A369 /* mBMShopOk-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F5021CAD16D54E2A0097A369 /* mBMShopOk-ipad.png */; };
 		F5021CB616D54E2C0097A369 /* mBMShopOk-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F5021CAE16D54E2A0097A369 /* mBMShopOk-ipadhd.png */; };
 		F5021CB716D54E2C0097A369 /* mBMShopOk.png in Resources */ = {isa = PBXBuildFile; fileRef = F5021CAF16D54E2B0097A369 /* mBMShopOk.png */; };
+		F5024521171949B700AC516F /* restoreBtn-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F5024519171949B200AC516F /* restoreBtn-hd.png */; };
+		F5024522171949B700AC516F /* restoreBtn-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F502451A171949B200AC516F /* restoreBtn-ipad.png */; };
+		F5024523171949B700AC516F /* restoreBtn-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F502451B171949B200AC516F /* restoreBtn-ipadhd.png */; };
+		F5024524171949B700AC516F /* restoreBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = F502451C171949B300AC516F /* restoreBtn.png */; };
+		F5024525171949B700AC516F /* restoreBtnTap-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F502451D171949B300AC516F /* restoreBtnTap-hd.png */; };
+		F5024526171949B700AC516F /* restoreBtnTap-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F502451E171949B400AC516F /* restoreBtnTap-ipad.png */; };
+		F5024527171949B700AC516F /* restoreBtnTap-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F502451F171949B500AC516F /* restoreBtnTap-ipadhd.png */; };
+		F5024528171949B700AC516F /* restoreBtnTap.png in Resources */ = {isa = PBXBuildFile; fileRef = F5024520171949B600AC516F /* restoreBtnTap.png */; };
 		F502BF0216D9C2FC008B5BFA /* numbers.png in Resources */ = {isa = PBXBuildFile; fileRef = F502BEFA16D9C2FC008B5BFA /* numbers.png */; };
 		F502BF0316D9C2FC008B5BFA /* numbers-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = F502BEFB16D9C2FC008B5BFA /* numbers-ipadhd.plist */; };
 		F502BF0416D9C2FC008B5BFA /* numbers-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F502BEFC16D9C2FC008B5BFA /* numbers-ipadhd.png */; };
@@ -758,6 +766,14 @@
 		F5021CAD16D54E2A0097A369 /* mBMShopOk-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mBMShopOk-ipad.png"; sourceTree = "<group>"; };
 		F5021CAE16D54E2A0097A369 /* mBMShopOk-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mBMShopOk-ipadhd.png"; sourceTree = "<group>"; };
 		F5021CAF16D54E2B0097A369 /* mBMShopOk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mBMShopOk.png; sourceTree = "<group>"; };
+		F5024519171949B200AC516F /* restoreBtn-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "restoreBtn-hd.png"; sourceTree = "<group>"; };
+		F502451A171949B200AC516F /* restoreBtn-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "restoreBtn-ipad.png"; sourceTree = "<group>"; };
+		F502451B171949B200AC516F /* restoreBtn-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "restoreBtn-ipadhd.png"; sourceTree = "<group>"; };
+		F502451C171949B300AC516F /* restoreBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restoreBtn.png; sourceTree = "<group>"; };
+		F502451D171949B300AC516F /* restoreBtnTap-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "restoreBtnTap-hd.png"; sourceTree = "<group>"; };
+		F502451E171949B400AC516F /* restoreBtnTap-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "restoreBtnTap-ipad.png"; sourceTree = "<group>"; };
+		F502451F171949B500AC516F /* restoreBtnTap-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "restoreBtnTap-ipadhd.png"; sourceTree = "<group>"; };
+		F5024520171949B600AC516F /* restoreBtnTap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restoreBtnTap.png; sourceTree = "<group>"; };
 		F502BEFA16D9C2FC008B5BFA /* numbers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = numbers.png; sourceTree = "<group>"; };
 		F502BEFB16D9C2FC008B5BFA /* numbers-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "numbers-ipadhd.plist"; sourceTree = "<group>"; };
 		F502BEFC16D9C2FC008B5BFA /* numbers-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "numbers-ipadhd.png"; sourceTree = "<group>"; };
@@ -1847,6 +1863,14 @@
 		F53F6BD116B2DAB900444747 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F5024519171949B200AC516F /* restoreBtn-hd.png */,
+				F502451A171949B200AC516F /* restoreBtn-ipad.png */,
+				F502451B171949B200AC516F /* restoreBtn-ipadhd.png */,
+				F502451C171949B300AC516F /* restoreBtn.png */,
+				F502451D171949B300AC516F /* restoreBtnTap-hd.png */,
+				F502451E171949B400AC516F /* restoreBtnTap-ipad.png */,
+				F502451F171949B500AC516F /* restoreBtnTap-ipadhd.png */,
+				F5024520171949B600AC516F /* restoreBtnTap.png */,
 				F502BF0A16D9C4C8008B5BFA /* hiddenSprite.png */,
 				F5021CA816D54E270097A369 /* mBMShop-hd.png */,
 				F5021CA916D54E270097A369 /* mBMShop-ipad.png */,
@@ -2880,6 +2904,14 @@
 				F5F86AB316E761F8006A2E37 /* congrBg-ipad.png in Resources */,
 				F5F86AB416E761F8006A2E37 /* congrBg-hd.png in Resources */,
 				F5F86AB516E761F8006A2E37 /* congrBg.png in Resources */,
+				F5024521171949B700AC516F /* restoreBtn-hd.png in Resources */,
+				F5024522171949B700AC516F /* restoreBtn-ipad.png in Resources */,
+				F5024523171949B700AC516F /* restoreBtn-ipadhd.png in Resources */,
+				F5024524171949B700AC516F /* restoreBtn.png in Resources */,
+				F5024525171949B700AC516F /* restoreBtnTap-hd.png in Resources */,
+				F5024526171949B700AC516F /* restoreBtnTap-ipad.png in Resources */,
+				F5024527171949B700AC516F /* restoreBtnTap-ipadhd.png in Resources */,
+				F5024528171949B700AC516F /* restoreBtnTap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3035,6 +3067,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Markus Geisler (U4XW2EP9F8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Markus Geisler (U4XW2EP9F8)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -3047,7 +3080,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8D85E3E5-89AD-4FEC-BB31-6112857F5E93";
+				PROVISIONING_PROFILE = "B1669AB6-FA6B-46F0-91F2-5F2F5612CA7E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B1669AB6-FA6B-46F0-91F2-5F2F5612CA7E";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -3057,6 +3091,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Markus Geisler (U4XW2EP9F8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Markus Geisler (U4XW2EP9F8)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -3067,7 +3102,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8D85E3E5-89AD-4FEC-BB31-6112857F5E93";
+				PROVISIONING_PROFILE = "B1669AB6-FA6B-46F0-91F2-5F2F5612CA7E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B1669AB6-FA6B-46F0-91F2-5F2F5612CA7E";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -3077,6 +3113,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Markus Geisler (U4XW2EP9F8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Markus Geisler (U4XW2EP9F8)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3094,6 +3132,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = taptapper;
+				PROVISIONING_PROFILE = "B1669AB6-FA6B-46F0-91F2-5F2F5612CA7E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B1669AB6-FA6B-46F0-91F2-5F2F5612CA7E";
 				USER_HEADER_SEARCH_PATHS = "Submodules/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -3103,6 +3143,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Markus Geisler (U4XW2EP9F8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Markus Geisler (U4XW2EP9F8)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = taptapper/Prefix.pch;
@@ -3119,6 +3161,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = taptapper;
+				PROVISIONING_PROFILE = "B1669AB6-FA6B-46F0-91F2-5F2F5612CA7E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B1669AB6-FA6B-46F0-91F2-5F2F5612CA7E";
 				USER_HEADER_SEARCH_PATHS = "Submodules/**";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;

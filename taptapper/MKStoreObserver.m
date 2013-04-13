@@ -42,7 +42,8 @@
 - (void) failedTransaction: (SKPaymentTransaction *)transaction
 {	
     if (transaction.error.code != SKErrorPaymentCancelled)		
-    {		
+    {
+        NSLog(@"OPA");
         // Optionally, display an error here.		
     }	
 	[[MKStoreManager sharedManager] paymentCanceled];

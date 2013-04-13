@@ -143,7 +143,17 @@
         backMenu.position = ccp(0, 0);
         [self addChild: backMenu];
         
+        CCMenuItemImage *restoreBtn = [CCMenuItemImage itemWithNormalImage: @"restoreBtn.png"
+                                                             selectedImage: @"restoreBtnTap.png"
+                                                                    target: self
+                                                                  selector: @selector(restorePurshase)];
         
+        restoreBtn.position = ccp(GameCenterX * 1.8, GameCenterY * 0.3);
+        
+        CCMenu *restoreMenu = [CCMenu menuWithItems: restoreBtn, nil];
+        restoreMenu.position = ccp(0, 0);
+        
+        [self addChild: restoreMenu];
         
         CCSprite *shopLabel = [CCSprite spriteWithFile: @"shopLabel.png"];
         shopLabel.position = ccp(GameCenterX, GameCenterY * 1.7);
@@ -164,6 +174,13 @@
 }
 
 #pragma mark Methods for purshase
+
+- (void) restorePurshase
+{
+    [self lockMenu];
+    [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
+    
+}
 
 - (void) buy: (CCMenuItemImage *) sender
 {
@@ -224,7 +241,6 @@
 
 - (void)failed
 {
-    
     [self unlockMenu];
 }
 
