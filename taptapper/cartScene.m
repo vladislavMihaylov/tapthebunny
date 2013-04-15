@@ -42,6 +42,8 @@
 {
     if(self = [super init])
     {
+        time = 0;
+
         [[Chartboost sharedChartboost] showInterstitial];
         
         [MKStoreManager sharedManager].delegate = self;
@@ -150,7 +152,7 @@
         
         restoreBtn.position = ccp(GameCenterX * 1.8, GameCenterY * 0.3);
         
-        CCMenu *restoreMenu = [CCMenu menuWithItems: restoreBtn, nil];
+        restoreMenu = [CCMenu menuWithItems: restoreBtn, nil];
         restoreMenu.position = ccp(0, 0);
         
         [self addChild: restoreMenu];
@@ -175,9 +177,29 @@
 
 #pragma mark Methods for purshase
 
+- (void) timer
+{
+    time++;
+    
+    CCLOG(@"time %f", time);
+    
+    if(time >= 30)
+    {
+        [self stopTimer];
+    }
+}
+
+- (void) stopTimer
+{
+    [self unschedule: @selector(timer)];
+    time = 0;
+    [self unlockMenu];
+}
+
 - (void) restorePurshase
 {
     [self lockMenu];
+    [self schedule: @selector(timer) interval: 1];
     [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
     
 }
@@ -203,20 +225,35 @@
 
 - (void) lockMenu
 {
+    CCLayerColor *blockLayer = [CCLayerColor layerWithColor: ccc4(0, 0, 0, 128)];
+    [self addChild: blockLayer z: 10 tag: 321];
+    
+    CCLabelTTF *loading = [CCLabelTTF labelWithString: @"Loading" fontName: @"Arial" fontSize: 36];
+    loading.position = ccp(GameCenterX, GameCenterY);
+    loading.color = ccc3(255, 255, 255);
+    [self addChild: loading z:11 tag:322];
+    
     animalsMenu.isTouchEnabled = NO;
     babyModeMenu.isTouchEnabled = NO;
     backMenu.isTouchEnabled = NO;
+    restoreMenu.isTouchEnabled = NO;
 }
 
 - (void) unlockMenu
 {
+    [self removeChildByTag: 321 cleanup: YES];
+    [self removeChildByTag: 322 cleanup: YES];
+    
     animalsMenu.isTouchEnabled = YES;
     babyModeMenu.isTouchEnabled = YES;
     backMenu.isTouchEnabled = YES;
+    restoreMenu.isTouchEnabled = YES;
 }
 
 - (void)productAPurchased
 {
+    [self unlockMenu];
+    
     animalsPackBuyed.visible = YES;
     animalsMenu.isTouchEnabled = NO;
     animalsMenu.visible = NO;
@@ -227,6 +264,8 @@
 
 - (void)productBPurchased
 {
+    [self unlockMenu];
+    
     babyModeBuyed.visible = YES;
     babyModeMenu.isTouchEnabled = NO;
     babyModeMenu.visible = NO;
@@ -241,6 +280,10 @@
 
 - (void)failed
 {
+    if(time > 0)
+    {
+        [self stopTimer];
+    }
     [self unlockMenu];
 }
 

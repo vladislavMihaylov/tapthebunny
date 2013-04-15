@@ -161,6 +161,11 @@ static MKStoreManager* _sharedStoreManager; // self
 	[self buyFeature:featureBId];
 }
 
+- (void) purchaseRestored
+{
+    [delegate failed]; // на самом деле не фэйл, просто этот метод разблокирует менюшки
+}
+
 -(void)paymentCanceled
 {
 	if([delegate respondsToSelector:@selector(failed)])

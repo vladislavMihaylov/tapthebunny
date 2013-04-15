@@ -17,8 +17,12 @@
     CCMenu *animalsMenu;
     CCMenu *babyModeMenu;
     CCMenu *backMenu;
+    CCMenu *restoreMenu;
+    
+    float time;
 }
 
+- (void) unlockMenu;
 + (CCScene *) scene;
 
 @end

@@ -30,13 +30,13 @@
 				
             case SKPaymentTransactionStateRestored:
 				
-                [self restoreTransaction:transaction];
+                [self restoreTransaction: transaction];
                 
                 break;
                 
             case SKErrorUnknown:
                 
-                NSLog(@"Error");
+                NSLog(@"Unknow error");
                 
             default:
 				
@@ -53,6 +53,10 @@
         NSLog(@"OPA");
         // Optionally, display an error here.		
     }
+    else
+    {
+        NSLog(@"cancel pressed");
+    }
     
     
 	[[MKStoreManager sharedManager] paymentCanceled];
@@ -66,7 +70,13 @@
 }
 
 - (void) restoreTransaction: (SKPaymentTransaction *)transaction
-{	
+{
+    if(transaction.error.code)
+    {
+        NSLog(@"OOOOOOOOOO");
+    }
+    
+    [[MKStoreManager sharedManager] purchaseRestored];
     [[MKStoreManager sharedManager] provideContent: transaction.originalTransaction.payment.productIdentifier];	
     [[SKPaymentQueue defaultQueue] finishTransaction: transaction];	
 }

@@ -56,7 +56,7 @@
 
 + (BOOL) featureAPurchased;
 + (BOOL) featureBPurchased;
-
+- (void) purchaseRestored;
 +(void) loadPurchases;
 +(void) updatePurchases;
 
