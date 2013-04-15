@@ -31,7 +31,13 @@
             case SKPaymentTransactionStateRestored:
 				
                 [self restoreTransaction:transaction];
-				
+                
+                break;
+                
+            case SKErrorUnknown:
+                
+                NSLog(@"Error");
+                
             default:
 				
                 break;
@@ -39,13 +45,16 @@
 	}
 }
 
+
 - (void) failedTransaction: (SKPaymentTransaction *)transaction
 {	
     if (transaction.error.code != SKErrorPaymentCancelled)		
     {
         NSLog(@"OPA");
         // Optionally, display an error here.		
-    }	
+    }
+    
+    
 	[[MKStoreManager sharedManager] paymentCanceled];
     [[SKPaymentQueue defaultQueue] finishTransaction: transaction];	
 }

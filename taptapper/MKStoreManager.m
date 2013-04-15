@@ -135,7 +135,6 @@ static MKStoreManager* _sharedStoreManager; // self
 	[request autorelease];
 }
 
-
 - (void) buyFeatureA
 {
 	[self buyFeature:featureAId];

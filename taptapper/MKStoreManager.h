@@ -35,6 +35,9 @@
 @property (nonatomic, retain) NSMutableArray *purchasableObjects;
 @property (nonatomic, retain) MKStoreObserver *storeObserver;
 
+@property (nonatomic, copy) void (^onRestoreFailed)(NSError* error);
+@property (nonatomic, copy) void (^onRestoreCompleted)();
+
 
 - (void) requestProductData;
 
