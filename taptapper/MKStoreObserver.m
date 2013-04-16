@@ -45,6 +45,11 @@
 	}
 }
 
+-(void)paymentQueue: (SKPaymentQueue *)queue restoreCompletedTransactionsFailedWithError: (NSError *) error
+{
+    [[MKStoreManager sharedManager] paymentCanceled];
+}
+
 
 - (void) failedTransaction: (SKPaymentTransaction *)transaction
 {	

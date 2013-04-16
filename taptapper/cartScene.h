@@ -18,8 +18,6 @@
     CCMenu *babyModeMenu;
     CCMenu *backMenu;
     CCMenu *restoreMenu;
-    
-    float time;
 }
 
 - (void) unlockMenu;

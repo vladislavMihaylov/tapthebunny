@@ -42,7 +42,6 @@
 {
     if(self = [super init])
     {
-        time = 0;
 
         [[Chartboost sharedChartboost] showInterstitial];
         
@@ -177,29 +176,10 @@
 
 #pragma mark Methods for purshase
 
-- (void) timer
-{
-    time++;
-    
-    CCLOG(@"time %f", time);
-    
-    if(time >= 30)
-    {
-        [self stopTimer];
-    }
-}
-
-- (void) stopTimer
-{
-    [self unschedule: @selector(timer)];
-    time = 0;
-    [self unlockMenu];
-}
 
 - (void) restorePurshase
 {
     [self lockMenu];
-    [self schedule: @selector(timer) interval: 1];
     [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
     
 }
@@ -280,10 +260,6 @@
 
 - (void)failed
 {
-    if(time > 0)
-    {
-        [self stopTimer];
-    }
     [self unlockMenu];
 }
 
